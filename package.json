@@ -1,0 +1,25 @@
+{
+  "name": "danngalann",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./danngalann/portfolio/src/index.js --output ./danngalann/portfolio/static/frontend/main.js",
+    "build": "webpack --mode production ./danngalann/portfolio/src/index.js --output ./danngalann/portfolio/static/frontend/main.js"
+  },
+  "author": "danngalann",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
