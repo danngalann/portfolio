@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Nav */
 nav {
   background: none;
@@ -10,9 +14,29 @@ nav {
     font-size: 1.4rem;
   }
 
+  .nav-item {
+    &:hover {
+      font-weight: 500;
+    }
+    // &:after {
+    //   content: " ";
+    //   display: block;
+    //   width: 0;
+    //   height: 1px;
+    //   background: white;
+    //   transition: width 0.3s;
+    // }
+
+    // &:hover:after {
+    //   width: 100%;
+    //   transition: width 0.3s;
+    // }
+  }
+
   &.nav-active {
     background: white;
-    a, i {
+    a,
+    i {
       color: black;
     }
   }

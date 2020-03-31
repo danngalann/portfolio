@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Nav */
 nav {
   background: none;
@@ -12,11 +16,16 @@ nav .translate-icon {
   font-size: 1.4rem;
 }
 
+nav .nav-item:hover {
+  font-weight: 500;
+}
+
 nav.nav-active {
   background: white;
 }
 
-nav.nav-active a, nav.nav-active i {
+nav.nav-active a,
+nav.nav-active i {
   color: black;
 }
 

@@ -34,7 +34,7 @@ export default function Navbar() {
           <a href="badges.html">{t("nav.link2")}</a>
         </li>
         <li>
-          <a href="collapsible.html">{t("nav.link3")}</a>
+          <a href="#contact">{t("nav.link3")}</a>
         </li>
         <li>
           <a href="#!">{t('nav.lang')}</a>
@@ -69,13 +69,13 @@ export default function Navbar() {
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a href="sass.html">{t("nav.link1")}</a>
+                <a href="sass.html" className="nav-item">{t("nav.link1")}</a>
               </li>
               <li>
-                <a href="badges.html">{t("nav.link2")}</a>
+                <a href="badges.html" className="nav-item">{t("nav.link2")}</a>
               </li>
               <li>
-                <a href="collapsible.html">{t("nav.link3")}</a>
+                <a href="#contact" className="nav-item">{t("nav.link3")}</a>
               </li>
               <li>
                 <a
