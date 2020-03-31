@@ -33,7 +33,9 @@ nav.nav-active i {
 #hero {
   height: 100vh;
   width: 100%;
-  background: url("media/hero_bg.jpg");
+  background-image: url("media/hero_bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +43,7 @@ nav.nav-active i {
 
 .hero-content {
   color: white;
-  margin-top: 20%;
+  margin-top: 50vh;
 }
 
 .hero-content .hero-title {

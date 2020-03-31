@@ -10,11 +10,17 @@ const resources = {
         link1: "About",
         link2: "Projects",
         link3: "Contact",
-        lang: 'Languages'
+        lang: "Languages"
       },
       hero: {
         title: "Hello World",
-        content: 'Web developing with React and Python'
+        content: "Web developing with React and Python"
+      },
+      contact: {
+        header: "Contact me",
+        name: "Name",
+        message: "Message",
+        send: "Send"
       }
     }
   },
@@ -24,11 +30,17 @@ const resources = {
         link1: "Sobre mi",
         link2: "Proyectos",
         link3: "Contacto",
-        lang: 'Idiomas'
+        lang: "Idiomas"
       },
       hero: {
         title: "Hola Mundo",
-        content: 'Desarrollando webs con React y Python'
+        content: "Desarrollando webs con React y Python"
+      },
+      contact: {
+        header: "Contacta conmigo",
+        name: "Nombre",
+        message: "Mensaje",
+        send: "Enviar"
       }
     }
   }
