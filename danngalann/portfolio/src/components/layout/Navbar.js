@@ -37,7 +37,7 @@ export default function Navbar() {
           <a href="collapsible.html">{t("nav.link3")}</a>
         </li>
         <li>
-          <a href="#!">Languages</a>
+          <a href="#!">{t('nav.lang')}</a>
           <ul style={{ paddingLeft: "12px" }}>
             <li onClick={() => handleClick("en")}>
               <a href="#!" style={{ fontWeight: "400" }}>
@@ -83,8 +83,8 @@ export default function Navbar() {
                   href="#!"
                   data-target="dropdown1"
                 >
-                  <i className="material-icons">translate</i>
-                  <i className="material-icons right">arrow_drop_down</i>
+                  <i className="material-icons translate-icon">translate</i>
+                  {/* <i className="material-icons right">arrow_drop_down</i> */}
                 </a>
               </li>
             </ul>

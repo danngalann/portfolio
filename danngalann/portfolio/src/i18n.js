@@ -9,10 +9,12 @@ const resources = {
       nav: {
         link1: "About",
         link2: "Projects",
-        link3: "Contact"
+        link3: "Contact",
+        lang: 'Languages'
       },
       hero: {
-        title: "Hello World"
+        title: "Hello World",
+        content: 'Web developing with React and Python'
       }
     }
   },
@@ -21,10 +23,12 @@ const resources = {
       nav: {
         link1: "Sobre mi",
         link2: "Proyectos",
-        link3: "Contacto"
+        link3: "Contacto",
+        lang: 'Idiomas'
       },
       hero: {
-        title: "Hola Mundo"
+        title: "Hola Mundo",
+        content: 'Desarrollando webs con React y Python'
       }
     }
   }

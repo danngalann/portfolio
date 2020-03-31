@@ -1,0 +1,41 @@
+/* Nav */
+nav {
+  background: none;
+  position: fixed;
+  border: none;
+  box-shadow: none;
+  margin-top: 20px;
+
+  .translate-icon {
+    font-size: 1.4rem;
+  }
+
+  &.nav-active {
+    background: white;
+    a, i {
+      color: black;
+    }
+  }
+}
+
+/* Hero */
+#hero {
+  height: 100vh;
+  width: 100%;
+  background: url("media/hero_bg.jpg");
+  display: flex;
+}
+
+.hero-content {
+  color: white;
+  margin-top: 20%;
+
+  .hero-title {
+    font-weight: 600;
+  }
+
+  .hero-text {
+    font-size: 1.4rem;
+    max-width: 60%;
+  }
+}

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "../i18n";
 
 import Navbar from "./layout/Navbar";
+import Hero from "./Hero";
 
 class App extends Component {
   render() {
@@ -10,8 +11,8 @@ class App extends Component {
       <div>
         <Suspense fallback={<div>Loading</div>}>
           <Navbar />
+          <Hero />
         </Suspense>
-        <h1>Hello World</h1>
       </div>
     );
   }
