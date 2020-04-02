@@ -10,7 +10,7 @@ export default function Project(props) {
     if (!source) {
       return (
         <button className="btn-small waves-effect waves-light disabled">
-          <i class="fas fa-eye-slash"></i>
+          <i className="fas fa-eye-slash"></i>
           {t("projects.content.nosource")}
         </button>
       );
@@ -18,7 +18,7 @@ export default function Project(props) {
       return (
         <a href={source} target="_blank">
           <button className="btn-small waves-effect waves-light blue">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             {t("projects.content.source")}
           </button>
         </a>
@@ -41,7 +41,7 @@ export default function Project(props) {
           <div className="actions">
             <a href={demo} target="_blank">
               <button className="btn-small waves-effect waves-light blue">
-                <i class="fas fa-desktop"></i>Demo
+                <i className="fas fa-desktop"></i>Demo
               </button>
             </a>
             {getSourceBtn(source)}
