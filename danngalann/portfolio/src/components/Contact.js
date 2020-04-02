@@ -27,7 +27,7 @@ export default function Contact() {
           <label htmlFor="message">{t("contact.message")}</label>
         </div>
         <button
-          className="btn waves-effect waves-light"
+          className="btn waves-effect waves-light blue"
           type="submit"
           name="action"
         >

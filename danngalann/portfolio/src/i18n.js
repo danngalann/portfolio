@@ -24,7 +24,7 @@ const resources = {
         }
       },
       contact: {
-        header: "Contact me",
+        header: "Get in touch",
         name: "Name",
         message: "Message",
         send: "Send"
@@ -51,7 +51,7 @@ const resources = {
         }
       },
       contact: {
-        header: "Contacta conmigo",
+        header: "Contacto",
         name: "Nombre",
         message: "Mensaje",
         send: "Enviar"

@@ -15,6 +15,7 @@ nav {
   border: none;
   box-shadow: none;
   transition: all 0.4s;
+  z-index: 10;
 
   .translate-icon {
     font-size: 1.4rem;
@@ -86,6 +87,10 @@ nav {
 }
 
 // Projects
+.project-title {
+  text-align: center;
+  margin-top: 4rem;
+}
 .project {
   display: flex;
   max-height: 20%;
@@ -122,7 +127,6 @@ nav {
         }
       }
     }
-
   }
 }
 
@@ -130,7 +134,7 @@ nav {
 @media only screen and (max-width: 600px) {
   // Projects
   .project {
-    margin: 0;    
+    margin: 0;
     flex-direction: column;
 
     .project-thumb {
@@ -138,6 +142,11 @@ nav {
       img {
         min-width: 60%;
       }
+    }
+
+    // Reset project content to it's original order on phones
+    .project-content {
+      order: 1 !important;
     }
   }
 }

@@ -16,6 +16,7 @@ nav {
           box-shadow: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  z-index: 10;
 }
 
 nav .translate-icon {
@@ -77,6 +78,11 @@ nav.nav-active i {
 .hero-content .hero-text {
   font-size: 1.4rem;
   max-width: 60%;
+}
+
+.project-title {
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .project {
@@ -143,5 +149,10 @@ nav.nav-active i {
   }
   .project .project-thumb img {
     min-width: 60%;
+  }
+  .project .project-content {
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
   }
 }
