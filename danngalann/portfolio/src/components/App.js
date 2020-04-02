@@ -5,12 +5,12 @@ import "../i18n";
 import Navbar from "./layout/Navbar";
 import Hero from "./Hero";
 import Contact from "./Contact";
+import Projects from "./Projects";
 
 class App extends Component {
   state = { navActive: false };
 
   setNavActive = isActive => {
-    // console.log(isActive);
     if(isActive != this.state.navActive){
       this.setState({navActive: isActive});
     }    
@@ -22,7 +22,8 @@ class App extends Component {
         <Suspense fallback={<div>Loading</div>}>
           <Navbar active={this.state.navActive} />
           <Hero />
-          <Contact setNavActive={this.setNavActive} />
+          <Projects setNavActive={this.setNavActive} />
+          <Contact />
         </Suspense>
       </div>
     );

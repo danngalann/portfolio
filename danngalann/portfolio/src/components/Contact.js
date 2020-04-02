@@ -1,24 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { useIntersection } from "react-use";
 
-export default function Contact({ setNavActive }) {
+
+export default function Contact() {
   const { t, i18n } = useTranslation();
 
-  const contactSection = useRef(null);
-
-  const intersection = useIntersection(contactSection, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2
-  });
-
-  useEffect(() => {
-    setNavActive(intersection && intersection.isIntersecting);
-  });
-
   return (
-    <div id="contact" className="container" ref={contactSection}>
+    <div id="contact" className="container">
       <h2>{t("contact.header")}</h2>
       <form action="/email" method="POST">
         <div className="row input-field">

@@ -16,6 +16,9 @@ const resources = {
         title: "Hello World",
         content: "Web developing with React and Python"
       },
+      projects: {
+        header: "Projects"
+      },
       contact: {
         header: "Contact me",
         name: "Name",
@@ -35,6 +38,9 @@ const resources = {
       hero: {
         title: "Hola Mundo",
         content: "Desarrollando webs con React y Python"
+      },
+      projects: {
+        header: "Proyectos"
       },
       contact: {
         header: "Contacta conmigo",
