@@ -136,6 +136,16 @@ nav.nav-active i {
   margin-right: 4px;
 }
 
+#contact form {
+  width: 80%;
+  margin: auto;
+  padding: 4rem;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  -webkit-box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
+          box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
+}
+
 @media only screen and (max-width: 600px) {
   .project {
     margin: 0;

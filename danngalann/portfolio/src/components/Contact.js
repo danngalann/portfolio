@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div id="contact" className="container">
       <h2>{t("contact.header")}</h2>
-      <form action="/email" method="POST">
+      <form action="/email" method="POST" className="container">
         <div className="row input-field">
           <input id="name" type="text" className="validate" required />
           <label htmlFor="name">{t("contact.name")}</label>
