@@ -7,8 +7,8 @@ nav {
   background: none;
   position: fixed;
   border: none;
-  box-shadow: none;
-  margin-top: 20px;
+  box-shadow: none;  
+  transition: all .3s;
 
   .translate-icon {
     font-size: 1.4rem;
@@ -17,6 +17,7 @@ nav {
   .nav-item {
     &:hover {
       font-weight: 500;
+      background: none;
     }
     // &:after {
     //   content: " ";
@@ -33,8 +34,19 @@ nav {
     // }
   }
 
+  .nav-wrapper {
+    margin-top: 20px;
+    transition: inherit;
+  }
+
   &.nav-active {
+    margin-top: 0px;
     background: white;
+    transition: all .3s;
+    .nav-wrapper {
+      margin-top: 0;
+      transition: inherit;
+    }
     a,
     i {
       color: black;

@@ -9,7 +9,8 @@ nav {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  margin-top: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 nav .translate-icon {
@@ -18,10 +19,26 @@ nav .translate-icon {
 
 nav .nav-item:hover {
   font-weight: 500;
+  background: none;
+}
+
+nav .nav-wrapper {
+  margin-top: 20px;
+  -webkit-transition: inherit;
+  transition: inherit;
 }
 
 nav.nav-active {
+  margin-top: 0px;
   background: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav.nav-active .nav-wrapper {
+  margin-top: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
 }
 
 nav.nav-active a,

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();  
 
   return (
     <div id="hero">

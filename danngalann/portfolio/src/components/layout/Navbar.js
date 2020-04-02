@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Navbar() {
+export default function Navbar({ active }) {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Navbar() {
           <a href="#contact">{t("nav.link3")}</a>
         </li>
         <li>
-          <a href="#!">{t('nav.lang')}</a>
+          <a href="#!">{t("nav.lang")}</a>
           <ul style={{ paddingLeft: "12px" }}>
             <li onClick={() => handleClick("en")}>
               <a href="#!" style={{ fontWeight: "400" }}>
@@ -54,7 +54,7 @@ export default function Navbar() {
       </ul>
 
       {/* Main nav */}
-      <nav>
+      <nav id="navbar" className={active ? "nav-active" : ""}>
         <div className="nav-wrapper">
           <div className="container">
             <a href="#" className="brand-logo">
@@ -69,13 +69,19 @@ export default function Navbar() {
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a href="sass.html" className="nav-item">{t("nav.link1")}</a>
+                <a href="sass.html" className="nav-item">
+                  {t("nav.link1")}
+                </a>
               </li>
               <li>
-                <a href="badges.html" className="nav-item">{t("nav.link2")}</a>
+                <a href="badges.html" className="nav-item">
+                  {t("nav.link2")}
+                </a>
               </li>
               <li>
-                <a href="#contact" className="nav-item">{t("nav.link3")}</a>
+                <a href="#contact" className="nav-item">
+                  {t("nav.link3")}
+                </a>
               </li>
               <li>
                 <a
