@@ -17,7 +17,11 @@ const resources = {
         content: "Web developing with React and Python"
       },
       projects: {
-        header: "Projects"
+        header: "Projects",
+        content: {
+          source: "Source",
+          nosource: "Closed source"
+        }
       },
       contact: {
         header: "Contact me",
@@ -40,7 +44,11 @@ const resources = {
         content: "Desarrollando webs con React y Python"
       },
       projects: {
-        header: "Proyectos"
+        header: "Proyectos",
+        content: {
+          source: "Fuente",
+          nosource: "Fuente cerrada"
+        }
       },
       contact: {
         header: "Contacta conmigo",

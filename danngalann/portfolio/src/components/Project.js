@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Project() {
+  const { t, i18n } = useTranslation();
   return (
     <div className="project">
       <div className="project-thumb">
@@ -13,6 +15,10 @@ export default function Project() {
           provident, error natus. Dolor officiis saepe impedit recusandae
           laboriosam cupiditate vero.
         </p>
+        <div className="actions">
+          <button className="btn-small waves-effect waves-light"><i class="fas fa-desktop"></i>Demo</button>
+          <button className="btn-small waves-effect waves-light"><i class="fab fa-github"></i>{t("projects.content.source")}</button>
+        </div>
       </div>
     </div>
   );
