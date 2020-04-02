@@ -16,7 +16,7 @@ export default function Project(props) {
       );
     } else {
       return (
-        <a href={source}>
+        <a href={source} target="_blank">
           <button className="btn-small waves-effect waves-light blue">
             <i class="fab fa-github"></i>
             {t("projects.content.source")}
@@ -39,7 +39,7 @@ export default function Project(props) {
         >
           <p className="justify">{text}</p>
           <div className="actions">
-            <a href={demo}>
+            <a href={demo} target="_blank">
               <button className="btn-small waves-effect waves-light blue">
                 <i class="fas fa-desktop"></i>Demo
               </button>

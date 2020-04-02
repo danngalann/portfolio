@@ -21,6 +21,10 @@ const resources = {
         content: {
           source: "Source",
           nosource: "Closed source"
+        },
+        leadManager : {
+          title: 'Lead Manager with Django and React',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. '
         }
       },
       contact: {
@@ -48,6 +52,10 @@ const resources = {
         content: {
           source: "Fuente",
           nosource: "Fuente cerrada"
+        },
+        leadManager : {
+          title: 'Gestor de contactos con Django y React',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. '
         }
       },
       contact: {

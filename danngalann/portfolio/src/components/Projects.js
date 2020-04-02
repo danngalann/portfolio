@@ -12,18 +12,17 @@ export default function Projects({ setNavActive }) {
 
   const intersection = useIntersection(projectSection, {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "10%",
     threshold: 0.2
   });
 
   // Projects
   const projects = [
     {
-      title: "Project 1",
-      text:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo.",
-      demo: "#",
-      source: "#",
+      title: t("projects.leadManager.title"),
+      text: t("projects.leadManager.text"),
+      demo: "http://djangoreactleadmanager.pythonanywhere.com",
+      source: "https://github.com/danngalann/react-django-leads",
       alternated: false
     },
     {

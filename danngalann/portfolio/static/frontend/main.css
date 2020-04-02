@@ -165,4 +165,11 @@ nav.nav-active i {
         -ms-flex-order: 1 !important;
             order: 1 !important;
   }
+  #contact form {
+    width: 100%;
+    padding: 2rem;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
