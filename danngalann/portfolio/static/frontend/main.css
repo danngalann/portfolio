@@ -84,16 +84,16 @@ nav.nav-active i {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .project-container.onscreen {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   opacity: 1;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .project-container .project-title {

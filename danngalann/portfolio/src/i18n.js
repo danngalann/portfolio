@@ -22,9 +22,10 @@ const resources = {
           source: "Source",
           nosource: "Closed source"
         },
-        leadManager : {
-          title: 'Lead Manager with Django and React',
-          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. '
+        leadManager: {
+          title: "Lead Manager with Django and React",
+          text:
+            "Lead manager app made with Django and React, following a tutorial by Traversy Media. This was my first project implementing React with a Django backend (this portfolio being the second). I learned a great deal about Redux, Django APIs, and user authentication both in the frontend and the backend."
         }
       },
       contact: {
@@ -53,9 +54,10 @@ const resources = {
           source: "Fuente",
           nosource: "Fuente cerrada"
         },
-        leadManager : {
-          title: 'Gestor de contactos con Django y React',
-          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. '
+        leadManager: {
+          title: "Gestor de contactos con Django y React",
+          text:
+            "Gestor de contactos hecho con Django y React siguiendo un tutorial de Traversy Media. Este fue mi primer proyecto implementando React con un backend de Django (siendo este portfolio el segundo). Aprendí mucho sobre React Redux, APIs en Django y autenticación de usuarios tanto en el frontend como en el backend."
         }
       },
       contact: {
