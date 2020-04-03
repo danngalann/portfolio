@@ -1,0 +1,54 @@
+.project-container {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s;
+
+  &.onscreen {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .project-title {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .project {
+    display: flex;
+    max-height: 20%;
+    margin: 0 4rem;
+
+    .project-thumb {
+      padding: 0;
+      margin: auto;
+      width: 80%;
+
+      img {
+        min-width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+    }
+
+    .project-content {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      p {
+        padding: 0 12px;
+      }
+
+      .actions {
+        align-self: center;
+
+        button {
+          margin: 0 8px;
+
+          i {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}

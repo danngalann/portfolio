@@ -1,0 +1,27 @@
+@media only screen and (max-width: 600px) {
+  // Projects to a column
+  .project {
+    margin: 0;
+    flex-direction: column;
+
+    .project-thumb {
+      text-align: center;
+      img {
+        min-width: 60%;
+      }
+    }
+
+    // Reset project content to it's original order on phones
+    .project-content {
+      order: 1 !important;
+    }
+  }
+
+  // Contact to full with, no background
+  #contact form {
+    width: 100%;
+    padding: 2rem;
+    background: none;
+    box-shadow: none;
+  }
+}

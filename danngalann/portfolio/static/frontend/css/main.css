@@ -1,13 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-.justify {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* Nav */
 nav {
   background: none;
   position: fixed;
@@ -54,11 +44,10 @@ nav.nav-active i {
   color: black;
 }
 
-/* Hero */
 #hero {
   height: 100vh;
   width: 100%;
-  background-image: url("media/hero_bg.jpg");
+  background-image: url("../media/hero_bg.jpg");
   background-attachment: fixed;
   background-size: cover;
   display: -webkit-box;
@@ -154,8 +143,8 @@ nav.nav-active i {
 
 #about {
   width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("media/about_bg.jpg");
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("media/about_bg.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../media/about_bg.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/about_bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -208,4 +197,13 @@ nav.nav-active i {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
