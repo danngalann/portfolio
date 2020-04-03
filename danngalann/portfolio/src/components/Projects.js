@@ -16,6 +16,10 @@ export default function Projects({ setNavActive }) {
     threshold: 0.2
   });
 
+  useEffect(() => {
+    setNavActive(intersection && intersection.isIntersecting);
+  });
+
   // Projects
   const projects = [
     {
@@ -42,10 +46,6 @@ export default function Projects({ setNavActive }) {
       alternated: false
     }
   ];
-
-  useEffect(() => {
-    setNavActive(intersection && intersection.isIntersecting);
-  });
 
   return (
     <div id="projects" className="container" ref={projectSection}>

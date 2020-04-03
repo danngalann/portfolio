@@ -6,6 +6,7 @@ import Navbar from "./layout/Navbar";
 import Hero from "./Hero";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import About from "./About";
 
 class App extends Component {
   state = { navActive: false };
@@ -23,6 +24,7 @@ class App extends Component {
           <Navbar active={this.state.navActive} />
           <Hero />
           <Projects setNavActive={this.setNavActive} />
+          <About />
           <Contact />
         </Suspense>
       </div>

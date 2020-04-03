@@ -130,6 +130,25 @@ nav {
   }
 }
 
+// About
+#about {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media/about_bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 4vh;
+  margin: 8vh 0;
+
+  h2, p {
+    color: white;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
 // Contact
 #contact form {
   width: 80%;

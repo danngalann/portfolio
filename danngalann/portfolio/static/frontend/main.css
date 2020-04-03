@@ -136,6 +136,25 @@ nav.nav-active i {
   margin-right: 4px;
 }
 
+#about {
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("media/about_bg.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("media/about_bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 4vh;
+  margin: 8vh 0;
+}
+
+#about h2, #about p {
+  color: white;
+}
+
+#about p {
+  font-size: 1.2rem;
+}
+
 #contact form {
   width: 80%;
   margin: auto;
