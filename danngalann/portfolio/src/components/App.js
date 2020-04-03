@@ -1,4 +1,5 @@
-import React, { Component, Suspense } from "react";
+import React, { Component, Suspense, useRef, useEffect, useState } from "react";
+import { useIntersection } from "react-use";
 import ReactDOM from "react-dom";
 import "../i18n";
 
@@ -8,28 +9,41 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import About from "./About";
 
-class App extends Component {
-  state = { navActive: false };
+function App() {
+  const [state, setState] = useState({ navActive: false });
 
-  setNavActive = isActive => {
-    if(isActive != this.state.navActive){
-      this.setState({navActive: isActive});
-    }    
-  }
+  const setNavActive = isActive => {
+    if (isActive != state.navActive) {
+      setState({ navActive: isActive });
+    }
+  };
 
-  render() {
-    return (
-      <div>
-        <Suspense fallback={<div>Loading</div>}>
-          <Navbar active={this.state.navActive} />
-          <Hero />
-          <Projects setNavActive={this.setNavActive} />
+  // Intersections
+  const scrolled = useRef(null);
+
+  const intersection = useIntersection(scrolled, {
+    root: null,
+    rootMargin: "10%",
+    threshold: 0.2
+  });
+
+  useEffect(() => {
+    setNavActive(intersection && intersection.isIntersecting);
+  });
+
+  return (
+    <div>
+      <Suspense fallback={<div>Loading</div>}>
+        <Navbar active={state.navActive} />
+        <Hero />
+        <div ref={scrolled} style={{ border: "1px solid red" }}>
+          <Projects />
           <About />
           <Contact />
-        </Suspense>
-      </div>
-    );
-  }
+        </div>
+      </Suspense>
+    </div>
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById("app"));

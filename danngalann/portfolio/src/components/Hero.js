@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <div id="hero">
       <div className="container">
-          <div className="hero-content" ref={rellaxContent} data-rellax-speed="-3">
+          <div className="hero-content" ref={rellaxContent} data-rellax-speed="-4">
             {/* <h1 className="hero-title">{t("hero.title")}</h1> */}
             <h1 className="hero-title">danngalann</h1>
             <p className="hero-text">{t("hero.content")}</p>

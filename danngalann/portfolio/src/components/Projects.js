@@ -1,24 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { useIntersection } from "react-use";
 
 import Project from "./Project";
 
-export default function Projects({ setNavActive }) {
-  const { t, i18n } = useTranslation();
-
-  // Intersections
-  const projectSection = useRef(null);
-
-  const intersection = useIntersection(projectSection, {
-    root: null,
-    rootMargin: "10%",
-    threshold: 0.2
-  });
-
-  useEffect(() => {
-    setNavActive(intersection && intersection.isIntersecting);
-  });
+export default function Projects() {
+  const { t, i18n } = useTranslation();  
 
   // Projects
   const projects = [
@@ -48,7 +34,7 @@ export default function Projects({ setNavActive }) {
   ];
 
   return (
-    <div id="projects" className="container" ref={projectSection}>
+    <div id="projects" className="container">
       <h2 style={{ marginBottom: "4rem" }}>{t("projects.header")}</h2>
       {projects.map(project => {
         return <Project project={project} />;
