@@ -1,4 +1,4 @@
-import React, { Component, Suspense, useRef, useEffect, useState } from "react";
+import React, { Suspense, useRef, useEffect, useState } from "react";
 import { useIntersection } from "react-use";
 import ReactDOM from "react-dom";
 import "../i18n";
@@ -36,7 +36,7 @@ function App() {
       <Suspense fallback={<div>Loading</div>}>
         <Navbar active={state.navActive} />
         <Hero />
-        <div ref={scrolled} style={{ border: "1px solid red" }}>
+        <div ref={scrolled}>
           <Projects />
           <About />
           <Contact />

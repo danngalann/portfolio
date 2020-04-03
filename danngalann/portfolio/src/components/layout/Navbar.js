@@ -28,10 +28,10 @@ export default function Navbar({ active }) {
       {/* Side nav */}
       <ul className="sidenav" id="mobile-demo">
         <li>
-          <a href="#about">{t("nav.link1")}</a>
+          <a href="#projects">{t("nav.link2")}</a>
         </li>
         <li>
-          <a href="#projects">{t("nav.link2")}</a>
+          <a href="#about">{t("nav.link1")}</a>
         </li>
         <li>
           <a href="#contact">{t("nav.link3")}</a>
@@ -69,13 +69,13 @@ export default function Navbar({ active }) {
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a href="#about" className="nav-item">
-                  {t("nav.link1")}
+                <a href="#projects" className="nav-item">
+                  {t("nav.link2")}
                 </a>
               </li>
               <li>
-                <a href="#projects" className="nav-item">
-                  {t("nav.link2")}
+                <a href="#about" className="nav-item">
+                  {t("nav.link1")}
                 </a>
               </li>
               <li>

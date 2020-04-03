@@ -80,12 +80,28 @@ nav.nav-active i {
   max-width: 60%;
 }
 
-.project-title {
+.project-container {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.project-container.onscreen {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.project-container .project-title {
   text-align: center;
   margin-top: 4rem;
 }
 
-.project {
+.project-container .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,20 +109,20 @@ nav.nav-active i {
   margin: 0 4rem;
 }
 
-.project .project-thumb {
+.project-container .project .project-thumb {
   padding: 0;
   margin: auto;
   width: 80%;
 }
 
-.project .project-thumb img {
+.project-container .project .project-thumb img {
   min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
 }
 
-.project .project-content {
+.project-container .project .project-content {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -118,21 +134,21 @@ nav.nav-active i {
           flex-direction: column;
 }
 
-.project .project-content p {
+.project-container .project .project-content p {
   padding: 0 12px;
 }
 
-.project .project-content .actions {
+.project-container .project .project-content .actions {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.project .project-content .actions button {
+.project-container .project .project-content .actions button {
   margin: 0 8px;
 }
 
-.project .project-content .actions button i {
+.project-container .project .project-content .actions button i {
   margin-right: 4px;
 }
 
@@ -147,7 +163,8 @@ nav.nav-active i {
   margin: 8vh 0;
 }
 
-#about h2, #about p {
+#about h2,
+#about p {
   color: white;
 }
 

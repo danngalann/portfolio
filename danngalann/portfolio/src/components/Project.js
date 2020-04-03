@@ -1,11 +1,30 @@
-import React, { Fragment } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { useIntersection } from "react-use";
 import { useTranslation } from "react-i18next";
 
 export default function Project(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { title, text, demo, source, alternated } = props.project;
+  const project = useRef(null);
 
-  // Returns a button depending 
+  const [state, setState] = useState({ onscreen: false });
+
+  // Intersections
+  const intersection = useIntersection(project, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+    once: true
+  });
+
+  // Animation
+  const show = () => {
+    if (!state.onscreen) setState({ onscreen: true });
+  };
+
+  if (intersection && intersection.isIntersecting) show(); // If intersecting with the screen, update the state so the .onscreen class is added to the project container
+
+  // Returns a button depending
   const getSourceBtn = source => {
     if (!source) {
       return (
@@ -27,7 +46,10 @@ export default function Project(props) {
   };
 
   return (
-    <Fragment>
+    <div
+      ref={project}
+      className={state.onscreen ? "project-container onscreen" : "project-container"}
+    >
       <h4 className="project-title">{title}</h4>
       <div className="project">
         <div className="project-thumb">
@@ -48,6 +70,6 @@ export default function Project(props) {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }

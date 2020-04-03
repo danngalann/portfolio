@@ -87,43 +87,55 @@ nav {
 }
 
 // Projects
-.project-title {
-  text-align: center;
-  margin-top: 4rem;
-}
-.project {
-  display: flex;
-  max-height: 20%;
-  margin: 0 4rem;
+.project-container {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s;
 
-  .project-thumb {
-    padding: 0;
-    margin: auto;
-    width: 80%;
-
-    img {
-      min-width: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
+  &.onscreen {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 0.8s;
   }
 
-  .project-content {
-    align-self: center;
+  .project-title {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .project {
     display: flex;
-    flex-direction: column;
-    p {
-      padding: 0 12px;
+    max-height: 20%;
+    margin: 0 4rem;
+
+    .project-thumb {
+      padding: 0;
+      margin: auto;
+      width: 80%;
+
+      img {
+        min-width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
     }
 
-    .actions {
+    .project-content {
       align-self: center;
+      display: flex;
+      flex-direction: column;
+      p {
+        padding: 0 12px;
+      }
 
-      button {
-        margin: 0 8px;
+      .actions {
+        align-self: center;
 
-        i {
-          margin-right: 4px;
+        button {
+          margin: 0 8px;
+
+          i {
+            margin-right: 4px;
+          }
         }
       }
     }
@@ -133,14 +145,16 @@ nav {
 // About
 #about {
   width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media/about_bg.jpg');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("media/about_bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   padding: 4vh;
   margin: 8vh 0;
 
-  h2, p {
+  h2,
+  p {
     color: white;
   }
 
@@ -156,6 +170,7 @@ nav {
   padding: 4rem;
   border-radius: 15px;
   background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  // background: linear-gradient(145deg, #ffffff, #f0f0f0);
   box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
 }
 
@@ -182,7 +197,7 @@ nav {
   // Contact
   #contact form {
     width: 100%;
-    padding: 2rem ;
+    padding: 2rem;
     background: none;
     box-shadow: none;
   }
