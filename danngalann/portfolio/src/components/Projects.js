@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Project from "./Project";
 
 export default function Projects() {
-  const { t, i18n } = useTranslation();  
+  const { t } = useTranslation();  
 
   // Projects
   const projects = [
@@ -14,24 +14,25 @@ export default function Projects() {
       text: t("projects.leadManager.text"),
       demo: "http://djangoreactleadmanager.pythonanywhere.com",
       source: "https://github.com/danngalann/react-django-leads",
+      imgsrc: "/static/frontend/media/projects/leadmanager.jpg",
       alternated: false
     },
     {
       id: 2,
-      title: "Project 2",
-      text:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo.",
-      demo: "#",
-      source: "#",
+      title: "Portfolio",
+      text: t("projects.portfolio.text"),
+      demo: "#!",
+      source: null,
+      imgsrc: "https://picsum.photos/300/200",
       alternated: true
     },
     {
       id: 3,
-      title: "Project 3",
-      text:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis unde, quidem minima accusantium rem odit provident eaque! Aut, quo.",
-      demo: "#",
-      source: null,
+      title: t("projects.notes.title"),
+      text:t("projects.notes.text"),
+      demo: "https://react-notes.neocities.org",
+      source: "https://github.com/danngalann/react-notes",
+      imgsrc: "/static/frontend/media/projects/notes.jpg",
       alternated: false
     }
   ];

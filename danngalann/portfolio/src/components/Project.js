@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Project(props) {
   const { t } = useTranslation();
-  const { title, text, demo, source, alternated } = props.project;
+  const { title, text, demo, source, imgsrc, alternated } = props.project;
   const project = useRef(null);
 
   const [state, setState] = useState({ onscreen: false });
@@ -53,7 +53,7 @@ export default function Project(props) {
       <h4 className="project-title">{title}</h4>
       <div className="project">
         <div className="project-thumb">
-          <img src="https://picsum.photos/300/200" alt="project-thumbnail" />
+          <img src={imgsrc} alt="project-thumbnail" />
         </div>
         <div
           className="project-content"

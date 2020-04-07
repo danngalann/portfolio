@@ -87,7 +87,7 @@ nav.nav-active i {
 
 .project-container .project-title {
   text-align: center;
-  margin-top: 4rem;
+  margin: 4rem 0 2rem 0;
 }
 
 .project-container .project {
@@ -101,11 +101,11 @@ nav.nav-active i {
 .project-container .project .project-thumb {
   padding: 0;
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .project-container .project .project-thumb img {
-  min-width: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
