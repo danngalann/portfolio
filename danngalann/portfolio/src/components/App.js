@@ -8,11 +8,13 @@ import Hero from "./Hero";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import About from "./About";
+import Load from "./Load";
 
 function App() {
   const [state, setState] = useState({ navActive: false });
 
-  const setNavActive = isActive => {
+  // Changes state when the user scrolls to the intersection observer
+  const setNavActive = (isActive) => {
     if (isActive != state.navActive) {
       setState({ navActive: isActive });
     }
@@ -24,7 +26,7 @@ function App() {
   const intersection = useIntersection(scrolled, {
     root: null,
     rootMargin: "10%",
-    threshold: 0.2
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -34,6 +36,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading</div>}>
+        <Load />
         <Navbar active={state.navActive} />
         <Hero />
         <div ref={scrolled}>
