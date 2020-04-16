@@ -24,7 +24,7 @@ export default function Project(props) {
 
   if (intersection && intersection.isIntersecting) show(); // If intersecting with the screen, update the state so the .onscreen class is added to the project container
 
-  // Returns a button depending
+  // Returns a button depending on the source
   const getSourceBtn = source => {
     if (!source) {
       return (
@@ -35,7 +35,7 @@ export default function Project(props) {
       );
     } else {
       return (
-        <a href={source} target="_blank">
+        <a href={source} target="_blank" rel="noreferrer noopener">
           <button className="btn-small waves-effect waves-light blue">
             <i className="fab fa-github"></i>
             {t("projects.content.source")}
@@ -61,7 +61,7 @@ export default function Project(props) {
         >
           <p className="justify">{text}</p>
           <div className="actions">
-            <a href={demo} target="_blank">
+            <a href={demo} target="_blank" rel="noreferrer noopener">
               <button className="btn-small waves-effect waves-light blue">
                 <i className="fas fa-desktop"></i>Demo
               </button>

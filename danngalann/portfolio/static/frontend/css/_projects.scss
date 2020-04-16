@@ -1,3 +1,4 @@
+// React and Django Projects
 .project-container {
   transform: translateY(50px);
   opacity: 0;
@@ -51,4 +52,14 @@
       }
     }
   }
+}
+
+// Card Project Carousel
+#smallprojects {
+  margin-top: 5vh;
+}
+
+// Card projects
+.card {
+  max-width: 300px;
 }

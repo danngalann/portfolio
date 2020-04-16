@@ -191,6 +191,14 @@ nav.nav-active i {
   margin-right: 4px;
 }
 
+#smallprojects {
+  margin-top: 5vh;
+}
+
+.card {
+  max-width: 300px;
+}
+
 #about {
   width: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../media/about_bg.jpg");
@@ -251,7 +259,6 @@ nav.nav-active i {
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 .justify {

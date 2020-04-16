@@ -36,7 +36,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading</div>}>
-        <Load />
+        {/* <Load /> */}
         <Navbar active={state.navActive} />
         <Hero />
         <div ref={scrolled}>
