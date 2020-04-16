@@ -127,12 +127,21 @@ nav.nav-active i {
   text-align: center;
 }
 
+#projects .project-section-header {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .project-container {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin: 3rem 0;
 }
 
 .project-container.onscreen {
@@ -145,7 +154,7 @@ nav.nav-active i {
 
 .project-container .project-title {
   text-align: center;
-  margin: 4rem 0 2rem 0;
+  font-size: 1.5rem;
 }
 
 .project-container .project {
@@ -200,9 +209,10 @@ nav.nav-active i {
 }
 
 #smallprojects .carousel {
-  height: 60vh;
-  margin: 5vh 0;
+  height: 50vh;
   width: 100%;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 #smallprojects .carousel .carousel-item {

@@ -7,6 +7,14 @@
     font-size: 2.5rem;
     text-align: center;
   }
+
+  .project-section-header {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 // React and Django Projects
@@ -14,6 +22,7 @@
   transform: translateY(50px);
   opacity: 0;
   transition: all 0.5s;
+  margin: 3rem 0;
 
   &.onscreen {
     transform: translateY(0px);
@@ -23,7 +32,7 @@
 
   .project-title {
     text-align: center;
-    margin: 4rem 0 2rem 0;
+    font-size: 1.5rem;
   }
   .project {
     display: flex;
@@ -68,9 +77,9 @@
 // Card Project Carousel
 #smallprojects {
   .carousel {
-    height: 60vh;
-    margin: 5vh 0;
+    height: 50vh; 
     width: 100%;
+    transform: translateY(-20%);
 
     .carousel-item {
       width: auto;
