@@ -38,7 +38,7 @@ export default function ProjectCard(props) {
             <i className="fas fa-desktop"></i>Demo
           </button>
         </a>
-        {getSourceBtn()}
+        {getSourceBtn(source)}
       </div>
     </div>
   );

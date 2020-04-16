@@ -13,8 +13,7 @@ export default function Projects() {
   const projects = bigProjects();
 
   useEffect(() => {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {indicators:true, padding: 20});
+    $(".carousel").carousel({ indicators: true, padding: 20 });
   }, []);
 
   return (
