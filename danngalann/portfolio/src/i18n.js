@@ -19,6 +19,10 @@ const resources = {
       },
       projects: {
         header: "Projects",
+        subheaders: {
+          big:"React and Django",
+          small:"Other JS Projects"
+        },
         content: {
           source: "Source",
           nosource: "Closed source",
@@ -63,6 +67,10 @@ const resources = {
       },
       projects: {
         header: "Proyectos",
+        subheaders: {
+          big:"React y Django",
+          small:"Otros proyectos JS"
+        },
         content: {
           source: "Fuente",
           nosource: "Fuente cerrada",
