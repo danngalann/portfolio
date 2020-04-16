@@ -56,10 +56,26 @@
 
 // Card Project Carousel
 #smallprojects {
-  margin-top: 5vh;
+
+  .carousel {
+    height: 55vh;
+    width: 100%;
+
+    .carousel-item {
+      width: auto;
+    }
+
+    .indicators .indicator-item {
+      background: rgba(0,0,0,.3);
+
+      &.active {
+        background: black;
+      }
+    }
+  }
 }
 
 // Card projects
 .card {
-  max-width: 300px;
+  max-width: 400px;
 }

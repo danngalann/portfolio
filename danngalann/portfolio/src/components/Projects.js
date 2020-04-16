@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import Project from "./Project";
@@ -12,6 +12,11 @@ export default function Projects() {
   // Projects
   const projects = bigProjects();
 
+  useEffect(() => {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {indicators:true, padding: 20});
+  }, []);
+
   return (
     <section id="projects" className="container">
       <h2 style={{ marginBottom: "4rem" }}>{t("projects.header")}</h2>
@@ -21,7 +26,58 @@ export default function Projects() {
         })}
       </div>
       <div id="smallprojects">
-        <ProjectCard project={{title:"Project 1", img:"https://picsum.photos/300/200", demo:"#!", source:null}} />
+        <div className="carousel">
+          <div className="carousel-item">
+            <ProjectCard
+              project={{
+                title: "Project 1",
+                img: "https://picsum.photos/300/200",
+                demo: "#!",
+                source: null,
+              }}
+            />
+          </div>
+          <div className="carousel-item">
+            <ProjectCard
+              project={{
+                title: "Project 1",
+                img: "https://picsum.photos/300/200",
+                demo: "#!",
+                source: null,
+              }}
+            />
+          </div>
+          <div className="carousel-item">
+            <ProjectCard
+              project={{
+                title: "Project 1",
+                img: "https://picsum.photos/300/200",
+                demo: "#!",
+                source: null,
+              }}
+            />
+          </div>
+          <div className="carousel-item">
+            <ProjectCard
+              project={{
+                title: "Project 1",
+                img: "https://picsum.photos/300/200",
+                demo: "#!",
+                source: null,
+              }}
+            />
+          </div>
+          <div className="carousel-item">
+            <ProjectCard
+              project={{
+                title: "Project 1",
+                img: "https://picsum.photos/300/200",
+                demo: "#!",
+                source: null,
+              }}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

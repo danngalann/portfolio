@@ -191,12 +191,25 @@ nav.nav-active i {
   margin-right: 4px;
 }
 
-#smallprojects {
-  margin-top: 5vh;
+#smallprojects .carousel {
+  height: 55vh;
+  width: 100%;
+}
+
+#smallprojects .carousel .carousel-item {
+  width: auto;
+}
+
+#smallprojects .carousel .indicators .indicator-item {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#smallprojects .carousel .indicators .indicator-item.active {
+  background: black;
 }
 
 .card {
-  max-width: 300px;
+  max-width: 400px;
 }
 
 #about {
