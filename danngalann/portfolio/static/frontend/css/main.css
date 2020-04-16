@@ -119,6 +119,14 @@ nav.nav-active i {
   max-width: 60%;
 }
 
+#projects #projects-header {
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
 .project-container {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
@@ -192,7 +200,8 @@ nav.nav-active i {
 }
 
 #smallprojects .carousel {
-  height: 55vh;
+  height: 60vh;
+  margin: 5vh 0;
   width: 100%;
 }
 
@@ -223,6 +232,10 @@ nav.nav-active i {
   margin: 8vh 0;
 }
 
+#about h2 {
+  font-size: 2.8rem;
+}
+
 #about h2,
 #about p {
   color: white;
@@ -230,6 +243,14 @@ nav.nav-active i {
 
 #about p {
   font-size: 1.2rem;
+}
+
+#contact h2 {
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 #contact form {

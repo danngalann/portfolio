@@ -1,3 +1,14 @@
+// Projects section
+#projects {
+  #projects-header {
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
 // React and Django Projects
 .project-container {
   transform: translateY(50px);
@@ -56,20 +67,22 @@
 
 // Card Project Carousel
 #smallprojects {
-
   .carousel {
-    height: 55vh;
+    height: 60vh;
+    margin: 5vh 0;
     width: 100%;
 
     .carousel-item {
       width: auto;
     }
 
-    .indicators .indicator-item {
-      background: rgba(0,0,0,.3);
+    .indicators {
+      .indicator-item {
+        background: rgba(0, 0, 0, 0.3);
 
-      &.active {
-        background: black;
+        &.active {
+          background: black;
+        }
       }
     }
   }

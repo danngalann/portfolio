@@ -13,12 +13,12 @@ export default function Projects() {
   const projects = bigProjects();
 
   useEffect(() => {
-    $(".carousel").carousel({ indicators: true, padding: 20 });
+    $(".carousel").carousel({ padding: 20 });
   }, []);
 
   return (
     <section id="projects" className="container">
-      <h2 style={{ marginBottom: "4rem" }}>{t("projects.header")}</h2>
+      <h1 id="projects-header">{t("projects.header")}</h1>
       <div id="bigprojects">
         {projects.map((project) => {
           return <Project key={project.id} project={project} />;

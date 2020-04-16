@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div id="about">
       <div className="container">
-        <h2 style={{ marginBottom: "4rem" }}>{t("about.title")}</h2>
+        <h2>{t("about.title")}</h2>
         <p className="justify">{t("about.text")}</p>
       </div>
     </div>

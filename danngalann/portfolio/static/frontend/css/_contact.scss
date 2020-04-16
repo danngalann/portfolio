@@ -1,9 +1,18 @@
-#contact form {
-  width: 80%;
-  margin: auto;
-  padding: 4rem;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #f0f0f0, #ffffff);
-  // background: linear-gradient(145deg, #ffffff, #f0f0f0);
-  box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
+#contact {
+  h2 {
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+    padding: 4rem;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    // background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
+  }
 }
