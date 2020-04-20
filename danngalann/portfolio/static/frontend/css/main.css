@@ -273,6 +273,69 @@ nav.nav-active i {
           box-shadow: 23px 23px 46px #f0f0f0, -23px -23px 46px #ffffff;
 }
 
+#footer {
+  color: white;
+  background: #222;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 8vh;
+}
+
+#footer .footer-section {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer .footer-section > div {
+  margin: 0;
+}
+
+#footer .footer-section i,
+#footer .footer-section a {
+  color: white;
+}
+
+#footer .footer-section i {
+  font-size: 1.4rem;
+  padding: 15px;
+  margin: 0 4px;
+  background: #444;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#footer .footer-section i:hover {
+  background: #666;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#footer .footer-section .footer-atr {
+  font-size: 0.8rem;
+}
+
 @media only screen and (max-width: 600px) {
   .project {
     margin: 0 !important;
@@ -301,6 +364,12 @@ nav.nav-active i {
     background: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  #footer {
+    height: 25vh;
+  }
+  #footer .footer-section {
+    margin: 10px 0;
   }
 }
 

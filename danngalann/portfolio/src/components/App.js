@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import About from "./About";
 import Load from "./Load";
+import Footer from "./Footer";
 
 function App() {
   const [state, setState] = useState({ navActive: false });
@@ -43,6 +44,7 @@ function App() {
           <Projects />
           <About />
           <Contact />
+          <Footer />
         </div>
       </Suspense>
     </div>

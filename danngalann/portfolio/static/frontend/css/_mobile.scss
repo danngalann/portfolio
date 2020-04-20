@@ -14,7 +14,7 @@
     // Reset project content to it's original order on phones
     .project-content {
       order: 1 !important;
-    }    
+    }
   }
 
   // Hide card project carousel
@@ -28,5 +28,14 @@
     padding: 2rem;
     background: none;
     box-shadow: none;
+  }
+
+  // Add space to footer
+  #footer {
+    height: 25vh;
+
+    .footer-section {
+      margin: 10px 0;
+    }
   }
 }

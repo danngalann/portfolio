@@ -19,14 +19,19 @@ export default function Projects() {
   return (
     <section id="projects" className="container">
       <h1 id="projects-header">{t("projects.header")}</h1>
-      <div className="project-section-header">{t("projects.subheaders.big")}</div>
       <div id="bigprojects">
+        <div className="project-section-header">
+          {t("projects.subheaders.big")}
+        </div>
         {projects.map((project) => {
           return <Project key={project.id} project={project} />;
         })}
       </div>
-      <div className="project-section-header">{t("projects.subheaders.small")}</div>
+
       <div id="smallprojects">
+        <div className="project-section-header">
+          {t("projects.subheaders.small")}
+        </div>
         <div className="carousel">
           <div className="carousel-item">
             <ProjectCard
