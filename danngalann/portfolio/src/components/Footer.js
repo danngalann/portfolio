@@ -5,16 +5,36 @@ export default function Footer() {
     <footer id="footer">
       <div className="footer-section">
         <div className="row">
-          <a href="#!" className="col s3">
-            <i className="fab fa-twitter"></i>
+          <a
+            href="https://github.com/danngalann"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col s3"
+          >
+            <i className="fab fa-github"></i>
           </a>
-          <a href="#!" className="col s3">
-            <i className="fab fa-twitter"></i>
+          <a
+            href="https://www.linkedin.com/in/daniel-galan-navio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col s3"
+          >
+            <i className="fab fa-linkedin-in"></i>
           </a>
-          <a href="#!" className="col s3">
-            <i className="fab fa-twitter"></i>
+          <a
+            href="https://www.instagram.com/dangalann_ps/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col s3"
+          >
+            <i className="fab fa-instagram"></i>
           </a>
-          <a href="#!" className="col s3">
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col s3"
+          >
             <i className="fab fa-twitter"></i>
           </a>
         </div>
