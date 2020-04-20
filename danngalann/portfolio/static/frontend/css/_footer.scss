@@ -42,6 +42,10 @@
     // Make attributions smaller
     .footer-atr{
       font-size: 0.8rem;
+
+      a {
+        color: #BBB;
+      }
     }
   }
 }

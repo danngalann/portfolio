@@ -336,6 +336,10 @@ nav.nav-active i {
   font-size: 0.8rem;
 }
 
+#footer .footer-section .footer-atr a {
+  color: #BBB;
+}
+
 @media only screen and (max-width: 600px) {
   .project {
     margin: 0 !important;

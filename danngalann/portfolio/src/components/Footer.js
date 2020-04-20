@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer id="footer">
       <div className="footer-section">
@@ -41,7 +44,7 @@ export default function Footer() {
       </div>
       <div className="footer-section">
         <div className="footer-copy">
-          &copy;danngalann {new Date().getFullYear()}. All rights reserved.{" "}
+          &copy;danngalann {new Date().getFullYear()}. {t("footer.rights")}
         </div>
         <div className="footer-atr">
           Icons made by{" "}
