@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export default function ProjectCard(props) {
   const { t } = useTranslation();
-  const { title, img, demo, source } = props.project;
+  const { title, imgsrc, demo, source } = props.project;
 
   // Returns a button depending on the source
   const getSourceBtn = (source) => {
@@ -29,7 +29,8 @@ export default function ProjectCard(props) {
   return (
     <div className="card">
       <div className="card-image">
-        <img src={img} />
+        <div className="card-image-overlay"></div>
+        <img src={imgsrc} />
         <span className="card-title">{title}</span>
       </div>
       <div className="card-action">

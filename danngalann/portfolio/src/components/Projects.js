@@ -5,12 +5,14 @@ import Project from "./Project";
 import ProjectCard from "./ProjectCard";
 
 import bigProjects from "../content/bigProjects";
+import smallProjects from "../content/smallProjects";
 
 export default function Projects() {
   const { t } = useTranslation();
 
   // Projects
   const projects = bigProjects();
+  const sprojects = smallProjects();
 
   useEffect(() => {
     $(".carousel").carousel({ padding: 20 });
@@ -33,56 +35,13 @@ export default function Projects() {
           {t("projects.subheaders.small")}
         </div>
         <div className="carousel">
-          <div className="carousel-item">
-            <ProjectCard
-              project={{
-                title: "Project 1",
-                img: "https://picsum.photos/300/200",
-                demo: "#!",
-                source: null,
-              }}
-            />
-          </div>
-          <div className="carousel-item">
-            <ProjectCard
-              project={{
-                title: "Project 1",
-                img: "https://picsum.photos/300/200",
-                demo: "#!",
-                source: null,
-              }}
-            />
-          </div>
-          <div className="carousel-item">
-            <ProjectCard
-              project={{
-                title: "Project 1",
-                img: "https://picsum.photos/300/200",
-                demo: "#!",
-                source: null,
-              }}
-            />
-          </div>
-          <div className="carousel-item">
-            <ProjectCard
-              project={{
-                title: "Project 1",
-                img: "https://picsum.photos/300/200",
-                demo: "#!",
-                source: null,
-              }}
-            />
-          </div>
-          <div className="carousel-item">
-            <ProjectCard
-              project={{
-                title: "Project 1",
-                img: "https://picsum.photos/300/200",
-                demo: "#!",
-                source: null,
-              }}
-            />
-          </div>
+        {sprojects.map((project) => {
+          return (
+            <div className="carousel-item">
+              <ProjectCard key={project.id} project={project} />
+            </div>
+          );
+        })}
         </div>
       </div>
     </section>
