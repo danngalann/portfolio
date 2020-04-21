@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading</div>}>
-        {/* <Load /> */}
+        {performance.navigation.type != 1 ? <Load /> : null}
         <Navbar active={state.navActive} />
         <Hero />
         <div ref={scrolled}>

@@ -6,12 +6,17 @@ export default function Load() {
   const tl = gsap.timeline();
 
   useEffect(() => {
+    pin();
     animateSgv("loadSvg", 0, 0.14);
-    tl.to(page.current, { duration: 0.5, delay: 3, y: -900 }).to(page.current, {
-      duration: 2.4,
-      height: 0,
-      onComplete: unpin,
-    }, 1.5);
+    tl.to(page.current, { duration: 0.5, delay: 3, y: -900 }).to(
+      page.current,
+      {
+        duration: 2.4,
+        height: 0,
+        onComplete: unpin,
+      },
+      1.5
+    );
   }, []);
 
   function animateSgv(id, delay, delayIncrement) {
@@ -27,6 +32,10 @@ export default function Load() {
     logo.style.animation = `fill .5s ease forwards ${delay}s`;
   }
 
+  // Block scroll before animation is finished
+  function pin() {
+    document.querySelector("html").style.overflow = "hidden";
+  }
   // Allow scroll after animation is finished
   function unpin() {
     document.querySelector("html").style.overflow = "auto";

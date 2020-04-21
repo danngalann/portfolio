@@ -47,7 +47,7 @@ export default function Footer() {
           &copy;danngalann {new Date().getFullYear()}. {t("footer.rights")}
         </div>
         <div className="footer-atr">
-          Icons made by{" "}
+          Favicon made by{" "}
           <a
             href="https://www.flaticon.com/authors/kiranshastry"
             title="Kiranshastry"
