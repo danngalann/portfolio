@@ -38,14 +38,16 @@ function App() {
     <div>
       <Suspense fallback={<div>Loading</div>}>
         {performance.navigation.type != 1 ? <Load /> : null}
-        <Navbar active={state.navActive} />
-        <Hero />
-        <div ref={scrolled}>
+        <header>
+          <Navbar active={state.navActive} />
+          <Hero />
+        </header>
+        <main ref={scrolled}>
           <Projects />
           <About />
           <Contact />
-          <Footer />
-        </div>
+        </main>
+        <Footer />
       </Suspense>
     </div>
   );
