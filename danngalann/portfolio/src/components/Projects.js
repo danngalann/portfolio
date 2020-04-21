@@ -22,9 +22,9 @@ export default function Projects() {
     <section id="projects" className="container">
       <h1 id="projects-header">{t("projects.header")}</h1>
       <div id="bigprojects">
-        <div className="project-section-header">
+        {/* <div className="project-section-header">
           {t("projects.subheaders.big")}
-        </div>
+        </div> */}
         {projects.map((project) => {
           return <Project key={project.id} project={project} />;
         })}
