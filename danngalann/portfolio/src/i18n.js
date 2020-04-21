@@ -21,7 +21,7 @@ const resources = {
         header: "Projects",
         subheaders: {
           big: "React and Django",
-          small: "Other JS Projects",
+          small: "Other web Projects",
         },
         content: {
           source: "Source",
@@ -75,7 +75,7 @@ const resources = {
         header: "Proyectos",
         subheaders: {
           big: "React y Django",
-          small: "Otros proyectos JS",
+          small: "Otros proyectos web",
         },
         content: {
           source: "Fuente",
