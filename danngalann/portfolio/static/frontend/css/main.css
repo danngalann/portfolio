@@ -59,6 +59,10 @@ nav {
   z-index: 10;
 }
 
+nav .dropdown-content > li > a {
+  color: black;
+}
+
 nav .translate-icon {
   font-size: 1.4rem;
 }

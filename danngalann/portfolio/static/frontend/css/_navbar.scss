@@ -6,6 +6,10 @@ nav {
   transition: all 0.4s;
   z-index: 10;
 
+  .dropdown-content > li > a {
+    color: black;
+  }
+
   .translate-icon {
     font-size: 1.4rem;
   }
