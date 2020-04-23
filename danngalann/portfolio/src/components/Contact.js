@@ -6,7 +6,7 @@ export default function Contact() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div id="contact" className="container">
+    <section id="contact" className="container">
       <h2>{t("contact.header")}</h2>
       <form action="/email" method="POST" className="container">
         <div className="row input-field">
@@ -35,6 +35,6 @@ export default function Contact() {
           <i className="material-icons right">send</i>
         </button>
       </form>
-    </div>
+    </section>
   );
 }
