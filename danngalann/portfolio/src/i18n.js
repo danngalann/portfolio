@@ -22,6 +22,7 @@ const resources = {
         subheaders: {
           big: "React and Django",
           small: "Other web Projects",
+          ai: "Machine Learning and Computer Vision"
         },
         content: {
           source: "Source",
@@ -76,6 +77,7 @@ const resources = {
         subheaders: {
           big: "React y Django",
           small: "Otros proyectos web",
+          ai: "Aprendizaje automático y Visión Computerizada"
         },
         content: {
           source: "Fuente",

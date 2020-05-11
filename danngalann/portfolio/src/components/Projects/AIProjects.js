@@ -19,13 +19,20 @@ export default function AIProjects({ projects }) {
 
   return (
     <div id="aiprojects">
-      <div className="project-section-header">AI</div>
+      <div className="project-section-header">
+        {t("projects.subheaders.ai")}
+      </div>
       <div className="project-gallery">
         {currProjects.map((project) => {
           return <ProjectCard key={project.id} project={project} />;
         })}
       </div>
-      <Pagination nPerPage={projectsPerPage} nTotal={projects.length} currPage={currPage} paginate={paginate} />
+      <Pagination
+        nPerPage={projectsPerPage}
+        nTotal={projects.length}
+        currPage={currPage}
+        paginate={paginate}
+      />
     </div>
   );
 }
