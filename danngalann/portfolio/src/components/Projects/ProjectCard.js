@@ -26,13 +26,27 @@ export default function ProjectCard(props) {
     }
   };
 
+  // Returns a button depeding on the source
+  const getDemoBtn = (demo) => {
+    if (!demo) {
+      return null;
+    } else {
+      return (
+        <a href={demo} target="_blank" rel="noreferrer noopener">
+          <button className="btn-small waves-effect waves-light blue">
+            <i className="fas fa-desktop"></i>Demo
+          </button>
+        </a>
+      );
+    }
+  };
+
   // Return HTML for image cards and non-image cards
   const getContent = (source) => {
-    if (!source) {      
+    if (!source) {
       return (
         <div className="card-content">
           <span className="card-title">{title}</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero recusandae sed vero at tempora atque quam optio adipisci saepe assumenda.</p>
         </div>
       );
     } else {
@@ -50,11 +64,7 @@ export default function ProjectCard(props) {
     <div className="card">
       {getContent(imgsrc)}
       <div className="card-action">
-        <a href={demo} target="_blank" rel="noreferrer noopener">
-          <button className="btn-small waves-effect waves-light blue">
-            <i className="fas fa-desktop"></i>Demo
-          </button>
-        </a>
+        {getDemoBtn(demo)}
         {getSourceBtn(source)}
       </div>
     </div>
