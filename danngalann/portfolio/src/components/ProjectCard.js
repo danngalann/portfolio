@@ -26,13 +26,29 @@ export default function ProjectCard(props) {
     }
   };
 
+  // Return HTML for image cards and non-image cards
+  const getContent = (source) => {
+    if (!source) {      
+      return (
+        <div className="card-content">
+          <span className="card-title">{title}</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero recusandae sed vero at tempora atque quam optio adipisci saepe assumenda.</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="card-image">
+          <div className="card-image-overlay"></div>
+          <img src={imgsrc} />
+          <span className="card-title">{title}</span>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="card">
-      <div className="card-image">
-        <div className="card-image-overlay"></div>
-        <img src={imgsrc} />
-        <span className="card-title">{title}</span>
-      </div>
+      {getContent(imgsrc)}
       <div className="card-action">
         <a href={demo} target="_blank" rel="noreferrer noopener">
           <button className="btn-small waves-effect waves-light blue">

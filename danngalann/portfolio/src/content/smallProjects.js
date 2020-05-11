@@ -53,5 +53,12 @@ export default function smallProjects() {
       source: "https://github.com/danngalann/react-gsap-hero-section",
       imgsrc: "/static/frontend/media/projects/gsap-hero.png",
     },
+    {
+      id: 8,
+      title: "TEST",
+      demo: "https://react-gsap-hero-section.neocities.org",
+      source: "https://github.com/danngalann/react-gsap-hero-section",
+      imgsrc: null,
+    },
   ];
 }
