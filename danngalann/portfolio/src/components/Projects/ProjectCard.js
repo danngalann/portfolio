@@ -46,7 +46,7 @@ export default function ProjectCard(props) {
     if (!source) {
       return (
         <div className="card-content">
-          <span className="card-title">{title}</span>
+          <span className="card-title white-text">{title}</span>
         </div>
       );
     } else {
@@ -61,7 +61,7 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <div className="card">
+    <div className="card blue-grey">
       {getContent(imgsrc)}
       <div className="card-action">
         {getDemoBtn(demo)}
