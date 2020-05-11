@@ -7,6 +7,7 @@ import AIProjects from "./AIProjects";
 
 import bigProjects from "../../content/bigProjects";
 import smallProjects from "../../content/smallProjects";
+import aiProjects from "../../content/aiProjects";
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ export default function Projects() {
   // Projects
   const projects = bigProjects();
   const sprojects = smallProjects();
+  const aicvProjects = aiProjects();
 
   useEffect(() => {
     $(".carousel").carousel({ padding: 20 });
@@ -46,7 +48,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <AIProjects projects={sprojects} />
+      <AIProjects projects={aicvProjects} />
     </section>
   );
 }
