@@ -5,8 +5,8 @@ import Project from "./Project";
 import ProjectCard from "./ProjectCard";
 import AIProjects from "./AIProjects";
 
-import bigProjects from "../content/bigProjects";
-import smallProjects from "../content/smallProjects";
+import bigProjects from "../../content/bigProjects";
+import smallProjects from "../../content/smallProjects";
 
 export default function Projects() {
   const { t } = useTranslation();

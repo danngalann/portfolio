@@ -6,7 +6,7 @@ import "../i18n";
 import Navbar from "./layout/Navbar";
 import Hero from "./Hero";
 import Contact from "./Contact";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import About from "./About";
 import Load from "./Load";
 import Footer from "./Footer";
