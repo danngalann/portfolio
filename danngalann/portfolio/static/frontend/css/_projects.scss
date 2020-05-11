@@ -124,3 +124,19 @@
     }
   }
 }
+
+// Project Gallery
+.project-gallery {
+
+  margin-top: 3rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  transition: height .4s;
+
+  .card {
+    max-width: 350px;
+  }
+}
