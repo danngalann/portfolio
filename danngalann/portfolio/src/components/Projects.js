@@ -37,8 +37,8 @@ export default function Projects() {
         <div className="carousel">
         {sprojects.map((project) => {
           return (
-            <div className="carousel-item">
-              <ProjectCard key={project.id} project={project} />
+            <div className="carousel-item" key={project.id} >
+              <ProjectCard project={project} />
             </div>
           );
         })}

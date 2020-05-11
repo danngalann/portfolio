@@ -33,12 +33,12 @@ export default function Footer() {
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="#!"
+            href="https://www.kaggle.com/danngalann"
             target="_blank"
             rel="noopener noreferrer"
             className="col s3"
           >
-            <i className="fab fa-twitter"></i>
+            <i style={{width: 50.31}} className="fab fa-kaggle"></i>
           </a>
         </div>
       </div>
