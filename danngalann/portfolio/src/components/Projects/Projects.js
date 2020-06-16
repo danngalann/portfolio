@@ -24,12 +24,12 @@ export default function Projects() {
   useEffect(() => {
     $(".carousel").carousel({ padding: 20 });
     gsap.from(".project-container", {
-      scrollTrigger: ".project-container",
+      scrollTrigger: { trigger: ".project-container"},
       y: 200,
       opacity: 0,
       stagger: 0.15,
-      duration: .4
-    })
+      duration: 0.4,
+    });
   }, []);
 
   return (

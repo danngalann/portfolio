@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading</div>}>
-        {performance.navigation.type != 1 ? <Load /> : null}
+        {/* {performance.navigation.type != 1 ? <Load /> : null} */}
         <header>
           <Navbar active={state.navActive} />
           <Hero />
