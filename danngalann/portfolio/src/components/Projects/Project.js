@@ -1,31 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
-import { useIntersection } from "react-use";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Project(props) {
   const { t } = useTranslation();
   const { title, text, demo, source, imgsrc, alternated } = props.project;
-  const project = useRef(null);
-
-  const [state, setState] = useState({ onscreen: false });
-
-  // Intersections
-  const intersection = useIntersection(project, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2,
-    once: true
-  });
-
-  // Animation
-  const show = () => {
-    if (!state.onscreen) setState({ onscreen: true });
-  };
-
-  if (intersection && intersection.isIntersecting) show(); // If intersecting with the screen, update the state so the .onscreen class is added to the project container
 
   // Returns a button depending on the source
-  const getSourceBtn = source => {
+  const getSourceBtn = (source) => {
     if (!source) {
       return (
         <button className="btn-small waves-effect waves-light disabled">
@@ -46,10 +27,7 @@ export default function Project(props) {
   };
 
   return (
-    <div
-      ref={project}
-      className={state.onscreen ? "project-container onscreen" : "project-container"}
-    >
+    <div className="project-container">
       <h4 className="project-title">{title}</h4>
       <div className="project">
         <div className="project-thumb">

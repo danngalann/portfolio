@@ -148,11 +148,6 @@ nav.nav-active i {
 }
 
 .project-container {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   margin: 3rem 0;
 }
 
