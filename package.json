@@ -19,7 +19,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "gsap": "^3.3.3",
+    "gsap": "^3.6.0",
     "i18next": "^19.3.4",
     "i18next-browser-languagedetector": "^4.0.2",
     "react": "^16.13.1",
