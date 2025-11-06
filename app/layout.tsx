@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "react-tooltip/dist/react-tooltip.css";
 import "./globals.css";
 import { roboto, montserrat } from "./ui/fonts";
 
