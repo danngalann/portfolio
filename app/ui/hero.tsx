@@ -2,8 +2,8 @@ import Image from "next-export-optimize-images/image";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex justify-center items-center w-screen">
-      <div className="flex flex-col md:flex-row items-center md:justify-between gap-8 md:gap-16">
+    <section className="min-h-screen flex items-center justify-center">
+      <div className="grid grid-cols-2 gap-4">
         <div>
           <h1>Daniel Galán</h1>
           <p>Some content</p>
