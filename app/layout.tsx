@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { roboto } from "./ui/fonts";
+import { roboto, montserrat } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Daniel's Portfolio",
@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className} antialiased`}>{children}</body>
+    <html lang="en" className={`${roboto.variable} ${montserrat.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
