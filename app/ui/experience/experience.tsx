@@ -54,7 +54,7 @@ export default function Experience() {
       slug: "perception",
     },
     {
-      title: "Backend Developer",
+      title: "Java Developer",
       company: "Necsia IT Consulting",
       startDate: new Date(2019, 4, 1),
       endDate: new Date(2020, 3, 30),
@@ -67,6 +67,7 @@ export default function Experience() {
 
   return (
     <section className="flex flex-col gap-[3vw] items-center justify-center">
+      <h1 className="text-5xl uppercase mb-8">Experience</h1>
       {jobs.map((job) => (
         <ExperienceItem key={job.slug} {...job} />
       ))}
