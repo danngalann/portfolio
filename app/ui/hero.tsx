@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
           <h1 className="text-6xl">Daniel Galán</h1>
-          <p>
+          <p className="text-xl">
             Full-stack developer with six years of experience building scalable
             web applications and AI-driven systems. Skilled in backend and
             frontend development, containerization, CI/CD, and VPS deployments,
