@@ -2,8 +2,9 @@ import { getDateDiffInYears } from "@/app/lib/utils";
 import TagList from "../tag-list";
 import Link from "next/link";
 import { Job } from "@/app/lib/definitions";
+import { LuArrowRight } from "react-icons/lu";
 
-export default function ExperienceItem(job: Job) {
+export default function ExperienceItem({ job }: { job: Job }) {
   const { title, company, startDate, endDate, description, tags, slug } = job;
   const duration = getDateDiffInYears(startDate, endDate);
 
@@ -23,14 +24,13 @@ export default function ExperienceItem(job: Job) {
         <h2 className="text-lg ">{company}</h2>
         <p>{description}</p>
         <TagList tags={tags} />
-        <div>
-          <Link
-            className="bg-blue-500 text-white px-4 py-2 rounded mt-2 inline-block"
-            href={`/experience/${slug}`}
-          >
-            Learn more
-          </Link>
-        </div>
+        <Link
+          className="flex justify-end gap-2 hover:cursor-pointer mt-4 hover:text-blue-800 transition-colors"
+          href={`/experience/${slug}`}
+        >
+          <p>Read the details</p>
+          <LuArrowRight />
+        </Link>
       </div>
     </div>
   );

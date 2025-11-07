@@ -71,7 +71,7 @@ export default function Experience() {
         Experience
       </h1>
       {jobs.map((job) => (
-        <ExperienceItem key={job.slug} {...job} />
+        <ExperienceItem key={job.slug} job={job} />
       ))}
     </section>
   );

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fffffa;
   --foreground: #171717;
 }
 
@@ -14,6 +14,7 @@
 
 html {
   font-family: var(--font-roboto), sans-serif;
+  background-color: var(--color-background);
 }
 
 h1,

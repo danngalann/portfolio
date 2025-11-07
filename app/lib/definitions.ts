@@ -7,3 +7,10 @@ export type Job = {
   description: string;
   tags: string[];
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  link: string;
+  tags: string[];
+};
