@@ -48,8 +48,8 @@ export default function Projects() {
   ];
 
   return (
-    <section className="flex flex-col gap-[3vw] items-center justify-center">
-      <h1 className="text-5xl uppercase mb-8">Projects</h1>
+    <section className="flex flex-col items-center justify-center">
+      <h1 className="text-5xl uppercase mb-16">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />

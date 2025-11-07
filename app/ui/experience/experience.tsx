@@ -59,20 +59,22 @@ export default function Experience() {
       startDate: new Date(2019, 4, 1),
       endDate: new Date(2020, 3, 30),
       description:
-        "Developed Java programs for database migration between MySQL and DB2 systems.",
+        "Developed and maintained a Java application for Agbar, handling large amounts of data in DB2 and MySQL and providing seamless migration and integration between the two database systems.",
       tags: ["Java", "MySQL", "DB2", "SQL", "Eclipse"],
       slug: "necsia-it-consulting",
     },
   ];
 
   return (
-    <section className="flex flex-col gap-[3vw] items-center justify-center">
-      <h1 id="experience-header" className="text-5xl uppercase mb-8">
+    <section className="flex flex-col items-center justify-center">
+      <h1 id="experience-header" className="text-5xl uppercase mb-16">
         Experience
       </h1>
-      {jobs.map((job) => (
-        <ExperienceItem key={job.slug} job={job} />
-      ))}
+      <div className="flex flex-col gap-[3vw]">
+        {jobs.map((job) => (
+          <ExperienceItem key={job.slug} job={job} />
+        ))}
+      </div>
     </section>
   );
 }
