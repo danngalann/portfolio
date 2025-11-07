@@ -24,9 +24,7 @@ function ScrollIndicator() {
       },
     );
 
-    // Find the experience header by looking for the section after hero
-    const experienceSection = document.querySelector("section:nth-of-type(2)");
-    const experienceHeader = experienceSection?.querySelector("h1");
+    const experienceHeader = document.querySelector("#experience-header");
 
     if (experienceHeader) {
       observer.observe(experienceHeader);

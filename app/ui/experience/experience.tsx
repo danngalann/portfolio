@@ -67,7 +67,9 @@ export default function Experience() {
 
   return (
     <section className="flex flex-col gap-[3vw] items-center justify-center">
-      <h1 className="text-5xl uppercase mb-8">Experience</h1>
+      <h1 id="experience-header" className="text-5xl uppercase mb-8">
+        Experience
+      </h1>
       {jobs.map((job) => (
         <ExperienceItem key={job.slug} {...job} />
       ))}
