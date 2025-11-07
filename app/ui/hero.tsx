@@ -1,8 +1,68 @@
 "use client";
 
 import Image from "next-export-optimize-images/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Tooltip } from "react-tooltip";
+
+function ParallaxLayers() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!containerRef.current) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      // Calculate normalized position (-1 to 1)
+      const x = (e.clientX - centerX) / (rect.width / 2);
+      const y = (e.clientY - centerY) / (rect.height / 2);
+
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  // Layers with different depths (higher number = further away, less movement)
+  const layers = [
+    { src: "/4_background.png", depth: 0.3 },
+    { src: "/3_clouds.png", depth: 0.3 },
+    { src: "/2_plants.png", depth: 0.7 },
+    { src: "/1_subject.png", depth: 1 },
+  ];
+
+  const movementFactor = 5;
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full overflow-hidden"
+      style={{ aspectRatio: "2/3" }}
+    >
+      {layers.map((layer, index) => (
+        <div
+          key={layer.src}
+          className="absolute inset-0 transition-transform duration-200 ease-out"
+          style={{
+            transform: `translate(${mousePosition.x * layer.depth * movementFactor}px, ${mousePosition.y * layer.depth * movementFactor}px)`,
+          }}
+        >
+          <Image
+            src={layer.src}
+            alt={`Layer ${index + 1}`}
+            width={1024}
+            height={1536}
+            className="w-full h-auto"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function ScrollIndicator() {
   const [isVisible, setIsVisible] = useState(true);
@@ -69,12 +129,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="hidden md:block max-w-lg">
-          <Image
-            src="/profile.png"
-            alt="Profile Picture"
-            width={1024}
-            height={1536}
-          />
+          <ParallaxLayers />
         </div>
       </div>
       <ScrollIndicator />
