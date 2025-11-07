@@ -19,7 +19,7 @@ export default function ExperienceItem({ job }: { job: Job }) {
           {duration} {duration === 1 ? "year" : "years"}
         </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 bg-foreground text-black p-6 rounded-lg mx-4 md:mx-0">
         <h1 className="text-3xl font-bold uppercase">{title}</h1>
         <h2 className="text-lg ">{company}</h2>
         <p>{description}</p>

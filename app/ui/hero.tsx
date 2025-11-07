@@ -106,8 +106,8 @@ function ScrollIndicator() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-8 h-14 border-2 border-gray-800 rounded-full flex justify-center p-2">
-        <div className="w-2 h-2 bg-gray-800 rounded-full animate-scroll"></div>
+      <div className="w-8 h-14 border-2 border-foreground rounded-full flex justify-center p-2">
+        <div className="w-2 h-2 bg-foreground rounded-full animate-scroll"></div>
       </div>
     </div>
   );
@@ -118,7 +118,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center">
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
-          <h1 className="text-6xl">Daniel Galán</h1>
+          <h1 className="-ml-[0.07em] text-6xl uppercase">Daniel Galán</h1>
           <p className="text-xl">
             Full-stack developer with six years of experience building scalable
             web applications and AI-driven systems. Skilled in backend and

@@ -6,7 +6,7 @@ export default function Experience() {
     {
       title: "Full Stack & AI Developer",
       company: "Delectatech",
-      startDate: new Date(2022, 11, 1),
+      startDate: new Date(2023, 1, 1),
       endDate: null,
       description:
         "Handled backend and frontend development with testing. Implemented GenAI and deep learning solutions. Managed VPS infrastructure and CI/CD pipelines with service containers.",
