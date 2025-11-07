@@ -35,7 +35,7 @@ function ParallaxLayers() {
     { src: "/1_subject.png", depth: 1 },
   ];
 
-  const movementFactor = 5;
+  const movementFactor = 2;
 
   return (
     <div
