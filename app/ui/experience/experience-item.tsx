@@ -11,11 +11,11 @@ export default function ExperienceItem({ job }: { job: Job }) {
   return (
     <div className="grid md:grid-cols-2 gap-4">
       <div className="flex flex-col justify-center items-center">
-        <div className="text-4xl">
+        <div className="text-6xl">
           {startDate.getFullYear()} -{" "}
           {endDate ? endDate.getFullYear() : "Present"}
         </div>
-        <div className="text-xl">
+        <div className="text-3xl italic">
           {duration} {duration === 1 ? "year" : "years"}
         </div>
       </div>

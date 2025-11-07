@@ -4,7 +4,7 @@ import TagList from "../tag-list";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="bg-foreground text-black border p-4 rounded-lg flex flex-col justify-between h-full">
+    <div className="mx-4 md:mx-0 bg-foreground text-black border p-4 rounded-lg flex flex-col justify-between h-full">
       <div>
         <h2 className="text-2xl font-bold">{project.title}</h2>
         <p className="my-2">{project.description}</p>
