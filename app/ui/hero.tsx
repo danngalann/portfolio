@@ -81,9 +81,11 @@ function ScrollIndicator() {
       />
 
       <div
-        data-tooltip-id="scroll-tooltip"
-        data-tooltip-content="Scroll down"
-        data-tooltip-place="right"
+        {...(!inView && {
+          "data-tooltip-id": "scroll-tooltip",
+          "data-tooltip-content": "Scroll down",
+          "data-tooltip-place": "right",
+        })}
         className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${
           inView ? "opacity-0" : "opacity-100"
         }`}
