@@ -8,22 +8,22 @@ import { FaHandPaper } from "react-icons/fa";
 export default function NecsiaExperiencePage() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <header className="mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
             Necsia IT Consulting
           </h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Table of Contents - Sticky Sidebar */}
           <aside className="lg:col-span-1">
             <nav className="lg:sticky lg:top-24 bg-light-background rounded-lg p-6 shadow-lg">
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-foreground/60 mb-4">
+              <h2 className="text-base font-semibold uppercase tracking-wider mb-6">
                 Contents
               </h2>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-3 text-base">
                 <li>
                   <Link
                     href="#overview"
@@ -61,19 +61,19 @@ export default function NecsiaExperiencePage() {
           </aside>
 
           {/* Main Content */}
-          <article className="lg:col-span-3 space-y-12">
+          <article className="lg:col-span-3 space-y-16">
             {/* Overview Section */}
             <section id="overview" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+              <h2 className="text-4xl font-bold mb-8 text-foreground flex items-center gap-3">
                 Overview
                 <RiSparklingFill
-                  className="text-xl"
+                  className="text-2xl"
                   data-tooltip-id="ai-tooltip"
                   data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
                 />
               </h2>
-              <div className="bg-light-background rounded-lg p-6 space-y-4">
-                <ul className="list-disc list-inside space-y-3 text-foreground/90">
+              <div className="bg-light-background rounded-lg p-8 space-y-4">
+                <ul className="list-disc list-inside space-y-4 text-lg text-foreground/90 leading-relaxed">
                   <li>
                     Contributed to the maintenance and development of a
                     large-scale Java desktop application used for data migration
@@ -114,16 +114,16 @@ export default function NecsiaExperiencePage() {
 
             {/* Short Summary Section */}
             <section id="summary" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+              <h2 className="text-4xl font-bold mb-8 flex items-center gap-3">
                 Short Summary
                 <RiSparklingFill
-                  className="text-xl"
+                  className="text-2xl"
                   data-tooltip-id="ai-tooltip"
                   data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
                 />
               </h2>
-              <div className="bg-light-background rounded-lg p-6">
-                <p className="text-foreground/90 leading-relaxed">
+              <div className="bg-light-background rounded-lg p-8">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   My first development role at Necsia immersed me in enterprise
                   Java systems, strict documentation workflows, and large-scale
                   data migrations. It was a formative experience marked by
@@ -135,16 +135,16 @@ export default function NecsiaExperiencePage() {
 
             {/* Key Takeaways Section */}
             <section id="key-takeaways" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+              <h2 className="text-4xl font-bold mb-8 text-foreground flex items-center gap-3">
                 Key Takeaways
                 <RiSparklingFill
-                  className="text-xl"
+                  className="text-2xl"
                   data-tooltip-id="ai-tooltip"
                   data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
                 />
               </h2>
-              <div className="bg-light-background rounded-lg p-6">
-                <ul className="list-disc list-inside space-y-3 text-foreground/90">
+              <div className="bg-light-background rounded-lg p-8">
+                <ul className="list-disc list-inside space-y-4 text-lg text-foreground/90 leading-relaxed">
                   <li>
                     Real-world exposure to enterprise-scale Java development and
                     database management.
@@ -171,16 +171,16 @@ export default function NecsiaExperiencePage() {
 
             {/* Experience Section */}
             <section id="experience" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+              <h2 className="text-4xl font-bold mb-8 text-foreground flex items-center gap-3">
                 Experience
                 <FaHandPaper
-                  className="text-lg"
+                  className="text-2xl"
                   data-tooltip-id="human-tooltip"
                   data-tooltip-content="This section was written by a human (me!)"
                 />
               </h2>
-              <div className="bg-light-background rounded-lg p-6 space-y-6">
-                <p className="text-foreground/90 leading-relaxed">
+              <div className="bg-light-background rounded-lg p-8 space-y-8">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   Necsia was my first serious job as a developer. At the time I
                   was looking for internships as part of my curriculum for my
                   studies at Vallbona. I consciously picked an internship
@@ -195,7 +195,7 @@ export default function NecsiaExperiencePage() {
                   intern.
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   It was their recruitment team that found me and contacted me
                   via LinkedIn. Back then, on-site interviews were still in
                   fashion, and I went through a single interview before being
@@ -208,7 +208,7 @@ export default function NecsiaExperiencePage() {
                   coffee.
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   When I started, a mountain of onboarding documents landed on
                   my desk. After reading them all (and even understanding some
                   parts) I was given database access and began working. My task
@@ -217,7 +217,7 @@ export default function NecsiaExperiencePage() {
                   engines for Aigües de Barcelona (now Agbar Group).
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   The application was massive, full of legacy code and extensive
                   documentation, and overseen by a senior developer who knew the
                   entire system by heart. Our small team implemented new
@@ -226,7 +226,7 @@ export default function NecsiaExperiencePage() {
                   so documentation was crucial for tracking progress.
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   As my internship was nearing its end, COVID hit hardest.
                   Remote work became a necessity, so we were allowed to take our
                   laptops home and were given VPN access to work remotely. This
@@ -236,7 +236,7 @@ export default function NecsiaExperiencePage() {
                   solely on basic messaging software.
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   The ending took a darker turn. I was under the impression the
                   company planned to hire me after my internship, yet once my
                   contract ended, I heard nothing for weeks until an email
@@ -246,7 +246,7 @@ export default function NecsiaExperiencePage() {
                   period.
                 </p>
 
-                <p className="text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/90 leading-relaxed">
                   Necsia was my first development experience, my first remote
                   work experience, and my first ghosting experience. The lessons
                   learned and the confidence gained in that single year would
