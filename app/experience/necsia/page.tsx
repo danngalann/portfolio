@@ -1,4 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { Tooltip } from "react-tooltip";
+import { RiSparklingFill } from "react-icons/ri";
+import { FaHandPaper } from "react-icons/fa";
 
 export default function NecsiaExperiencePage() {
   return (
@@ -59,66 +64,49 @@ export default function NecsiaExperiencePage() {
           <article className="lg:col-span-3 space-y-12">
             {/* Overview Section */}
             <section id="overview" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
                 Overview
+                <RiSparklingFill
+                  className="text-xl"
+                  data-tooltip-id="ai-tooltip"
+                  data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
+                />
               </h2>
               <div className="bg-light-background rounded-lg p-6 space-y-4">
-                <ul className="space-y-3 text-foreground/90">
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Contributed to the maintenance and development of a
-                      large-scale Java desktop application used for data
-                      migration and synchronization between DB2 and Oracle
-                      databases.
-                    </span>
+                <ul className="list-disc list-inside space-y-3 text-foreground/90">
+                  <li>
+                    Contributed to the maintenance and development of a
+                    large-scale Java desktop application used for data migration
+                    and synchronization between DB2 and Oracle databases.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Worked in a highly regulated, documentation-driven
-                      environment, emphasizing precision and traceability over
-                      speed.
-                    </span>
+                  <li>
+                    Worked in a highly regulated, documentation-driven
+                    environment, emphasizing precision and traceability over
+                    speed.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Collaborated closely with senior and mid-level developers,
-                      gaining exposure to real-world software engineering
-                      standards and enterprise workflows.
-                    </span>
+                  <li>
+                    Collaborated closely with senior and mid-level developers,
+                    gaining exposure to real-world software engineering
+                    standards and enterprise workflows.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Acquired hands-on experience with legacy codebases, manual
-                      deployment, and database integrity validation.
-                    </span>
+                  <li>
+                    Acquired hands-on experience with legacy codebases, manual
+                    deployment, and database integrity validation.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Developed professional habits in technical documentation,
-                      structured debugging, and change tracking—at a time before
-                      version control systems were standard.
-                    </span>
+                  <li>
+                    Developed professional habits in technical documentation,
+                    structured debugging, and change tracking—at a time before
+                    version control systems were standard.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Experienced the transition to remote work during the onset
-                      of the COVID-19 pandemic, adapting to asynchronous
-                      communication and VPN-based workflows.
-                    </span>
+                  <li>
+                    Experienced the transition to remote work during the onset
+                    of the COVID-19 pandemic, adapting to asynchronous
+                    communication and VPN-based workflows.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Learned valuable lessons about team communication,
-                      expectation management, and the unpredictable nature of
-                      early career opportunities.
-                    </span>
+                  <li>
+                    Learned valuable lessons about team communication,
+                    expectation management, and the unpredictable nature of
+                    early career opportunities.
                   </li>
                 </ul>
               </div>
@@ -126,8 +114,13 @@ export default function NecsiaExperiencePage() {
 
             {/* Short Summary Section */}
             <section id="summary" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
                 Short Summary
+                <RiSparklingFill
+                  className="text-xl"
+                  data-tooltip-id="ai-tooltip"
+                  data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
+                />
               </h2>
               <div className="bg-light-background rounded-lg p-6">
                 <p className="text-foreground/90 leading-relaxed">
@@ -142,45 +135,35 @@ export default function NecsiaExperiencePage() {
 
             {/* Key Takeaways Section */}
             <section id="key-takeaways" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
                 Key Takeaways
+                <RiSparklingFill
+                  className="text-xl"
+                  data-tooltip-id="ai-tooltip"
+                  data-tooltip-content="This section was created with the aid of AI, from the 'Experience' section"
+                />
               </h2>
               <div className="bg-light-background rounded-lg p-6">
-                <ul className="space-y-3 text-foreground/90">
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Real-world exposure to enterprise-scale Java development
-                      and database management.
-                    </span>
+                <ul className="list-disc list-inside space-y-3 text-foreground/90">
+                  <li>
+                    Real-world exposure to enterprise-scale Java development and
+                    database management.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Importance of documentation and process in maintaining
-                      complex systems.
-                    </span>
+                  <li>
+                    Importance of documentation and process in maintaining
+                    complex systems.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Early lessons in remote work adaptation during a global
-                      crisis.
-                    </span>
+                  <li>
+                    Early lessons in remote work adaptation during a global
+                    crisis.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Experience navigating ambiguity and professional setbacks
-                      early in a career.
-                    </span>
+                  <li>
+                    Experience navigating ambiguity and professional setbacks
+                    early in a career.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-foreground/60 mt-1">•</span>
-                    <span>
-                      Foundational confidence that shaped later success in more
-                      complex technical roles.
-                    </span>
+                  <li>
+                    Foundational confidence that shaped later success in more
+                    complex technical roles.
                   </li>
                 </ul>
               </div>
@@ -188,8 +171,13 @@ export default function NecsiaExperiencePage() {
 
             {/* Experience Section */}
             <section id="experience" className="scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
                 Experience
+                <FaHandPaper
+                  className="text-lg"
+                  data-tooltip-id="human-tooltip"
+                  data-tooltip-content="This section was written by a human (me!)"
+                />
               </h2>
               <div className="bg-light-background rounded-lg p-6 space-y-6">
                 <p className="text-foreground/90 leading-relaxed">
@@ -270,6 +258,10 @@ export default function NecsiaExperiencePage() {
           </article>
         </div>
       </div>
+
+      {/* Tooltips */}
+      <Tooltip id="ai-tooltip" />
+      <Tooltip id="human-tooltip" />
     </div>
   );
 }
