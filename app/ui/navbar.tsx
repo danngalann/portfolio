@@ -2,12 +2,19 @@
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const { ref, inView } = useInView({
     threshold: 0,
     initialInView: true,
   });
+  const pathname = usePathname();
+
+  // Hide navbar on experience detail pages
+  if (pathname.startsWith("/experience/")) {
+    return null;
+  }
 
   return (
     <>
