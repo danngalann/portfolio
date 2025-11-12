@@ -66,7 +66,10 @@ export default function Experience() {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section
+      id="experience-section"
+      className="flex flex-col items-center justify-center"
+    >
       <h1 id="experience-header" className="text-5xl uppercase mb-16">
         Experience
       </h1>

@@ -3,6 +3,7 @@
 import Image from "next-export-optimize-images/image";
 import { useEffect, useState, useRef } from "react";
 import { Tooltip } from "react-tooltip";
+import { useInView } from "react-intersection-observer";
 
 function ParallaxLayers() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -65,51 +66,35 @@ function ParallaxLayers() {
 }
 
 function ScrollIndicator() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(false);
-          } else {
-            setIsVisible(true);
-          }
-        });
-      },
-      {
-        threshold: 0,
-        rootMargin: "-5px",
-      },
-    );
-
-    const experienceHeader = document.querySelector("#experience-header");
-
-    if (experienceHeader) {
-      observer.observe(experienceHeader);
-    }
-
-    return () => {
-      if (experienceHeader) {
-        observer.unobserve(experienceHeader);
-      }
-    };
-  }, []);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "-5px",
+  });
 
   return (
-    <div
-      data-tooltip-id="scroll-tooltip"
-      data-tooltip-content="Scroll down"
-      data-tooltip-place="right"
-      className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="w-8 h-14 border-2 border-foreground rounded-full flex justify-center p-2">
-        <div className="w-2 h-2 bg-foreground rounded-full animate-scroll"></div>
+    <>
+      {/* Target element to observe */}
+      <div
+        ref={ref}
+        id="experience-header-observer"
+        className="absolute bottom-0 left-0 w-full h-px pointer-events-none"
+      />
+
+      <div
+        {...(!inView && {
+          "data-tooltip-id": "scroll-tooltip",
+          "data-tooltip-content": "Scroll down",
+          "data-tooltip-place": "right",
+        })}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${
+          inView ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <div className="w-8 h-14 border-2 border-foreground rounded-full flex justify-center p-2">
+          <div className="w-2 h-2 bg-foreground rounded-full animate-scroll"></div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -118,7 +103,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center">
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
-          <h1 className="-ml-[0.07em] text-6xl uppercase">Daniel Galán</h1>
+          {/* <h1 className="-ml-[0.07em] text-6xl uppercase">Daniel Galán</h1> */}
           <p className="text-xl">
             Full-stack developer with six years of experience building scalable
             web applications and AI-driven systems. Skilled in backend and
@@ -129,7 +114,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="hidden md:block max-w-lg">
-          <ParallaxLayers />
+          {/* <ParallaxLayers /> */}
         </div>
       </div>
       <ScrollIndicator />
