@@ -16,6 +16,7 @@
 html {
   font-family: var(--font-roboto), sans-serif;
   background-color: var(--color-background);
+  scroll-behavior: smooth;
 }
 
 body {
