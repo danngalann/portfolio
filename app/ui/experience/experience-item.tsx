@@ -25,7 +25,7 @@ export default function ExperienceItem({ job }: { job: Job }) {
         <p>{description}</p>
         <TagList tags={tags} />
         <Link
-          className="flex justify-end gap-2 hover:cursor-pointer mt-4 hover:text-blue-800 transition-colors"
+          className="flex justify-end items-center gap-2 hover:cursor-pointer mt-4 hover:text-blue-800 transition-colors"
           href={`/experience/${slug}`}
         >
           <p>Read the details</p>

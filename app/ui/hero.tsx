@@ -100,7 +100,7 @@ function ScrollIndicator() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
+    <section className="relative h-screen flex items-center justify-center -mt-[72px] pt-[72px]">
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
           <h1 className="-ml-[0.07em] text-6xl uppercase">Daniel Galán</h1>

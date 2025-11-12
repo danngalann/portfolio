@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BackButton from "../ui/experience/back-button";
+import BackButton from "../ui/back-button";
 
 export const metadata: Metadata = {
   title: "Experience - Daniel's Portfolio",
