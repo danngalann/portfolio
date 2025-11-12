@@ -61,7 +61,7 @@ export default function Experience() {
       description:
         "Developed and maintained a Java application for Agbar, handling large amounts of data in DB2 and MySQL and providing seamless migration and integration between the two database systems.",
       tags: ["Java", "MySQL", "DB2", "SQL", "Eclipse"],
-      slug: "necsia-it-consulting",
+      slug: "necsia",
     },
   ];
 
