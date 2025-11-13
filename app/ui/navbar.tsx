@@ -11,8 +11,10 @@ export default function Navbar() {
   });
   const pathname = usePathname();
 
+  const hideOnPaths = ["/career", "/experience"];
+
   // Hide navbar on experience detail pages
-  if (pathname.startsWith("/experience/")) {
+  if (hideOnPaths.some((path) => pathname.startsWith(path))) {
     return null;
   }
 
@@ -45,9 +47,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#about" className="relative group">
+            <Link href="/career" className="relative group">
               <span className="relative">
-                About me
+                My career
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
               </span>
             </Link>

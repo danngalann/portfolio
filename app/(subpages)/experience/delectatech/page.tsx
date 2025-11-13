@@ -199,8 +199,14 @@ export default function DelectatechExperiencePage() {
                   doing (a backend position using Symfony) but it came with the
                   chance to work in AI and data science, something I had been
                   seeking for some time. I saw an opportunity to pivot my
-                  specialization, so I left Perception and, in 2023, started a
-                  new journey.
+                  specialization, so I left{" "}
+                  <Link
+                    href="/experience/perception"
+                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Perception
+                  </Link>{" "}
+                  and, in 2023, started a new journey.
                 </p>
 
                 <p className="text-lg text-foreground/90 leading-relaxed">
@@ -245,10 +251,16 @@ export default function DelectatechExperiencePage() {
                   full-stack role with AI-related tasks. I&apos;ve moved from
                   Symfony and PHP to FastAPI with Python and NestJS with Node.
                   Building on the server knowledge I gained during my studies
-                  and at Perception, I&apos;ve built CI/CD pipelines with
-                  Jenkins and GitHub Actions to improve iteration speed, execute
-                  automated tests, and build Docker images for deployment on VPS
-                  instances.
+                  and at{" "}
+                  <Link
+                    href="/experience/perception"
+                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Perception
+                  </Link>
+                  , I&apos;ve built CI/CD pipelines with Jenkins and GitHub
+                  Actions to improve iteration speed, execute automated tests,
+                  and build Docker images for deployment on VPS instances.
                 </p>
 
                 <p className="text-lg text-foreground/90 leading-relaxed">

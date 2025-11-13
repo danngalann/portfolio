@@ -221,9 +221,15 @@ export default function PerceptionExperiencePage() {
                   own improvement ideas. For example, when I noticed we were
                   spending an hour setting up a new codebase, I developed a fork
                   of PHP Maker Bundle to create projects in minutes. I later
-                  built a similar tool using Cookiecutter and Python at
-                  Delectatech. Developers at both companies appreciated the
-                  solution and contributed to it.
+                  built a similar tool using Cookiecutter and Python at{" "}
+                  <Link
+                    href="/experience/delectatech"
+                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Delectatech
+                  </Link>
+                  . Developers at both companies appreciated the solution and
+                  contributed to it.
                 </p>
 
                 <p className="text-lg text-foreground/90 leading-relaxed">
@@ -250,8 +256,14 @@ export default function PerceptionExperiencePage() {
                 <p className="text-lg text-foreground/90 leading-relaxed">
                   I left the company after two and a half years and, if memory
                   serves me right, three promotions, to take a similar
-                  full-stack position at Delectatech and pursue the opportunity
-                  to work with AI.
+                  full-stack position at{" "}
+                  <Link
+                    href="/experience/delectatech"
+                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Delectatech
+                  </Link>{" "}
+                  and pursue the opportunity to work with AI.
                 </p>
               </div>
             </section>
