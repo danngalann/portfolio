@@ -1,5 +1,6 @@
 "use client";
 
+import { sendMessage } from "@/app/lib/actions";
 import { useState, useRef, useEffect } from "react";
 
 export default function ChatbotInterface() {
@@ -18,11 +19,17 @@ export default function ChatbotInterface() {
     scrollToBottom();
   }, [messages]);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim()) {
       setMessages([...messages, { role: "user", text: input }]);
+
+      const response = await sendMessage(input);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role: "assistant", text: response },
+      ]);
+
       setInput("");
-      // Add your API call here to get assistant response
     }
   };
 
