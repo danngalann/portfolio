@@ -15,11 +15,6 @@ export default function Navbar() {
 
   const hideOnPaths = ["/career", "/experience"];
 
-  // Close drawer when pathname changes
-  useEffect(() => {
-    setIsDrawerOpen(false);
-  }, [pathname]);
-
   // Prevent body scroll when drawer is open
   useEffect(() => {
     if (isDrawerOpen) {
@@ -38,9 +33,10 @@ export default function Navbar() {
   }
 
   const navLinks = [
-    { href: "#experience-section", label: "Experience" },
-    { href: "#projects-section", label: "Projects" },
+    { href: "/#experience-section", label: "Experience" },
+    { href: "/#projects-section", label: "Projects" },
     { href: "/career", label: "My career" },
+    { href: "/chat", label: "Chat" },
   ];
 
   return (
