@@ -1,5 +1,7 @@
-const withExportImages = require("next-export-optimize-images");
+import type { NextConfig } from "next";
 
-module.exports = withExportImages({
-  output: "export",
-});
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
