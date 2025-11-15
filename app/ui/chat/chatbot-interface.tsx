@@ -1,13 +1,12 @@
 "use client";
 
-import { sendMessage } from "@/app/lib/actions";
 import { useState, useRef, useEffect } from "react";
 
 export default function ChatbotInterface() {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<{ role: string; text: string }[]>(
-    [],
-  );
+  const [messages, setMessages] = useState<
+    { role: "user" | "assistant"; text: string }[]
+  >([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -19,16 +18,41 @@ export default function ChatbotInterface() {
   }, [messages]);
 
   const handleSend = async () => {
-    if (input.trim()) {
-      setMessages([...messages, { role: "user", text: input }]);
+    if (!input.trim()) return;
 
-      const response = await sendMessage(input);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { role: "assistant", text: response },
-      ]);
+    const userMsg = input;
+    setInput("");
 
-      setInput("");
+    setMessages((prev) => [...prev, { role: "user", text: userMsg }]);
+    setMessages((prev) => [...prev, { role: "assistant", text: "" }]);
+
+    const assistantIndex = messages.length + 1;
+
+    const res = await fetch("/api/chat/stream", {
+      method: "POST",
+      body: JSON.stringify({ message: userMsg }),
+    });
+
+    const reader = res.body!.getReader();
+    const decoder = new TextDecoder();
+
+    let partial = "";
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+
+      partial += decoder.decode(value);
+
+      // Update last message incrementally
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[assistantIndex] = {
+          role: "assistant",
+          text: partial,
+        };
+        return updated;
+      });
     }
   };
 
