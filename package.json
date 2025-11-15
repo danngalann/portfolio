@@ -16,13 +16,17 @@
   "dependencies": {
     "@langchain/core": "^1.0.5",
     "@langchain/ollama": "^1.0.1",
+    "@langchain/textsplitters": "^1.0.0",
+    "@langchain/weaviate": "^1.0.0",
     "langchain": "^1.0.4",
     "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^10.0.0",
-    "react-tooltip": "^5.30.0"
+    "react-tooltip": "^5.30.0",
+    "uuid": "^13.0.0",
+    "weaviate-client": "^3.9.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

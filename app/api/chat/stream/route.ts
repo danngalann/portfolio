@@ -1,22 +1,58 @@
 import { NextResponse } from "next/server";
 import { ChatOllama } from "@langchain/ollama";
+import weaviate from "weaviate-client";
+import { WeaviateStore } from "@langchain/weaviate";
+import { OllamaEmbeddings } from "@langchain/ollama";
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
+  const { messages, nResults = 3 } = await req.json();
 
+  // Extract latest user message
+  const userQuery = messages[messages.length - 1]?.content ?? "";
+
+  // Setup vector store and embeddings
+  const client = await weaviate.connectToLocal({
+    port: 1564,
+  });
+
+  const embeddings = new OllamaEmbeddings({
+    model: "mxbai-embed-large:335m",
+  });
+
+  const vectorStore = new WeaviateStore(embeddings, {
+    client,
+    indexName: "Docs",
+  });
+
+  // Run similarity search
+  const ragResults = await vectorStore.similaritySearch(userQuery, nResults);
+
+  // Build RAG context
+  const contextText = ragResults
+    .map((doc, i) => `(${i + 1}) ${doc.pageContent}`)
+    .join("\n");
+
+  // LLM model
   const model = new ChatOllama({
     model: "gemma3:4b",
   });
 
+  // RAG-augmented system message
   const systemMessage = {
     role: "system",
-    content: `You are a helpful assistant that provides concise and accurate information in a chat environment.
-      Do not output markdown in any form, just plain text.
-      Your responses will be shown directly to the user, so be brief and conversational.`,
-  };
-  const chat_history = [systemMessage, ...messages];
+    content: `
+      You are a chatbot that leverages retrieved documents to provide accurate answers.
+      You answer user queries using the retrieved context provided below.
+      The provided context related to the professional and life experience of a human named Daniel.
+      If the context does not contain relevant information, answer normally.
+      Be concise and plain-text only. No markdown.
 
-  console.log(chat_history);
+      Context:
+      ${contextText}
+    `.trim(),
+  };
+
+  const chat_history = [systemMessage, ...messages];
 
   const stream = await model.stream(chat_history);
 
