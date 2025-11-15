@@ -45,7 +45,8 @@ export async function POST(req: Request) {
       You answer user queries using the retrieved context provided below.
       The provided context related to the professional and life experience of a human named Daniel.
       If the context does not contain relevant information, answer normally.
-      Be concise and plain-text only. No markdown.
+      Answer in plain-text only. No markdown.
+      Never mention the context directly in your answers; act as if you know this information already.
 
       Context:
       ${contextText}
