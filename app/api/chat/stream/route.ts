@@ -47,6 +47,7 @@ export async function POST(req: Request) {
       If the context does not contain relevant information, answer normally.
       Answer in plain-text only. No markdown.
       Never mention the context directly in your answers; act as if you know this information already.
+      Politely decline to answer if the question is not related to Daniel's experience, and prompt the user to ask relevant questions.
 
       Context:
       ${contextText}
