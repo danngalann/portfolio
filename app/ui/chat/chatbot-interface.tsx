@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 export default function ChatbotInterface() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<
-    { role: "user" | "assistant"; text: string }[]
+    { role: "user" | "assistant"; content: string }[]
   >([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -23,15 +23,20 @@ export default function ChatbotInterface() {
     const userMsg = input;
     setInput("");
 
-    setMessages((prev) => [...prev, { role: "user", text: userMsg }]);
-    setMessages((prev) => [...prev, { role: "assistant", text: "" }]);
+    const updatedMessages = [
+      ...messages,
+      { role: "user" as const, content: userMsg },
+    ];
+    setMessages(updatedMessages);
 
-    const assistantIndex = messages.length + 1;
+    const assistantIndex = updatedMessages.length;
 
     const res = await fetch("/api/chat/stream", {
       method: "POST",
-      body: JSON.stringify({ message: userMsg }),
+      body: JSON.stringify({ messages: updatedMessages }),
     });
+
+    setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
     const reader = res.body!.getReader();
     const decoder = new TextDecoder();
@@ -49,7 +54,7 @@ export default function ChatbotInterface() {
         const updated = [...prev];
         updated[assistantIndex] = {
           role: "assistant",
-          text: partial,
+          content: partial,
         };
         return updated;
       });
@@ -87,7 +92,7 @@ export default function ChatbotInterface() {
                 }`}
               >
                 <p className="text-sm sm:text-base break-words">
-                  {message.text}
+                  {message.content}
                 </p>
               </div>
             </div>
