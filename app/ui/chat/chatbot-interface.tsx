@@ -5,10 +5,9 @@ import { useState, useRef, useEffect } from "react";
 
 export default function ChatbotInterface() {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<{ role: string; text: string }[]>([
-    { role: "assistant", text: "Hello! How can I assist you today?" },
-    { role: "user", text: "Hi! I have a question about your portfolio." },
-  ]);
+  const [messages, setMessages] = useState<{ role: string; text: string }[]>(
+    [],
+  );
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
