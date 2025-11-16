@@ -19,7 +19,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: portfolio_app_prod
+    container_name: portfolio
     ports:
       - "3000:3000"
     environment:
