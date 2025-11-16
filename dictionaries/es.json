@@ -1,0 +1,71 @@
+{
+  "navbar": {
+    "experience": "",
+    "projects": "",
+    "myCareer": "",
+    "chat": ""
+  },
+  "hero": {
+    "title": "Daniel Galán",
+    "description": ""
+  },
+  "experience": {
+    "title": "",
+    "jobs": {
+      "delectatech": {
+        "title": "",
+        "company": "Delectatech",
+        "description": ""
+      },
+      "perception": {
+        "title": "",
+        "company": "Perception",
+        "description": ""
+      },
+      "necsia": {
+        "title": "",
+        "company": "Necsia IT Consulting",
+        "description": ""
+      }
+    }
+  },
+  "projects": {
+    "title": "",
+    "items": {
+      "sesametime": {
+        "title": "SesameTime",
+        "description": ""
+      },
+      "astroweather": {
+        "title": "AstroWeather",
+        "description": ""
+      },
+      "cluedogpt": {
+        "title": "Cluedo GPT",
+        "description": ""
+      },
+      "booksummarizer": {
+        "title": "Book Summarizer",
+        "description": ""
+      },
+      "panoramahorizon": {
+        "title": "Panorama Horizon Maker",
+        "description": ""
+      },
+      "arpdos": {
+        "title": "ArpDos",
+        "description": ""
+      }
+    }
+  },
+  "backButton": {
+    "back": ""
+  },
+  "scrollIndicator": {
+    "scrollDown": ""
+  },
+  "metadata": {
+    "title": "",
+    "description": ""
+  }
+}

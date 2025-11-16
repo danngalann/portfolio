@@ -1,0 +1,71 @@
+{
+  "navbar": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "myCareer": "My career",
+    "chat": "Chat"
+  },
+  "hero": {
+    "title": "Daniel Galán",
+    "description": "Full-stack developer with six years of experience building scalable web applications and AI-driven systems. Skilled in backend and frontend development, containerization, CI/CD, and VPS deployments, with a focus on clean architecture, performance, and automation. I combine technical depth with a systems-thinking approach to deliver efficient, maintainable solutions."
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": {
+      "delectatech": {
+        "title": "Full Stack & AI Developer",
+        "company": "Delectatech",
+        "description": "Handled backend and frontend development with testing. Implemented GenAI and deep learning solutions. Managed VPS infrastructure and CI/CD pipelines with service containers."
+      },
+      "perception": {
+        "title": "Full Stack Developer",
+        "company": "Perception",
+        "description": "Developed full stack applications with modern PHP frameworks and React. Managed databases and caching systems, containerized environments, CI pipelines, and server infrastructure."
+      },
+      "necsia": {
+        "title": "Java Developer",
+        "company": "Necsia IT Consulting",
+        "description": "Developed and maintained a Java application for Agbar, handling large amounts of data in DB2 and MySQL and providing seamless migration and integration between the two database systems."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "sesametime": {
+        "title": "SesameTime",
+        "description": "A little Chrome extension to aid in time management on flexible work schedules. Basically tells you when can you check out. I built it to help me and my coworkers with logistics."
+      },
+      "astroweather": {
+        "title": "AstroWeather",
+        "description": "A frontend to quickly check weather conditions for astrophotography. It'll show data from a custom backend I've kept private for privacy concerns. I built it to simplify planning astrophotography sessions."
+      },
+      "cluedogpt": {
+        "title": "Cluedo GPT",
+        "description": "An AI-powered version of the classic Cluedo game. A game master creates a mystery with custom characters, and players can interact with a chatbot to ask for clues and solve the case. I built it as an improvement to a team-building exercise we did at Delectatech."
+      },
+      "booksummarizer": {
+        "title": "Book Summarizer",
+        "description": "This originally named set of scripts will split a digital book into chapters, and pass each chapter through an LLM to get a structured summary. This tool allows me to quickly generate notes from non-fiction books so I can store them in Obsidian for reference."
+      },
+      "panoramahorizon": {
+        "title": "Panorama Horizon Maker",
+        "description": "Another small utility that can take a 360 image and help you generate an horizon file from it. This horizon file can then be used in astrophotography software to automate astronomy sessions."
+      },
+      "arpdos": {
+        "title": "ArpDos",
+        "description": "A nasty little thing I wrote back when I was studing to prank my classmates. It will cut internet access to every computer on a network (or at least it did in 2019). I'm showcasing it here as evidence to my interest an knowledge in cybersecurity and network protocols."
+      }
+    }
+  },
+  "backButton": {
+    "back": "Back"
+  },
+  "scrollIndicator": {
+    "scrollDown": "Scroll down"
+  },
+  "metadata": {
+    "title": "Daniel's Portfolio",
+    "description": "Welcome to Daniel's personal portfolio website."
+  }
+}
