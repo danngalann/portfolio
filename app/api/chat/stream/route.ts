@@ -4,6 +4,13 @@ import { WeaviateStore } from "@langchain/weaviate";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 
 export async function POST(req: Request) {
+  if (process.env.NEXT_PUBLIC_ENABLE_RAG_CHAT !== "true") {
+    return NextResponse.json(
+      { error: "RAG chat is disabled." },
+      { status: 403 },
+    );
+  }
+
   const { messages, nResults = 3 } = await req.json();
 
   // Extract latest user message

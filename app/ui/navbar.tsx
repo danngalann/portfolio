@@ -42,8 +42,11 @@ export default function Navbar() {
     { href: `/${lang}#experience-section`, label: labels.experience },
     { href: `/${lang}#projects-section`, label: labels.projects },
     { href: `/${lang}/career`, label: labels.myCareer },
-    { href: `/${lang}/chat`, label: labels.chat },
   ];
+
+  if (process.env.NEXT_PUBLIC_ENABLE_RAG_CHAT === "true") {
+    navLinks.push({ href: `/${lang}/chat`, label: labels.chat });
+  }
 
   const handleLanguageChange = (newLang: Locale) => {
     if (!pathname) return;
