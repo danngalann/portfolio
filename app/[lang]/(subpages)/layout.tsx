@@ -1,25 +1,24 @@
-import type { Metadata } from "next";
-import BackButton from "../../ui/back-button";
-import { getDictionary, type Locale } from "@/dictionaries";
+import BackButton from "@/app/ui/back-button";
+import { getDictionary, locales, type Locale } from "@/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Experience - Daniel's Portfolio",
-  description: "Detailed experience information",
-};
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ lang: locale }));
+}
 
 export default async function ExperienceLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dict = await getDictionary(locale);
 
   return (
     <>
-      <BackButton lang={lang} text={dict.backButton.back} />
+      <BackButton lang={locale} text={dict.backButton.back} />
       {children}
     </>
   );
