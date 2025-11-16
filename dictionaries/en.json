@@ -58,6 +58,176 @@
       }
     }
   },
+  "career": {
+    "title": "My career",
+    "contents": "Contents",
+    "sections": {
+      "overview": "Overview",
+      "summary": "Short Summary",
+      "keyTakeaways": "Key Takeaways",
+      "aboutMe": "About Me"
+    },
+    "tooltips": {
+      "ai": "This section was created with the aid of AI, from the 'About Me' section",
+      "human": "This section was written by a human (me!)"
+    },
+    "overviewItems": [
+      "Developed an early passion for technology and problem-solving, sparked by curiosity and hands-on tinkering with electronics.",
+      "Self-taught in programming from adolescence, beginning with C++ and later transitioning to Python, building personal projects that fostered persistence and autonomy.",
+      "Recognized the value of English proficiency as a gateway to global knowledge and self-improvement; developed fluency through media immersion and reading.",
+      "Pursued comprehensive technical education through mid- and advanced-level vocational programs in computer science, mastering both hardware and software fundamentals.",
+      "Gained practical experience via internships at Necsia IT Consulting and Perception Technologies, leading to full-time roles in professional software development.",
+      "Transitioned to Delectatech, an AI-focused startup, to bridge software engineering with artificial intelligence and expand into hybrid, multidisciplinary work.",
+      "Continues to invest in lifelong learning, skill refinement, and personal growth—balancing technical specialization with broader intellectual interests such as language learning and astronomy."
+    ],
+    "summaryText": "A self-taught technologist turned professional developer, I built my career from early curiosity and persistence. From dismantling toys to developing software and exploring AI, my journey reflects a constant drive to learn, adapt, and evolve.",
+    "keyTakeawaysItems": [
+      "Early self-directed learning built a strong foundation in problem-solving and technical curiosity.",
+      "Language fluency and self-education enabled continuous professional advancement.",
+      "Vocational training provided both theoretical grounding and practical exposure to computing.",
+      "Career progression reflects intentional growth—from intern to full-stack developer to AI-focused engineer.",
+      "Maintains a lifelong learning mindset, blending professional development with personal curiosity and discipline."
+    ],
+    "aboutMeParagraphs": [
+      "I developed a taste for technology at a very young age. Noisy electronic toys were taken apart, and their speakers removed (with help from my father, an electrician) to make them less annoying. Over the years, I had to make do with cheap equipment; my parents weren't keen on spoiling a child, so our single low-spec family PC was all I had to satisfy my curiosity. I broke it, many times, and each time I scrambled through the web to learn how to fix it before my mother found out.",
+      "Around age fourteen, I realized I only had a few years left before choosing what to do with my life, so I started thinking early. I was fascinated by psychology and the human mind, astronomy and physics, and technology. A quick search revealed that programmers enjoyed abundant opportunities and high salaries, so I chose programming and kept the other interests as hobbies.",
+      "I downloaded a phone app to learn C++; arguably not the most beginner-friendly language, but I've always believed you should start with whatever draws you in. I liked video games, and Google said they were written in C++, so I went with that... until I discovered Python. I took Codecademy courses, and after grasping the basics, I started building personal projects. I'd spend whole afternoons fighting with a Python script that tried to draw a box around my face through a webcam feed, completely absorbed.",
+      "Around that time, I realized that learning English would unlock countless learning opportunities, since most of the material I wanted to consume was in that language. I already had a basic foundation from school, but I took it upon myself to improve by watching subtitled movies and later reading books. I started with the Harry Potter films, since I knew them by heart anyway, and to this day I read almost exclusively in English, both fiction and non-fiction.",
+      "When my secondary school offered programming and technology classes, I enrolled in every one I could. We learned programming fundamentals, CAD design, electronics, and more, most of which I already had some grasp of. I even wrote a small Android app to solve force-vector addition problems for my physics class, which my teacher, to my displeasure, considered cheating. I still maintain it wasn't. After all, I wrote it myself.",
+      "After secondary school, I completed a two-year mid-level vocational program covering all things computer-related. We disassembled hard drives and PCs and learned to navigate terminals. For two years we worked on CentOS systems without a GUI; the teacher told us, \"You'll hate me now, and you'll thank me later.\" He was right on both counts.",
+      "Later, I pursued a pair of advanced-level programs focused on web, desktop, and mobile development. In theory, the studies would have taken four years, but students with strong English skills were allowed to take a mixed first year with all subjects taught in English, earning two certifications in three years instead of four. Through these studies, I secured internships at Necsia IT Consulting and Perception.",
+      "After a little over two years at Perception, I received an offer to join an AI startup in the food service industry: Delectatech. The salary increase was modest, but the chance to work in AI, a field I'd dreamed about as a teenager, was too good to pass up. It was my first time changing companies, my first time in a startup, and my first time in a hybrid role.",
+      "Currently, I'm focused on staying up to date with technological progress and advancing my career. I'm working on projects like this portfolio, taking courses to fill gaps in my skill set, and have even started learning a new language (a challenge, since I tend to excel more at technical tasks) while continuing to pursue mastery in my hobbies."
+    ]
+  },
+  "experienceDetails": {
+    "delectatech": {
+      "title": "Delectatech",
+      "contents": "Contents",
+      "sections": {
+        "overview": "Overview",
+        "summary": "Short Summary",
+        "keyTakeaways": "Key Takeaways",
+        "experience": "Experience"
+      },
+      "tooltips": {
+        "ai": "This section was created with the aid of AI, from the 'Experience' section",
+        "human": "This section was written by a human (me!)"
+      },
+      "overviewItems": [
+        "Joined Delectatech, an AI-driven startup in the food service industry, as a backend developer with the opportunity to expand into AI and data science.",
+        "Initially onboarded in data engineering, later transitioned toward full-stack development while supporting AI-related initiatives.",
+        "Realized a personal preference for software engineering over data science, focusing on backend and AI implementation rather than data pipelines.",
+        "Worked across multiple frameworks—Symfony, FastAPI, and NestJS—and contributed to React and Angular frontends.",
+        "Built and maintained CI/CD pipelines with Jenkins and GitHub Actions, automating testing, image building, and deployment workflows.",
+        "Managed distributed systems involving RabbitMQ, Redis, Elasticsearch, and Dockerized environments.",
+        "Implemented AI-powered and agentic solutions using PyTorch, PydanticAI, and LangChain, including generative AI integrations.",
+        "Adapted to the fast-paced startup environment, balancing shifting priorities and incomplete projects with high learning velocity.",
+        "Took on DevOps and project management duties, leading a small cross-functional team through rapid development cycles.",
+        "Currently focusing on cloud scalability and international expansion initiatives."
+      ],
+      "summaryText": "At Delectatech, I expanded from backend to full-stack and AI development within a fast-moving startup. I built distributed systems, automated pipelines, and led cross-functional teams while refining my technical focus and leadership skills.",
+      "keyTakeawaysItems": [
+        "Gained hands-on experience in AI implementation, microservices, and distributed processing.",
+        "Strengthened expertise in backend and DevOps automation through CI/CD and containerization.",
+        "Developed leadership and coordination skills by managing small agile teams.",
+        "Learned adaptability and prioritization in a volatile startup context.",
+        "Transitioned from aspiring data scientist to confident software engineer and AI implementer."
+      ],
+      "experienceParagraphs": [
+        "By the end of 2022, I was contacted by a recruitment consultant working for Delectatech, an AI startup in the food service industry. The role was similar to what I was already doing (a backend position using Symfony) but it came with the chance to work in AI and data science, something I had been seeking for some time. I saw an opportunity to pivot my specialization, so I left Perception and, in 2023, started a new journey.",
+        "During the first few weeks, I was onboarded by a senior data engineer who introduced me to the company's data and AI operations. I was also trained on the backend and frontend of our SaaS platform. My role would involve both areas: the full-stack application as part of my formal responsibilities, and the data processes as part of my desired career path.",
+        "In practice, I ended up leaning more toward full-stack development. The senior data engineer left the company shortly after I joined and was replaced by two juniors who had been onboarded at the same time as me. They've grown into their roles and now handle all data-related tasks.",
+        "It was enlightening to realize that, after actively pursuing a role in AI and data science, I actually preferred software development. Now, the Data team handles most of the data work, and I only step in when more hands are needed, or focus on strictly AI-related tasks such as generative AI implementation and model training.",
+        "Work in a startup is highly dynamic. Priorities change constantly, and you need to manage frustration over unfinished projects while finding satisfaction in the tasks you complete and the lessons you learn. Learning opportunities are plentiful. At Delectatech, I've faced challenges ranging from pesky, hard-to-debug issues to distributed AI-powered processing of large data volumes.",
+        "It's also common in startups to take on multiple roles. What began as a backend-focused position has evolved into a full-stack role with AI-related tasks. I've moved from Symfony and PHP to FastAPI with Python and NestJS with Node. Building on the server knowledge I gained during my studies and at Perception, I've built CI/CD pipelines with Jenkins and GitHub Actions to improve iteration speed, execute automated tests, and build Docker images for deployment on VPS instances.",
+        "The wide range of roles and challenges has helped me build a diverse technology stack. I've worked on projects in React and Angular on the frontend and with three different backend frameworks. I've used both relational and non-relational databases, such as PostgreSQL and MongoDB, along with specialized data-storage systems like Redis for caching and Elasticsearch for fast retrieval of data. I've also implemented distributed task handling with RabbitMQ and developed agentic AI solutions using PyTorch, PydanticAI, and LangChain.",
+        "The company is now expanding internationally, which brings a new set of challenges we're actively tackling. I'm currently learning cloud technologies to help us scale efficiently and adding some more DevOps responsibilities to my skill set. I've also taken on more responsibility as a project manager for fast-paced project iterations, leading a small cross-functional team of developers, data specialists, and product professionals."
+      ]
+    },
+    "perception": {
+      "title": "Perception",
+      "contents": "Contents",
+      "sections": {
+        "overview": "Overview",
+        "summary": "Short Summary",
+        "keyTakeaways": "Key Takeaways",
+        "experience": "Experience"
+      },
+      "tooltips": {
+        "ai": "This section was created with the aid of AI, from the 'Experience' section",
+        "human": "This section was written by a human (me!)"
+      },
+      "overviewItems": [
+        "First fully remote position, requiring adaptation to a digital-only workflow and the ability to integrate into company culture without in-person contact.",
+        "Progressed from backend intern to full-stack developer, assuming broader technical and organizational responsibilities.",
+        "Gained strong foundations in software architecture, applying Domain-Driven Design (DDD), hexagonal architecture, and CQRS principles in production systems.",
+        "Contributed to backend systems using Symfony, RabbitMQ, and Elasticsearch, while later leading frontend initiatives with Next.js.",
+        "Developed internal automation tools to accelerate project setup and improve developer efficiency, one of which was later adapted and reused in a different company.",
+        "Expanded scope into server management, deployment automation, and client communication, demonstrating versatility and ownership.",
+        "Built key products such as Planeta de Libros, integrating complex server-driven UI and CMS-style content scheduling.",
+        "Promoted multiple times due to initiative, technical growth, and consistent delivery before transitioning to a new role focused on AI development."
+      ],
+      "summaryText": "At Perception, I evolved from an intern into a full-stack developer, mastering backend and frontend development within a mature engineering culture. It was my first remote role and a period of rapid growth in software design, autonomy, and leadership.",
+      "keyTakeawaysItems": [
+        "Deep exposure to enterprise-grade software architecture and design patterns.",
+        "Learned the value of mentorship, structured onboarding, and feedback cycles.",
+        "Improved team productivity through automation and tooling initiatives.",
+        "Transitioned from backend to full-stack, bridging technical and client-facing roles.",
+        "Gained remote collaboration and cross-functional communication skills.",
+        "Foundation for later advancement into AI-focused software engineering."
+      ],
+      "experienceParagraphs": [
+        "Perception was my first step into professional web development. I began as an intern and was later hired full-time, gaining more autonomy and responsibility. The company had over 30 years of experience building custom web applications for clients across diverse sectors, which meant their technical and architectural practices were already well established.",
+        "When I first joined the company, I was assigned a senior backend developer as a mentor of sorts. He made me realize the importance of mentorship and a solid onboarding process. I was given courses, regular feedback, and opportunities for pair programming. That onboarding phase became a major boost to my career.",
+        "I learned about software design patterns: we followed clean-code practices and worked under a Domain-Driven Design philosophy, using hexagonal architecture and applying CQRS to our business logic. I also learned about technologies such as Elasticsearch and message queues with RabbitMQ.",
+        "After some time, I was given more autonomy and could pursue my own improvement ideas. For example, when I noticed we were spending an hour setting up a new codebase, I developed a fork of PHP Maker Bundle to create projects in minutes. I later built a similar tool using Cookiecutter and Python at Delectatech. Developers at both companies appreciated the solution and contributed to it.",
+        "I also expanded into responsibilities beyond backend development. I began managing servers and deployed services, learning about Supervisor and other industry-standard tools for deploying code to a VPS. At one point, I covered for a colleague on leave who handled client communication, which meant gathering requirements, creating tasks, and executing them myself.",
+        "I had dabbled in some frontend work with plain JavaScript, but after discussions with other developers, we pushed for adopting a frontend framework. We chose Next.js, which we used to build the popular Planeta de Libros website. It was a fascinating challenge to delve more seriously into frontend development; the client wanted a server-driven UI where they could manage and schedule entire page blocks from a management application.",
+        "I left the company after two and a half years and, if memory serves me right, three promotions, to take a similar full-stack position at Delectatech and pursue the opportunity to work with AI."
+      ]
+    },
+    "necsia": {
+      "title": "Necsia IT Consulting",
+      "contents": "Contents",
+      "sections": {
+        "overview": "Overview",
+        "summary": "Short Summary",
+        "keyTakeaways": "Key Takeaways",
+        "experience": "Experience"
+      },
+      "tooltips": {
+        "ai": "This section was created with the aid of AI, from the 'Experience' section",
+        "human": "This section was written by a human (me!)"
+      },
+      "overviewItems": [
+        "Contributed to the maintenance and development of a large-scale Java desktop application used for data migration and synchronization between DB2 and Oracle databases.",
+        "Worked in a highly regulated, documentation-driven environment, emphasizing precision and traceability over speed.",
+        "Collaborated closely with senior and mid-level developers, gaining exposure to real-world software engineering standards and enterprise workflows.",
+        "Acquired hands-on experience with legacy codebases, manual deployment, and database integrity validation.",
+        "Developed professional habits in technical documentation, structured debugging, and change tracking—at a time before version control systems were standard.",
+        "Experienced the transition to remote work during the onset of the COVID-19 pandemic, adapting to asynchronous communication and VPN-based workflows.",
+        "Learned valuable lessons about team communication, expectation management, and the unpredictable nature of early career opportunities."
+      ],
+      "summaryText": "My first development role at Necsia immersed me in enterprise Java systems, strict documentation workflows, and large-scale data migrations. It was a formative experience marked by growth, disruption from COVID, and an early lesson in workplace uncertainty.",
+      "keyTakeawaysItems": [
+        "Real-world exposure to enterprise-scale Java development and database management.",
+        "Importance of documentation and process in maintaining complex systems.",
+        "Early lessons in remote work adaptation during a global crisis.",
+        "Experience navigating ambiguity and professional setbacks early in a career.",
+        "Foundational confidence that shaped later success in more complex technical roles."
+      ],
+      "experienceParagraphs": [
+        "Necsia was my first serious job as a developer. At the time I was looking for internships as part of my curriculum for my studies at Vallbona. I consciously picked an internship modality available at my school where you were required to work more hours, receiving pay in exchange. To be more specific, these were year-long internships instead of the regular three-month internship usually offered in most Spanish degree programs. The longer duration meant more experience and the possibility of getting hired afterwards (COVID had other ideas, but more on that later). The pay meant I was expected to perform at a higher level of responsibility than a regular intern.",
+        "It was their recruitment team that found me and contacted me via LinkedIn. Back then, on-site interviews were still in fashion, and I went through a single interview before being hired. The position was fully on-site, in the offices of the World Trade Center in Barcelona. Getting my first serious job in a glass maze with views of the sea was quite an experience—especially when the police started raiding the place for suspected drug trafficking (the offices are next to the port). But that's a story for another day over coffee.",
+        "When I started, a mountain of onboarding documents landed on my desk. After reading them all (and even understanding some parts) I was given database access and began working. My task was to develop and maintain a Java application with a small UI utility that managed data migrations between several database engines for Aigües de Barcelona (now Agbar Group).",
+        "The application was massive, full of legacy code and extensive documentation, and overseen by a senior developer who knew the entire system by heart. Our small team implemented new features and fixed bugs while documenting nearly every change. I don't recall any version control system being in place, so documentation was crucial for tracking progress.",
+        "As my internship was nearing its end, COVID hit hardest. Remote work became a necessity, so we were allowed to take our laptops home and were given VPN access to work remotely. This was my first experience with remote work. The tasks remained mostly the same, but communication suffered; our team wasn't used to asynchronous coordination and relied solely on basic messaging software.",
+        "The ending took a darker turn. I was under the impression the company planned to hire me after my internship, yet once my contract ended, I heard nothing for weeks until an email arrived instructing me to return my company laptop by mail. I never received a clear explanation, but I suspect the company reconsidered its team size due to the uncertainty of the COVID period.",
+        "Necsia was my first development experience, my first remote work experience, and my first ghosting experience. The lessons learned and the confidence gained in that single year would later open doors to new opportunities across different teams, stacks, and sectors."
+      ]
+    }
+  },
   "backButton": {
     "back": "Back"
   },

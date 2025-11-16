@@ -1,71 +1,241 @@
 {
   "navbar": {
-    "experience": "",
-    "projects": "",
-    "myCareer": "",
-    "chat": ""
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "myCareer": "Mi carrera",
+    "chat": "Chat"
   },
   "hero": {
     "title": "Daniel Galán",
-    "description": ""
+    "description": "Full-stack developer con seis años de experiencia creando aplicaciones web escalables y sistemas impulsados por IA. Experto en desarrollo backend y frontend, contenerización, CI/CD y despliegues en VPS, con enfoque en arquitectura limpia, rendimiento y automatización. Combino profundidad técnica con un enfoque sistémico para ofrecer soluciones eficientes y mantenibles."
   },
   "experience": {
-    "title": "",
+    "title": "Experiencia",
     "jobs": {
       "delectatech": {
-        "title": "",
+        "title": "Full Stack & AI Developer",
         "company": "Delectatech",
-        "description": ""
+        "description": "Responsable de desarrollo backend y frontend con testing. Implementación de soluciones GenAI y deep learning. Gestión de infraestructura VPS y pipelines CI/CD con contenedores de servicio."
       },
       "perception": {
-        "title": "",
+        "title": "Full Stack Developer",
         "company": "Perception",
-        "description": ""
+        "description": "Desarrollo de aplicaciones full stack con frameworks modernos de PHP y React. Gestión de bases de datos y sistemas de caché, entornos contenerizados, pipelines CI y servidores."
       },
       "necsia": {
-        "title": "",
+        "title": "Java Developer",
         "company": "Necsia IT Consulting",
-        "description": ""
+        "description": "Desarrollo y mantenimiento de una aplicación Java para Agbar, gestionando grandes volúmenes de datos en DB2 y MySQL, garantizando una migración y una integración fluidas entre ambos sistemas."
       }
     }
   },
   "projects": {
-    "title": "",
+    "title": "Proyectos",
     "items": {
       "sesametime": {
         "title": "SesameTime",
-        "description": ""
+        "description": "Una pequeña extensión de Chrome para ayudar a gestionar el tiempo en horarios laborales flexibles. Básicamente te indica cuándo puedes desconectar. La creé para ayudarme a mí y a mis compañeros con la logística."
       },
       "astroweather": {
         "title": "AstroWeather",
-        "description": ""
+        "description": "Un frontend para consultar rápidamente las condiciones meteorológicas para astrofotografía. Muestra datos desde un backend privado que mantengo por motivos de privacidad. Lo creé para simplificar la planificación de sesiones de astrofotografía."
       },
       "cluedogpt": {
         "title": "Cluedo GPT",
-        "description": ""
+        "description": "Una versión del clásico Cluedo impulsada por IA. Un “game master” crea un misterio con personajes personalizados, y los jugadores interactúan con un chatbot para pedir pistas y resolver el caso. Lo construí como una mejora de un ejercicio de team-building que hicimos en Delectatech."
       },
       "booksummarizer": {
         "title": "Book Summarizer",
-        "description": ""
+        "description": "Este conjunto de scripts divide un libro digital en capítulos y pasa cada uno por un LLM para obtener un resumen estructurado. Esta herramienta me permite generar notas rápidamente de libros de no ficción para guardarlas en Obsidian como referencia."
       },
       "panoramahorizon": {
         "title": "Panorama Horizon Maker",
-        "description": ""
+        "description": "Otra pequeña utilidad que toma una imagen 360 y ayuda a generar un archivo de horizonte a partir de ella. Ese archivo puede usarse en software de astrofotografía para automatizar sesiones astronómicas."
       },
       "arpdos": {
         "title": "ArpDos",
-        "description": ""
+        "description": "Una pequeña travesura que escribí cuando estudiaba para gastar una broma a mis compañeros. Cortaba el acceso a internet a todos los equipos de una red (o al menos lo hacía en 2019). Lo muestro aquí como prueba de mi interés y conocimiento en ciberseguridad y protocolos de red."
       }
     }
   },
+  "career": {
+    "title": "Mi carrera",
+    "contents": "Contenidos",
+    "sections": {
+      "overview": "Resumen general",
+      "summary": "Resumen corto",
+      "keyTakeaways": "Puntos clave",
+      "aboutMe": "Sobre mí"
+    },
+    "tooltips": {
+      "ai": "Esta sección fue creada con ayuda de IA, a partir de la sección 'Sobre mí'",
+      "human": "Esta sección fue escrita por un humano (yo)"
+    },
+    "overviewItems": [
+      "Desarrollé una pasión temprana por la tecnología y la resolución de problemas, impulsada por la curiosidad y el trasteo con electrónica.",
+      "Autodidacta en programación desde la adolescencia, empezando con C++ y después pasando a Python, construyendo proyectos personales que fomentaron la persistencia y la autonomía.",
+      "Reconocí el valor del inglés como vía hacia el conocimiento global y la mejora personal; desarrollé fluidez a través de la exposición a medios y la lectura.",
+      "Pursuí una formación técnica completa mediante ciclos formativos de grado medio y superior en informática, dominando fundamentos de hardware y software.",
+      "Obtuve experiencia práctica a través de prácticas en Necsia IT Consulting y Perception Technologies, lo que llevó a puestos a tiempo completo en desarrollo profesional de software.",
+      "Pasé a Delectatech, una startup centrada en IA, para unir ingeniería de software con inteligencia artificial y expandirme hacia un trabajo híbrido y multidisciplinar.",
+      "Continúo invirtiendo en aprendizaje continuo, perfeccionamiento de habilidades y crecimiento personal, equilibrando la especialización técnica con intereses más amplios como el aprendizaje de idiomas y la astronomía."
+    ],
+    "summaryText": "Tecnólogo autodidacta convertido en desarrollador profesional, construí mi carrera desde la curiosidad y la persistencia tempranas. Desde desmontar juguetes hasta desarrollar software y explorar la IA, mi camino refleja un impulso constante por aprender, adaptarme y evolucionar.",
+    "keyTakeawaysItems": [
+      "El aprendizaje autodirigido temprano construyó una base sólida en resolución de problemas y curiosidad técnica.",
+      "La fluidez lingüística y la autoformación permitieron un avance profesional continuo.",
+      "La formación profesional aportó base teórica y experiencia práctica.",
+      "La progresión profesional refleja un crecimiento intencional: de becario a full-stack developer a ingeniero centrado en IA.",
+      "Mantiene una mentalidad de aprendizaje continuo, combinando desarrollo profesional con curiosidad y disciplina personales."
+    ],
+    "aboutMeParagraphs": [
+      "Desarrollé el gusto por la tecnología a una edad muy temprana. Desmontaba juguetes electrónicos ruidosos y, con ayuda de mi padre (electricista), les quitaba los altavoces para hacerlos menos molestos. A lo largo de los años tuve que apañarme con equipos baratos; mis padres no querían malcriarme, así que nuestro único PC familiar poco potente era lo que tenía para satisfacer mi curiosidad. Lo rompí muchas veces, y cada vez tenía que buscar por internet cómo arreglarlo antes de que mi madre se diera cuenta.",
+      "A los catorce años entendí que solo me quedaban unos pocos años antes de elegir qué hacer con mi vida, así que empecé a pensar pronto. Me fascinaban la psicología y la mente humana, la astronomía y la física, y la tecnología. Una búsqueda rápida reveló que los programadores disfrutaban de muchas oportunidades y buenos salarios, así que elegí la programación y mantuve el resto de intereses como aficiones.",
+      "Descargué una app de móvil para aprender C++; probablemente no el lenguaje más amigable para principiantes, pero siempre he creído que debes empezar por lo que te atraiga. Me gustaban los videojuegos, y Google decía que estaban escritos en C++, así que empecé con eso... hasta que descubrí Python. Hice cursos de Codecademy, y tras dominar lo básico, empecé a crear proyectos personales. Pasaba tardes enteras peleándome con un script de Python que intentaba dibujar un recuadro alrededor de mi cara usando la webcam, totalmente absorto.",
+      "Por entonces me di cuenta de que aprender inglés desbloquearía innumerables oportunidades de aprendizaje, ya que la mayoría del material que quería consumir estaba en ese idioma. Ya tenía una base del colegio, pero me propuse mejorar viendo películas subtituladas y después leyendo libros. Empecé con las películas de Harry Potter, ya que me las sabía de memoria, y a día de hoy leo casi exclusivamente en inglés, tanto ficción como no ficción.",
+      "Cuando mi instituto ofreció clases de programación y tecnología, me apunté a todas las que pude. Aprendimos fundamentos de programación, diseño CAD, electrónica, y más, casi todo algo que ya conocía parcialmente. Incluso escribí una pequeña app Android para resolver problemas de suma de vectores de fuerza para mi clase de física, que mi profesor, para mi disgusto, consideró hacer trampas. Sigo creyendo que no lo era. Al fin y al cabo, la escribí yo.",
+      "Tras el instituto, completé un ciclo formativo de grado medio de dos años que cubría todo lo relacionado con ordenadores. Desmontábamos discos duros y PCs y aprendíamos a manejar terminales. Durante dos años trabajamos en sistemas CentOS sin entorno gráfico; el profesor decía: \"Ahora me odiaréis, y luego me lo agradeceréis\". Tenía razón en ambas cosas.",
+      "Después cursé dos ciclos superiores centrados en desarrollo web, de escritorio y móvil. En teoría duraban cuatro años, pero los estudiantes con buen inglés podían tomar un primer año mixto con todas las asignaturas en inglés, obteniendo dos titulaciones en tres años en lugar de cuatro. Durante estos estudios conseguí prácticas en Necsia IT Consulting y Perception.",
+      "Tras algo más de dos años en Perception, recibí una oferta para unirme a una startup de IA en el sector de la restauración: Delectatech. El aumento salarial era modesto, pero la oportunidad de trabajar en IA, un campo con el que soñaba desde adolescente, era demasiado buena para dejarla pasar. Fue mi primer cambio de empresa, mi primera startup y mi primer rol híbrido.",
+      "Actualmente estoy centrado en mantenerme al día con el progreso tecnológico y avanzar en mi carrera. Estoy trabajando en proyectos como este portfolio, realizando cursos para cubrir lagunas en mis habilidades y he empezado incluso a aprender un nuevo idioma (un reto, ya que suelo destacar más en tareas técnicas) mientras continúo perfeccionando mis aficiones."
+    ]
+  },
+  "experienceDetails": {
+    "delectatech": {
+      "title": "Delectatech",
+      "contents": "Contenidos",
+      "sections": {
+        "overview": "Resumen general",
+        "summary": "Resumen corto",
+        "keyTakeaways": "Puntos clave",
+        "experience": "Experiencia"
+      },
+      "tooltips": {
+        "ai": "Esta sección fue creada con ayuda de IA, a partir de la sección 'Experiencia'",
+        "human": "Esta sección fue escrita por un humano (yo)"
+      },
+      "overviewItems": [
+        "Me uní a Delectatech, una startup impulsada por IA en el sector de la restauración, como desarrollador backend con la oportunidad de expandirme hacia IA y ciencia de datos.",
+        "Inicialmente incorporado en ingeniería de datos, luego pasé a desarrollo full stack mientras apoyaba iniciativas relacionadas con IA.",
+        "Descubrí preferencia personal por la ingeniería de software frente a la ciencia de datos, centrándome en backend e implementación de IA en lugar de pipelines de datos.",
+        "Trabajé con múltiples frameworks—Symfony, FastAPI y NestJS—y contribuí a frontends en React y Angular.",
+        "Construí y mantuve pipelines CI/CD con Jenkins y GitHub Actions, automatizando testing, construcción de imágenes y despliegues.",
+        "Gestioné sistemas distribuidos con RabbitMQ, Redis, Elasticsearch y entornos contenerizados.",
+        "Implementé soluciones impulsadas por IA y agentes usando PyTorch, PydanticAI y LangChain, incluyendo integraciones de IA generativa.",
+        "Me adapté al entorno de startup, equilibrando prioridades cambiantes y proyectos incompletos con una alta velocidad de aprendizaje.",
+        "Asumí tareas de DevOps y gestión de proyectos, liderando un pequeño equipo multidisciplinar.",
+        "Actualmente centrado en escalabilidad en la nube e iniciativas de expansión internacional."
+      ],
+      "summaryText": "En Delectatech pasé de backend a full stack e IA en una startup de ritmo rápido. Construí sistemas distribuidos, pipelines automatizados y lideré equipos, mientras refinaba mi enfoque técnico y habilidades de liderazgo.",
+      "keyTakeawaysItems": [
+        "Experiencia práctica en implementación de IA, microservicios y procesamiento distribuido.",
+        "Fortalecimiento de experiencia en backend y automatización DevOps mediante CI/CD y contenerización.",
+        "Desarrollo de habilidades de liderazgo gestionando pequeños equipos ágiles.",
+        "Aprendizaje de adaptabilidad y priorización en un contexto de startup.",
+        "Transición de aspirante a científico de datos a ingeniero de software e implementador de IA."
+      ],
+      "experienceParagraphs": [
+        "A finales de 2022 fui contactado por una consultora de selección que trabajaba para Delectatech, una startup de IA en el sector de la restauración. El rol era similar al que ya desempeñaba (backend con Symfony), pero ofrecía la oportunidad de trabajar en IA y ciencia de datos, algo que llevaba tiempo buscando. Vi una oportunidad para reorientar mi especialización, así que dejé Perception y en 2023 comencé una nueva etapa.",
+        "Durante las primeras semanas, un ingeniero de datos sénior me introdujo en las operaciones de datos y IA de la empresa. También recibí formación en el backend y frontend de la plataforma SaaS. Mi rol abarcaría ambas áreas: la aplicación full stack como responsabilidad formal y los procesos de datos como parte del camino profesional que buscaba.",
+        "En la práctica terminé inclinándome más hacia el desarrollo full stack. El ingeniero de datos sénior dejó la empresa poco después de que yo entrase y fue reemplazado por dos junior incorporados al mismo tiempo que yo. Han crecido en sus roles y ahora gestionan todas las tareas relacionadas con datos.",
+        "Fue revelador darme cuenta de que, tras perseguir activamente un rol en IA y ciencia de datos, en realidad prefería el desarrollo de software. Ahora el equipo de Datos gestiona la mayor parte del trabajo, y solo intervengo cuando hace falta más personal o me centro en tareas estrictamente relacionadas con IA, como implementación de IA generativa y entrenamiento de modelos.",
+        "El trabajo en una startup es muy dinámico. Las prioridades cambian constantemente, y hay que gestionar la frustración de los proyectos inacabados mientras se encuentra satisfacción en las tareas completadas y las lecciones aprendidas. Las oportunidades de aprendizaje son abundantes. En Delectatech he afrontado desafíos que van desde problemas complicados de depurar hasta procesamiento distribuido con IA de grandes volúmenes de datos.",
+        "También es común asumir múltiples roles. Lo que empezó como un puesto centrado en backend se convirtió en un rol full stack con tareas de IA. He pasado de Symfony y PHP a FastAPI con Python y NestJS con Node. Aprovechando el conocimiento de servidores obtenido en mis estudios y en Perception, construí pipelines CI/CD con Jenkins y GitHub Actions para mejorar la velocidad de iteración, ejecutar tests automáticos y construir imágenes Docker para desplegarlas en instancias VPS.",
+        "La variedad de tareas y retos me ha permitido construir un stack tecnológico diverso. He trabajado en proyectos en React y Angular en frontend y en tres frameworks distintos en backend. He usado bases de datos relacionales y no relacionales como PostgreSQL y MongoDB, además de sistemas especializados como Redis para caché y Elasticsearch para búsqueda rápida. También he implementado tareas distribuidas con RabbitMQ y soluciones de IA con PyTorch, PydanticAI y LangChain.",
+        "La empresa está expandiéndose internacionalmente, lo que trae nuevos retos que estamos abordando. Actualmente estoy aprendiendo tecnologías cloud para escalar de forma eficiente y asumiendo más responsabilidades de DevOps. También he tomado un rol más activo como project manager en iteraciones rápidas, liderando un pequeño equipo de desarrolladores, especialistas en datos y producto."
+      ]
+    },
+    "perception": {
+      "title": "Perception",
+      "contents": "Contenidos",
+      "sections": {
+        "overview": "Resumen general",
+        "summary": "Resumen corto",
+        "keyTakeaways": "Puntos clave",
+        "experience": "Experiencia"
+      },
+      "tooltips": {
+        "ai": "Esta sección fue creada con ayuda de IA, a partir de la sección 'Experiencia'",
+        "human": "Esta sección fue escrita por un humano (yo)"
+      },
+      "overviewItems": [
+        "Primer puesto completamente remoto, que exigió adaptación a un flujo de trabajo íntegramente digital y la capacidad de integrarse en la cultura de la empresa sin contacto presencial.",
+        "Progresé de becario backend a full-stack developer, asumiendo responsabilidades técnicas y organizativas más amplias.",
+        "Adquirí una base sólida en arquitectura software, aplicando DDD, arquitectura hexagonal y principios CQRS en sistemas de producción.",
+        "Contribuí a sistemas backend usando Symfony, RabbitMQ y Elasticsearch, y posteriormente lideré iniciativas de frontend con Next.js.",
+        "Desarrollé herramientas internas de automatización para acelerar la creación de proyectos y mejorar la eficiencia del equipo, una de las cuales fue posteriormente adaptada y reutilizada en otra empresa.",
+        "Amplié responsabilidades hacia gestión de servidores, automatización de despliegues y comunicación con clientes, demostrando versatilidad y sentido de propiedad.",
+        "Construí productos clave como Planeta de Libros, integrando una UI dirigida por servidor y programación de contenidos estilo CMS.",
+        "Fui ascendido varias veces debido a la iniciativa, el crecimiento técnico y la entrega constante, antes de pasar a un nuevo rol centrado en IA."
+      ],
+      "summaryText": "En Perception pasé de becario a full-stack developer, dominando backend y frontend dentro de una cultura de ingeniería madura. Fue mi primer puesto remoto y un periodo de rápido crecimiento en diseño software, autonomía y liderazgo.",
+      "keyTakeawaysItems": [
+        "Exposición profunda a arquitectura y patrones de diseño de nivel empresarial.",
+        "Aprendizaje del valor del mentoring, el onboarding estructurado y los ciclos de feedback.",
+        "Mejora de la productividad del equipo mediante iniciativas de automatización y tooling.",
+        "Transición de backend a full stack, uniendo responsabilidades técnicas y de comunicación con clientes.",
+        "Desarrollo de habilidades de colaboración remota y comunicación transversal.",
+        "Fundamento para el posterior avance hacia ingeniería software centrada en IA."
+      ],
+      "experienceParagraphs": [
+        "Perception fue mi primera experiencia en desarrollo web profesional. Comencé como becario y luego fui contratado, ganando autonomía y responsabilidad. La empresa tenía más de 30 años de experiencia creando aplicaciones web a medida para sectores diversos, lo que implicaba prácticas técnicas y arquitectónicas maduras.",
+        "Cuando me incorporé, se me asignó un desarrollador backend sénior como mentor. Me hizo comprender la importancia del mentoring y un buen proceso de onboarding. Recibí cursos, feedback regular y oportunidades de pair programming. Esa fase inicial impulsó considerablemente mi carrera.",
+        "Aprendí patrones de diseño de software: seguíamos prácticas de clean code y trabajábamos bajo una filosofía DDD, usando arquitectura hexagonal y aplicando CQRS a la lógica de negocio. También aprendí tecnologías como Elasticsearch y colas de mensajes con RabbitMQ.",
+        "Con el tiempo adquirí más autonomía y pude impulsar mis propias ideas de mejora. Por ejemplo, cuando vi que tardábamos una hora en preparar un nuevo repositorio, creé un fork de PHP Maker Bundle para generar proyectos en minutos. Más tarde construí una herramienta similar con Cookiecutter y Python en Delectatech. Los desarrolladores de ambas empresas valoraron la solución y contribuyeron a ella.",
+        "También amplié mis responsabilidades más allá del backend. Empecé a gestionar servidores y desplegar servicios, aprendiendo sobre Supervisor y otras herramientas estándar para desplegar en VPS. En una ocasión cubrí la baja de un compañero encargado de comunicarse con clientes, lo que implicó recopilar requisitos, crear tareas y desarrollarlas.",
+        "Había hecho trabajos puntuales de frontend con JavaScript, pero tras debatir con otros desarrolladores impulsamos la adopción de un framework. Elegimos Next.js para construir la web de Planeta de Libros. Fue un reto fascinante profundizar en el frontend: el cliente quería una UI dirigida por servidor donde gestionasen y planificasen bloques de página desde una aplicación de administración.",
+        "Dejé la empresa tras dos años y medio y, si no recuerdo mal, tres ascensos, para tomar un puesto similar en Delectatech y perseguir la oportunidad de trabajar con IA."
+      ]
+    },
+    "necsia": {
+      "title": "Necsia IT Consulting",
+      "contents": "Contenidos",
+      "sections": {
+        "overview": "Resumen general",
+        "summary": "Resumen corto",
+        "keyTakeaways": "Puntos clave",
+        "experience": "Experiencia"
+      },
+      "tooltips": {
+        "ai": "Esta sección fue creada con ayuda de IA, a partir de la sección 'Experiencia'",
+        "human": "Esta sección fue escrita por un humano (yo)"
+      },
+      "overviewItems": [
+        "Contribuí al mantenimiento y desarrollo de una aplicación Java de escritorio de gran escala usada para migración y sincronización de datos entre bases de datos DB2 y Oracle.",
+        "Trabajé en un entorno altamente regulado y centrado en documentación, priorizando la precisión y trazabilidad sobre la velocidad.",
+        "Colaboré estrechamente con desarrolladores sénior y de nivel medio, obteniendo exposición a estándares reales de ingeniería software y flujos de trabajo empresariales.",
+        "Obtuve experiencia práctica con bases de código legacy, despliegues manuales y validación de integridad de datos.",
+        "Desarrollé hábitos profesionales en documentación técnica, depuración estructurada y seguimiento de cambios—en una época previa al uso extendido de sistemas de control de versiones.",
+        "Viví la transición al trabajo remoto durante el inicio de la pandemia de COVID-19, adaptándome a comunicación asincrónica y flujos por VPN.",
+        "Aprendí lecciones valiosas sobre comunicación, gestión de expectativas y la naturaleza impredecible de los inicios de una carrera profesional."
+      ],
+      "summaryText": "Mi primer rol como desarrollador en Necsia me introdujo en sistemas Java empresariales, flujos estrictos de documentación y migraciones de datos de gran escala. Fue una experiencia formativa marcada por crecimiento, disrupción debido a la COVID y una lección temprana sobre la incertidumbre laboral.",
+      "keyTakeawaysItems": [
+        "Exposición real al desarrollo Java empresarial y gestión de bases de datos.",
+        "Importancia de la documentación y los procesos en sistemas complejos.",
+        "Primer contacto con el trabajo remoto durante una crisis global.",
+        "Experiencia gestionando ambigüedad y contratiempos tempranos.",
+        "Confianza inicial que permitió avanzar hacia roles técnicos más complejos."
+      ],
+      "experienceParagraphs": [
+        "Necsia fue mi primer trabajo serio como desarrollador. Por entonces buscaba prácticas del ciclo de Vallbona. Elegí una modalidad con más horas a cambio de remuneración. Eran prácticas de un año, en lugar de los tres meses habituales, lo que implicaba más experiencia y posibilidad de contratación (la COVID tuvo otros planes). El sueldo implicaba más responsabilidad que la de un becario típico.",
+        "Su equipo de selección me encontró por LinkedIn. En aquella época las entrevistas presenciales seguían siendo comunes, y pasé una única entrevista antes de ser contratado. El puesto era completamente presencial, en el World Trade Center de Barcelona. Conseguir mi primer trabajo serio en un edificio acristalado con vistas al mar fue toda una experiencia—especialmente cuando la policía comenzó a registrar el lugar buscando tráfico de drogas (las oficinas están junto al puerto). Pero esa historia queda para un café.",
+        "Al empezar, recibí una montaña de documentos de onboarding. Tras leerlos (y entender parte), me dieron acceso a bases de datos y comencé a trabajar. Mi tarea era mantener y desarrollar una aplicación Java con una pequeña interfaz que gestionaba migraciones de datos entre varios motores para Aigües de Barcelona (Agbar).",
+        "La aplicación era enorme, llena de código legacy y abundante documentación, supervisada por un desarrollador sénior que conocía todo el sistema. Nuestro pequeño equipo implementaba nuevas funciones y corregía errores mientras documentábamos casi cada cambio. No recuerdo ningún sistema de control de versiones, así que la documentación era esencial para seguir el progreso.",
+        "Al acercarse el final de mis prácticas, la COVID golpeó fuerte. El teletrabajo se volvió necesario, así que pudimos llevarnos los portátiles a casa y acceder por VPN. Fue mi primera experiencia de trabajo remoto. Las tareas eran prácticamente las mismas, pero la comunicación se resintió; el equipo no estaba habituado a coordinarse de forma asincrónica y dependía de mensajería básica.",
+        "El cierre fue más amargo. Creía que querían contratarme al terminar las prácticas, pero una vez concluyó el contrato, no recibí noticias durante semanas hasta que llegó un correo pidiendo devolver el portátil por correo. Nunca obtuve una explicación clara, pero sospecho que reconsideraron el tamaño del equipo ante la incertidumbre de la pandemia.",
+        "Necsia fue mi primera experiencia como desarrollador, mi primer trabajo remoto y mi primera experiencia de ghosting. Las lecciones y la confianza obtenidas en ese año abrirían puertas a nuevas oportunidades en distintos equipos, stacks y sectores."
+      ]
+    }
+  },
   "backButton": {
-    "back": ""
+    "back": "Atrás"
   },
   "scrollIndicator": {
-    "scrollDown": ""
+    "scrollDown": "Desplazar hacia abajo"
   },
   "metadata": {
-    "title": "",
-    "description": ""
+    "title": "Portfolio de Daniel",
+    "description": "Bienvenido al portfolio personal de Daniel."
   }
 }
