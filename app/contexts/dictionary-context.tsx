@@ -17,8 +17,89 @@ type Dictionary = {
     myCareer: string;
     chat: string;
   };
-  // Add other sections as needed
-  [key: string]: Record<string, string>;
+  hero: {
+    title: string;
+    description: string;
+  };
+  experience: {
+    title: string;
+    jobs: {
+      delectatech: {
+        title: string;
+        company: string;
+        description: string;
+      };
+      perception: {
+        title: string;
+        company: string;
+        description: string;
+      };
+      necsia: {
+        title: string;
+        company: string;
+        description: string;
+      };
+    };
+  };
+  projects: {
+    title: string;
+    items: Record<
+      string,
+      {
+        title: string;
+        description: string;
+      }
+    >;
+  };
+  career: {
+    title: string;
+    contents: string;
+    sections: {
+      overview: string;
+      summary: string;
+      keyTakeaways: string;
+      aboutMe: string;
+    };
+    tooltips: {
+      ai: string;
+      human: string;
+    };
+    overviewItems: string[];
+    summaryText: string;
+    keyTakeawaysItems: string[];
+    aboutMeParagraphs: string[];
+  };
+  experienceDetails: Record<
+    string,
+    {
+      title: string;
+      contents: string;
+      sections: {
+        overview: string;
+        summary: string;
+        keyTakeaways: string;
+        experience: string;
+      };
+      tooltips: {
+        ai: string;
+        human: string;
+      };
+      overviewItems: string[];
+      summaryText: string;
+      keyTakeawaysItems: string[];
+      experienceParagraphs: string[];
+    }
+  >;
+  backButton: {
+    back: string;
+  };
+  scrollIndicator: {
+    scrollDown: string;
+  };
+  metadata: {
+    title: string;
+    description: string;
+  };
 };
 
 type DictionaryContextType = {

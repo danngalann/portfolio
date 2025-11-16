@@ -130,126 +130,16 @@ export default function CareerPage() {
                 />
               </h2>
               <div className="bg-light-background rounded-lg p-8 space-y-8">
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  I developed a taste for technology at a very young age. Noisy
-                  electronic toys were taken apart, and their speakers removed
-                  (with help from my father, an electrician) to make them less
-                  annoying. Over the years, I had to make do with cheap
-                  equipment; my parents weren&apos;t keen on spoiling a child,
-                  so our single low-spec family PC was all I had to satisfy my
-                  curiosity. I broke it, many times, and each time I scrambled
-                  through the web to learn how to fix it before my mother found
-                  out.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Around age fourteen, I realized I only had a few years left
-                  before choosing what to do with my life, so I started thinking
-                  early. I was fascinated by psychology and the human mind,
-                  astronomy and physics, and technology. A quick search revealed
-                  that programmers enjoyed abundant opportunities and high
-                  salaries, so I chose programming and kept the other interests
-                  as hobbies.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  I downloaded a phone app to learn C++; arguably not the most
-                  beginner-friendly language, but I&apos;ve always believed you
-                  should start with whatever draws you in. I liked video games,
-                  and Google said they were written in C++, so I went with
-                  that... until I discovered Python. I took Codecademy courses,
-                  and after grasping the basics, I started building personal
-                  projects. I&apos;d spend whole afternoons fighting with a
-                  Python script that tried to draw a box around my face through
-                  a webcam feed, completely absorbed.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Around that time, I realized that learning English would
-                  unlock countless learning opportunities, since most of the
-                  material I wanted to consume was in that language. I already
-                  had a basic foundation from school, but I took it upon myself
-                  to improve by watching subtitled movies and later reading
-                  books. I started with the Harry Potter films, since I knew
-                  them by heart anyway, and to this day I read almost
-                  exclusively in English, both fiction and non-fiction.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  When my secondary school offered programming and technology
-                  classes, I enrolled in every one I could. We learned
-                  programming fundamentals, CAD design, electronics, and more,
-                  most of which I already had some grasp of. I even wrote a
-                  small Android app to solve force-vector addition problems for
-                  my physics class, which my teacher, to my displeasure,
-                  considered cheating. I still maintain it wasn&apos;t. After
-                  all, I wrote it myself.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  After secondary school, I completed a two-year mid-level
-                  vocational program covering all things computer-related. We
-                  disassembled hard drives and PCs and learned to navigate
-                  terminals. For two years we worked on CentOS systems without a
-                  GUI; the teacher told us, &quot;You&apos;ll hate me now, and
-                  you&apos;ll thank me later.&quot; He was right on both counts.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Later, I pursued a pair of advanced-level programs focused on
-                  web, desktop, and mobile development. In theory, the studies
-                  would have taken four years, but students with strong English
-                  skills were allowed to take a mixed first year with all
-                  subjects taught in English, earning two certifications in
-                  three years instead of four. Through these studies, I secured
-                  internships at{" "}
-                  <Link
-                    href="/experience/necsia"
-                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
-                  >
-                    Necsia IT Consulting
-                  </Link>{" "}
-                  and{" "}
-                  <Link
-                    href="/experience/perception"
-                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
-                  >
-                    Perception
-                  </Link>
-                  .
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  After a little over two years at{" "}
-                  <Link
-                    href="/experience/perception"
-                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
-                  >
-                    Perception
-                  </Link>
-                  , I received an offer to join an AI startup in the food
-                  service industry:{" "}
-                  <Link
-                    href="/experience/delectatech"
-                    className="text-cyan-300 hover:text-cyan-400 transition-colors"
-                  >
-                    Delectatech
-                  </Link>
-                  . The salary increase was modest, but the chance to work in
-                  AI, a field I&apos;d dreamed about as a teenager, was too good
-                  to pass up. It was my first time changing companies, my first
-                  time in a startup, and my first hybrid role.
-                </p>
-
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Currently, I&apos;m focused on staying up to date with
-                  technological progress and advancing my career. I&apos;m
-                  working on projects like this portfolio, taking courses to
-                  fill gaps in my skill set, and have even started learning a
-                  new language (a challenge, since I tend to excel more at
-                  technical tasks) while continuing to pursue mastery in my
-                  hobbies.
-                </p>
+                {dict.aboutMeParagraphs.map(
+                  (paragraph: string, index: number) => (
+                    <p
+                      key={index}
+                      className="text-lg text-foreground/90 leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ),
+                )}
               </div>
             </section>
           </article>
