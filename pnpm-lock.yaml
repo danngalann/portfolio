@@ -10,19 +10,25 @@ importers:
     dependencies:
       '@langchain/core':
         specifier: ^1.0.5
-        version: 1.0.5
+        version: 1.0.5(openai@6.9.0(zod@4.1.12))
       '@langchain/ollama':
         specifier: ^1.0.1
-        version: 1.0.1(@langchain/core@1.0.5)
+        version: 1.0.1(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
+      '@langchain/openai':
+        specifier: ^1.1.1
+        version: 1.1.1(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
       '@langchain/textsplitters':
         specifier: ^1.0.0
-        version: 1.0.0(@langchain/core@1.0.5)
+        version: 1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
       '@langchain/weaviate':
         specifier: ^1.0.0
-        version: 1.0.0(@langchain/core@1.0.5)
+        version: 1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
+      dotenv:
+        specifier: ^17.2.3
+        version: 17.2.3
       langchain:
         specifier: ^1.0.4
-        version: 1.0.4(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 1.0.4(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(openai@6.9.0(zod@4.1.12))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next:
         specifier: 16.0.1
         version: 16.0.1(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -435,6 +441,12 @@ packages:
 
   '@langchain/ollama@1.0.1':
     resolution: {integrity: sha512-Pe32hhTpMvnRlNFJxkdu6r1QzsONGz5uvoLiMU1TpgAUu7EyKr2osymlgjBLqDe2vMKUmqHb+yWRH0IppDBUOg==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.0.0
+
+  '@langchain/openai@1.1.1':
+    resolution: {integrity: sha512-0kUaXejo/sn6QAohWHDaAUapC4CJRkJIajGaWfJC+llSqpDBnmBE1oHg1M2fi1OCeP+ns9SxB6BTsq4Qbiqmig==}
     engines: {node: '>=20'}
     peerDependencies:
       '@langchain/core': ^1.0.0
@@ -1086,6 +1098,10 @@ packages:
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
+
+  dotenv@17.2.3:
+    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+    engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -1904,6 +1920,18 @@ packages:
   onetime@7.0.0:
     resolution: {integrity: sha512-VXJjc87FScF88uafS3JllDgvAm+c/Slfz06lorj2uAY34rlUu0Nt+v8wreiImcrgAjjIHp1rXpTDlLOGw29WwQ==}
     engines: {node: '>=18'}
+
+  openai@6.9.0:
+    resolution: {integrity: sha512-n2sJRYmM+xfJ0l3OfH8eNnIyv3nQY7L08gZQu3dw6wSdfPtKAk92L83M2NIP5SS8Cl/bsBBG3yKzEOjkx0O+7A==}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -2789,14 +2817,14 @@ snapshots:
 
   '@js-sdsl/ordered-map@4.4.2': {}
 
-  '@langchain/core@1.0.5':
+  '@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12))':
     dependencies:
       '@cfworker/json-schema': 4.1.1
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.21
-      langsmith: 0.3.79
+      langsmith: 0.3.79(openai@6.9.0(zod@4.1.12))
       mustache: 4.2.0
       p-queue: 6.6.2
       p-retry: 4.6.2
@@ -2808,46 +2836,55 @@ snapshots:
       - '@opentelemetry/sdk-trace-base'
       - openai
 
-  '@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.0.5)':
+  '@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))':
     dependencies:
-      '@langchain/core': 1.0.5
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
       uuid: 10.0.0
 
-  '@langchain/langgraph-sdk@1.0.0(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@langchain/langgraph-sdk@1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       p-queue: 6.6.2
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 1.0.5
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@langchain/langgraph@1.0.2(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)':
+  '@langchain/langgraph@1.0.2(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)':
     dependencies:
-      '@langchain/core': 1.0.5
-      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.0.5)
-      '@langchain/langgraph-sdk': 1.0.0(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
+      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
+      '@langchain/langgraph-sdk': 1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       uuid: 10.0.0
       zod: 4.1.12
     transitivePeerDependencies:
       - react
       - react-dom
 
-  '@langchain/ollama@1.0.1(@langchain/core@1.0.5)':
+  '@langchain/ollama@1.0.1(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))':
     dependencies:
-      '@langchain/core': 1.0.5
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
       ollama: 0.5.18
       uuid: 10.0.0
 
-  '@langchain/textsplitters@1.0.0(@langchain/core@1.0.5)':
+  '@langchain/openai@1.1.1(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))':
     dependencies:
-      '@langchain/core': 1.0.5
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
+      js-tiktoken: 1.0.21
+      openai: 6.9.0(zod@4.1.12)
+      zod: 4.1.12
+    transitivePeerDependencies:
+      - ws
+
+  '@langchain/textsplitters@1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))':
+    dependencies:
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
       js-tiktoken: 1.0.21
 
-  '@langchain/weaviate@1.0.0(@langchain/core@1.0.5)':
+  '@langchain/weaviate@1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))':
     dependencies:
-      '@langchain/core': 1.0.5
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
       uuid: 10.0.0
       weaviate-client: 3.9.0
     transitivePeerDependencies:
@@ -3450,6 +3487,8 @@ snapshots:
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
+
+  dotenv@17.2.3: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -4139,12 +4178,12 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  langchain@1.0.4(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  langchain@1.0.4(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(openai@6.9.0(zod@4.1.12))(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
-      '@langchain/core': 1.0.5
-      '@langchain/langgraph': 1.0.2(@langchain/core@1.0.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
-      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.0.5)
-      langsmith: 0.3.79
+      '@langchain/core': 1.0.5(openai@6.9.0(zod@4.1.12))
+      '@langchain/langgraph': 1.0.2(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
+      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
+      langsmith: 0.3.79(openai@6.9.0(zod@4.1.12))
       uuid: 10.0.0
       zod: 4.1.12
     transitivePeerDependencies:
@@ -4156,7 +4195,7 @@ snapshots:
       - react-dom
       - zod-to-json-schema
 
-  langsmith@0.3.79:
+  langsmith@0.3.79(openai@6.9.0(zod@4.1.12)):
     dependencies:
       '@types/uuid': 10.0.0
       chalk: 4.1.2
@@ -4165,6 +4204,8 @@ snapshots:
       p-retry: 4.6.2
       semver: 7.7.3
       uuid: 10.0.0
+    optionalDependencies:
+      openai: 6.9.0(zod@4.1.12)
 
   language-subtag-registry@0.3.23: {}
 
@@ -4401,6 +4442,10 @@ snapshots:
   onetime@7.0.0:
     dependencies:
       mimic-function: 5.0.1
+
+  openai@6.9.0(zod@4.1.12):
+    optionalDependencies:
+      zod: 4.1.12
 
   optionator@0.9.4:
     dependencies:

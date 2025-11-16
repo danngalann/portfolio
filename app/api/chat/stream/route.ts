@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
-import { ChatOllama } from "@langchain/ollama";
 import weaviate from "weaviate-client";
 import { WeaviateStore } from "@langchain/weaviate";
-import { OllamaEmbeddings } from "@langchain/ollama";
+import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 
 export async function POST(req: Request) {
   const { messages, nResults = 3 } = await req.json();
@@ -15,8 +14,12 @@ export async function POST(req: Request) {
     port: 1564,
   });
 
-  const embeddings = new OllamaEmbeddings({
-    model: "mxbai-embed-large:335m",
+  const embeddings = new OpenAIEmbeddings({
+    model: process.env.EMBEDDING_MODEL,
+    configuration: {
+      baseURL: process.env.BASE_URL,
+      apiKey: process.env.OPENROUTER_API_KEY,
+    },
   });
 
   const vectorStore = new WeaviateStore(embeddings, {
@@ -33,8 +36,13 @@ export async function POST(req: Request) {
     .join("\n");
 
   // LLM model
-  const model = new ChatOllama({
-    model: "gemma3:4b",
+  const model = new ChatOpenAI({
+    model: process.env.CHAT_MODEL,
+    configuration: {
+      baseURL: process.env.BASE_URL,
+      apiKey: process.env.OPENROUTER_API_KEY,
+    },
+    streaming: true,
   });
 
   // RAG-augmented system message

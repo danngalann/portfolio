@@ -2,8 +2,11 @@ import weaviate from "weaviate-client";
 import { WeaviateStore } from "@langchain/weaviate";
 import { v4 as uuidv4 } from "uuid";
 import type { Document } from "@langchain/core/documents";
-import { OllamaEmbeddings } from "@langchain/ollama";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function main() {
   // --- 1. Connect to local Weaviate ---
@@ -12,8 +15,12 @@ async function main() {
   });
 
   // --- 2. Embeddings model ---
-  const embeddings = new OllamaEmbeddings({
-    model: "mxbai-embed-large:335m",
+  const embeddings = new OpenAIEmbeddings({
+    model: process.env.EMBEDDING_MODEL,
+    configuration: {
+      baseURL: process.env.BASE_URL,
+      apiKey: process.env.OPENROUTER_API_KEY,
+    },
   });
 
   // --- 3. Create Vector Store ---
