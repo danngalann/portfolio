@@ -4,7 +4,13 @@ import Link from "next/link";
 import { Job } from "@/app/lib/definitions";
 import { LuArrowRight } from "react-icons/lu";
 
-export default function ExperienceItem({ job }: { job: Job }) {
+export default function ExperienceItem({
+  job,
+  lang,
+}: {
+  job: Job;
+  lang: string;
+}) {
   const { title, company, startDate, endDate, description, tags, slug } = job;
   const duration = getDateDiffInYears(startDate, endDate);
 
@@ -26,7 +32,7 @@ export default function ExperienceItem({ job }: { job: Job }) {
         <TagList tags={tags} />
         <Link
           className="flex justify-end items-center gap-2 hover:cursor-pointer mt-4 hover:text-blue-800 transition-colors"
-          href={`/experience/${slug}`}
+          href={`/${lang}/experience/${slug}`}
         >
           <p>Read the details</p>
           <LuArrowRight />

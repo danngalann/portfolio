@@ -65,7 +65,7 @@ function ParallaxLayers() {
   );
 }
 
-function ScrollIndicator() {
+function ScrollIndicator({ scrollDown }: { scrollDown: string }) {
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "-5px",
@@ -83,7 +83,7 @@ function ScrollIndicator() {
       <div
         {...(!inView && {
           "data-tooltip-id": "scroll-tooltip",
-          "data-tooltip-content": "Scroll down",
+          "data-tooltip-content": scrollDown,
           "data-tooltip-place": "right",
         })}
         className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${
@@ -98,26 +98,25 @@ function ScrollIndicator() {
   );
 }
 
-export default function Hero() {
+type HeroProps = {
+  title: string;
+  description: string;
+  scrollDown: string;
+};
+
+export default function Hero({ title, description, scrollDown }: HeroProps) {
   return (
     <section className="relative h-screen flex items-center justify-center -mt-[72px] pt-[72px]">
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
-          <h1 className="-ml-[0.07em] text-6xl uppercase">Daniel Galán</h1>
-          <p className="text-xl">
-            Full-stack developer with six years of experience building scalable
-            web applications and AI-driven systems. Skilled in backend and
-            frontend development, containerization, CI/CD, and VPS deployments,
-            with a focus on clean architecture, performance, and automation. I
-            combine technical depth with a systems-thinking approach to deliver
-            efficient, maintainable solutions.
-          </p>
+          <h1 className="-ml-[0.07em] text-6xl uppercase">{title}</h1>
+          <p className="text-xl">{description}</p>
         </div>
         <div className="hidden md:block max-w-lg">
           <ParallaxLayers />
         </div>
       </div>
-      <ScrollIndicator />
+      <ScrollIndicator scrollDown={scrollDown} />
       <Tooltip id="scroll-tooltip" />
     </section>
   );

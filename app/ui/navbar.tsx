@@ -2,18 +2,30 @@
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { type Locale } from "@/dictionaries";
 
-export default function Navbar() {
+type NavbarProps = {
+  lang: Locale;
+  labels?: {
+    experience: string;
+    projects: string;
+    myCareer: string;
+    chat: string;
+  };
+};
+
+export default function Navbar({ lang, labels }: NavbarProps) {
   const { ref, inView } = useInView({
     threshold: 0,
     initialInView: true,
   });
   const pathname = usePathname();
+  const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const hideOnPaths = ["/career", "/experience"];
+  const hideOnPaths = [`/${lang}/career`, `/${lang}/experience`];
 
   // Prevent body scroll when drawer is open
   useEffect(() => {
@@ -28,16 +40,33 @@ export default function Navbar() {
   }, [isDrawerOpen]);
 
   // Hide navbar on experience detail pages
-  if (hideOnPaths.some((path) => pathname.startsWith(path))) {
+  if (pathname && hideOnPaths.some((path) => pathname.startsWith(path))) {
     return null;
   }
 
+  const defaultLabels = {
+    experience: "Experience",
+    projects: "Projects",
+    myCareer: "My career",
+    chat: "Chat",
+  };
+
+  const navLabels = labels || defaultLabels;
+
   const navLinks = [
-    { href: "/#experience-section", label: "Experience" },
-    { href: "/#projects-section", label: "Projects" },
-    { href: "/career", label: "My career" },
-    { href: "/chat", label: "Chat" },
+    { href: `/${lang}#experience-section`, label: navLabels.experience },
+    { href: `/${lang}#projects-section`, label: navLabels.projects },
+    { href: `/${lang}/career`, label: navLabels.myCareer },
+    { href: `/${lang}/chat`, label: navLabels.chat },
   ];
+
+  const handleLanguageChange = (newLang: Locale) => {
+    if (!pathname) return;
+
+    // Replace current language in pathname with new language
+    const newPathname = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPathname);
+  };
 
   return (
     <>
@@ -51,18 +80,46 @@ export default function Navbar() {
         }`}
       >
         {/* Desktop navigation */}
-        <ul className="hidden md:flex gap-8 p-6 justify-center">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} className="relative group">
-                <span className="relative">
-                  {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex gap-8 p-6 justify-center items-center">
+          <ul className="flex gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="relative group">
+                  <span className="relative">
+                    {link.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Language switcher */}
+          <div className="flex gap-2 ml-4 pl-4 border-l border-current/30">
+            <button
+              onClick={() => handleLanguageChange("en")}
+              className={`px-2 py-1 rounded transition-all ${
+                lang === "en"
+                  ? "bg-current/20 font-semibold"
+                  : "hover:bg-current/10"
+              }`}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              onClick={() => handleLanguageChange("es")}
+              className={`px-2 py-1 rounded transition-all ${
+                lang === "es"
+                  ? "bg-current/20 font-semibold"
+                  : "hover:bg-current/10"
+              }`}
+              aria-label="Switch to Spanish"
+            >
+              ES
+            </button>
+          </div>
+        </div>
 
         {/* Mobile navigation - Hamburger button */}
         <div className="md:hidden flex justify-end p-6">
@@ -119,6 +176,40 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+
+          {/* Language switcher - Mobile */}
+          <li className="pt-6 border-t border-current/30">
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  handleLanguageChange("en");
+                  setIsDrawerOpen(false);
+                }}
+                className={`flex-1 px-4 py-2 rounded transition-all ${
+                  lang === "en"
+                    ? "bg-current/20 font-semibold"
+                    : "bg-current/10"
+                }`}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+              <button
+                onClick={() => {
+                  handleLanguageChange("es");
+                  setIsDrawerOpen(false);
+                }}
+                className={`flex-1 px-4 py-2 rounded transition-all ${
+                  lang === "es"
+                    ? "bg-current/20 font-semibold"
+                    : "bg-current/10"
+                }`}
+                aria-label="Switch to Spanish"
+              >
+                ES
+              </button>
+            </div>
+          </li>
         </ul>
       </div>
     </>

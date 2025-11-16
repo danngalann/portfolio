@@ -1,15 +1,28 @@
 import { Job } from "@/app/lib/definitions";
 import ExperienceItem from "./experience-item";
 
-export default function Experience() {
+type ExperienceProps = {
+  title: string;
+  jobs: {
+    title: string;
+    company: string;
+    description: string;
+  }[];
+  lang: string;
+};
+
+export default function Experience({
+  title,
+  jobs: jobsDict,
+  lang,
+}: ExperienceProps) {
   const jobs: Job[] = [
     {
-      title: "Full Stack & AI Developer",
-      company: "Delectatech",
+      title: jobsDict[0].title,
+      company: jobsDict[0].company,
       startDate: new Date(2023, 1, 1),
       endDate: null,
-      description:
-        "Handled backend and frontend development with testing. Implemented GenAI and deep learning solutions. Managed VPS infrastructure and CI/CD pipelines with service containers.",
+      description: jobsDict[0].description,
       tags: [
         "TypeScript",
         "React",
@@ -30,12 +43,11 @@ export default function Experience() {
       slug: "delectatech",
     },
     {
-      title: "Full Stack Developer",
-      company: "Perception",
+      title: jobsDict[1].title,
+      company: jobsDict[1].company,
       startDate: new Date(2020, 8, 1),
       endDate: new Date(2022, 11, 31),
-      description:
-        "Developed full stack applications with modern PHP frameworks and React. Managed databases and caching systems, containerized environments, CI pipelines, and server infrastructure.",
+      description: jobsDict[1].description,
       tags: [
         "PHP",
         "Symfony",
@@ -54,12 +66,11 @@ export default function Experience() {
       slug: "perception",
     },
     {
-      title: "Java Developer",
-      company: "Necsia IT Consulting",
+      title: jobsDict[2].title,
+      company: jobsDict[2].company,
       startDate: new Date(2019, 4, 1),
       endDate: new Date(2020, 3, 30),
-      description:
-        "Developed and maintained a Java application for Agbar, handling large amounts of data in DB2 and MySQL and providing seamless migration and integration between the two database systems.",
+      description: jobsDict[2].description,
       tags: ["Java", "MySQL", "DB2", "SQL", "Eclipse"],
       slug: "necsia",
     },
@@ -71,11 +82,11 @@ export default function Experience() {
       className="flex flex-col items-center justify-center"
     >
       <h1 id="experience-header" className="text-5xl uppercase mb-16">
-        Experience
+        {title}
       </h1>
       <div className="flex flex-col gap-[16vw] md:gap-[3vw]">
         {jobs.map((job) => (
-          <ExperienceItem key={job.slug} job={job} />
+          <ExperienceItem key={job.slug} job={job} lang={lang} />
         ))}
       </div>
     </section>
