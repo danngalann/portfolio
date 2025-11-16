@@ -33,9 +33,13 @@ services:
     restart: always
     networks:
       - portfolio-network
+      - proxy
 
 networks:
   portfolio-network:
+  proxy:
+    external: false
+    name: proxy
 
 volumes:
   weaviate_data_prod:
