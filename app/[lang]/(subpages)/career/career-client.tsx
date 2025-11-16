@@ -122,11 +122,11 @@ export default function CareerPage() {
             {/* About Me Section */}
             <section id="about-me" className="scroll-mt-24">
               <h2 className="text-4xl font-bold mb-8 text-foreground flex items-center gap-3">
-                About Me
+                {dict.sections.aboutMe}
                 <FaHandPaper
                   className="text-2xl"
                   data-tooltip-id="human-tooltip"
-                  data-tooltip-content="This section was written by a human (me!)"
+                  data-tooltip-content={dict.tooltips.human}
                 />
               </h2>
               <div className="bg-light-background rounded-lg p-8 space-y-8">
