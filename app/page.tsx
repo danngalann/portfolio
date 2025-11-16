@@ -1,13 +1,6 @@
-import Experience from "./ui/experience/experience";
-import Hero from "./ui/hero";
-import Projects from "./ui/projects/projects";
+import { redirect } from "next/navigation";
+import { defaultLocale } from "@/dictionaries";
 
-export default function Home() {
-  return (
-    <main className="container mx-auto">
-      <Hero />
-      <Experience />
-      <Projects />
-    </main>
-  );
+export default function RootPage() {
+  redirect(`/${defaultLocale}`);
 }
