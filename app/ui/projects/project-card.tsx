@@ -1,8 +1,13 @@
+"use client";
+
 import { Project } from "@/app/lib/definitions";
 import { FaGithub } from "react-icons/fa";
 import TagList from "../tag-list";
+import { useDictionary } from "@/app/contexts/dictionary-context";
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const dict = useDictionary();
+
   return (
     <div className="mx-4 md:mx-0 bg-foreground text-black border p-4 rounded-lg flex flex-col justify-between h-full">
       <div>
@@ -18,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="mt-4 inline-flex items-center hover:text-blue-800"
         >
           <FaGithub className="mr-2" />
-          View Project
+          {dict.generic.viewProject}
         </a>
       </div>
     </div>

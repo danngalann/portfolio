@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { Tooltip } from "react-tooltip";
 import { useInView } from "react-intersection-observer";
+import { useDictionary } from "@/app/contexts/dictionary-context";
 
 function ParallaxLayers() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -98,25 +99,21 @@ function ScrollIndicator({ scrollDown }: { scrollDown: string }) {
   );
 }
 
-type HeroProps = {
-  title: string;
-  description: string;
-  scrollDown: string;
-};
+export default function Hero() {
+  const dict = useDictionary();
 
-export default function Hero({ title, description, scrollDown }: HeroProps) {
   return (
     <section className="relative h-screen flex items-center justify-center -mt-[72px] pt-[72px]">
       <div className="grid md:grid-cols-2 gap-4 p-6">
         <div className="flex flex-col gap-6 justify-center">
-          <h1 className="-ml-[0.07em] text-6xl uppercase">{title}</h1>
-          <p className="text-xl">{description}</p>
+          <h1 className="-ml-[0.07em] text-6xl uppercase">{dict.hero.title}</h1>
+          <p className="text-xl">{dict.hero.description}</p>
         </div>
         <div className="hidden md:block max-w-lg">
           <ParallaxLayers />
         </div>
       </div>
-      <ScrollIndicator scrollDown={scrollDown} />
+      <ScrollIndicator scrollDown={dict.scrollIndicator.scrollDown} />
       <Tooltip id="scroll-tooltip" />
     </section>
   );

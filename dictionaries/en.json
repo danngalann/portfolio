@@ -1,4 +1,11 @@
 {
+  "generic": {
+    "readDetails": "Read the details",
+    "year": "year",
+    "years": "years",
+    "present": "Present",
+    "viewProject": "View Project"
+  },
   "navbar": {
     "experience": "Experience",
     "projects": "Projects",

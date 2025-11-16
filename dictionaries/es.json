@@ -1,4 +1,11 @@
 {
+  "generic": {
+    "readDetails": "Leer los detalles",
+    "year": "año",
+    "years": "años",
+    "present": "Presente",
+    "viewProject": "Ver proyecto"
+  },
   "navbar": {
     "experience": "Experiencia",
     "projects": "Proyectos",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../ui/navbar";
 import Footer from "../ui/footer";
 import { getDictionary, locales, type Locale } from "@/dictionaries";
+import { DictionaryProvider } from "../contexts/dictionary-context";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
@@ -32,10 +33,10 @@ export default async function LangLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <>
-      <Navbar lang={lang} labels={dict.navbar} />
+    <DictionaryProvider dictionary={dict} locale={lang}>
+      <Navbar />
       {children}
       <Footer />
-    </>
+    </DictionaryProvider>
   );
 }

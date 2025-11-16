@@ -4,33 +4,17 @@ import Link from "next/link";
 import { Tooltip } from "react-tooltip";
 import { RiSparklingFill } from "react-icons/ri";
 import { FaHandPaper } from "react-icons/fa";
+import { useDictionary } from "@/app/contexts/dictionary-context";
 
 type ExperienceDetailProps = {
-  dict: {
-    title: string;
-    contents: string;
-    sections: {
-      overview: string;
-      summary: string;
-      keyTakeaways: string;
-      experience: string;
-    };
-    tooltips: {
-      ai: string;
-      human: string;
-    };
-    overviewItems: string[];
-    summaryText: string;
-    keyTakeawaysItems: string[];
-    experienceParagraphs: string[];
-  };
-  lang: string;
+  company: "delectatech" | "perception" | "necsia";
 };
 
 export default function ExperienceDetailClient({
-  dict,
-  lang,
+  company,
 }: ExperienceDetailProps) {
+  const fullDict = useDictionary();
+  const dict = fullDict.experienceDetails[company];
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -99,7 +83,7 @@ export default function ExperienceDetailClient({
               </h2>
               <div className="bg-light-background rounded-lg p-8 space-y-4">
                 <ul className="list-disc list-inside space-y-4 text-lg text-foreground/90 leading-relaxed">
-                  {dict.overviewItems.map((item, index) => (
+                  {dict.overviewItems.map((item: string, index: number) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
@@ -135,7 +119,7 @@ export default function ExperienceDetailClient({
               </h2>
               <div className="bg-light-background rounded-lg p-8">
                 <ul className="list-disc list-inside space-y-4 text-lg text-foreground/90 leading-relaxed">
-                  {dict.keyTakeawaysItems.map((item, index) => (
+                  {dict.keyTakeawaysItems.map((item: string, index: number) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
@@ -153,14 +137,16 @@ export default function ExperienceDetailClient({
                 />
               </h2>
               <div className="bg-light-background rounded-lg p-8 space-y-8">
-                {dict.experienceParagraphs.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-lg text-foreground/90 leading-relaxed"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {dict.experienceParagraphs.map(
+                  (paragraph: string, index: number) => (
+                    <p
+                      key={index}
+                      className="text-lg text-foreground/90 leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ),
+                )}
               </div>
             </section>
           </article>

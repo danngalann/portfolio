@@ -1,18 +1,5 @@
-import { getDictionary, type Locale } from "@/dictionaries";
-import ExperienceDetailClient from "./experience-detail-client";
+import ExperienceDetailClient from "@/app/ui/experience/experience-detail-client";
 
-export default async function DelectatechPage({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>;
-}) {
-  const { lang } = await params;
-  const dict = await getDictionary(lang);
-
-  return (
-    <ExperienceDetailClient
-      dict={dict.experienceDetails.delectatech}
-      lang={lang}
-    />
-  );
+export default async function DelectatechPage() {
+  return <ExperienceDetailClient company="delectatech" />;
 }

@@ -4,19 +4,13 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { useDictionary, useLocale } from "@/app/contexts/dictionary-context";
 import { type Locale } from "@/dictionaries";
 
-type NavbarProps = {
-  lang: Locale;
-  labels?: {
-    experience: string;
-    projects: string;
-    myCareer: string;
-    chat: string;
-  };
-};
-
-export default function Navbar({ lang, labels }: NavbarProps) {
+export default function Navbar() {
+  const dict = useDictionary();
+  const lang = useLocale();
+  const labels = dict.navbar;
   const { ref, inView } = useInView({
     threshold: 0,
     initialInView: true,
@@ -44,20 +38,11 @@ export default function Navbar({ lang, labels }: NavbarProps) {
     return null;
   }
 
-  const defaultLabels = {
-    experience: "Experience",
-    projects: "Projects",
-    myCareer: "My career",
-    chat: "Chat",
-  };
-
-  const navLabels = labels || defaultLabels;
-
   const navLinks = [
-    { href: `/${lang}#experience-section`, label: navLabels.experience },
-    { href: `/${lang}#projects-section`, label: navLabels.projects },
-    { href: `/${lang}/career`, label: navLabels.myCareer },
-    { href: `/${lang}/chat`, label: navLabels.chat },
+    { href: `/${lang}#experience-section`, label: labels.experience },
+    { href: `/${lang}#projects-section`, label: labels.projects },
+    { href: `/${lang}/career`, label: labels.myCareer },
+    { href: `/${lang}/chat`, label: labels.chat },
   ];
 
   const handleLanguageChange = (newLang: Locale) => {
