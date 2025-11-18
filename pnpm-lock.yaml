@@ -11,6 +11,9 @@ importers:
       '@langchain/core':
         specifier: ^1.0.5
         version: 1.0.5(openai@6.9.0(zod@4.1.12))
+      '@langchain/langgraph':
+        specifier: ^1.0.2
+        version: 1.0.2(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
       '@langchain/ollama':
         specifier: ^1.0.1
         version: 1.0.1(@langchain/core@1.0.5(openai@6.9.0(zod@4.1.12)))
@@ -56,6 +59,9 @@ importers:
       weaviate-client:
         specifier: ^3.9.0
         version: 3.9.0
+      zod:
+        specifier: ^4.1.12
+        version: 4.1.12
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.1

@@ -9,6 +9,7 @@ export default function ChatbotInterface() {
   const [messages, setMessages] = useState<
     { role: "user" | "assistant"; content: string }[]
   >([]);
+  const [progressStatus, setProgressStatus] = useState<string>("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -17,7 +18,7 @@ export default function ChatbotInterface() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, progressStatus]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -32,6 +33,7 @@ export default function ChatbotInterface() {
     setMessages(updatedMessages);
 
     const assistantIndex = updatedMessages.length;
+    setProgressStatus("Preparing...");
 
     const res = await fetch("/api/chat/stream", {
       method: "POST",
@@ -43,24 +45,59 @@ export default function ChatbotInterface() {
     const reader = res.body!.getReader();
     const decoder = new TextDecoder();
 
-    let partial = "";
+    let answerStarted = false;
 
     while (true) {
       const { value, done } = await reader.read();
       if (done) break;
 
-      partial += decoder.decode(value);
+      const chunk = decoder.decode(value, { stream: true });
 
-      // Update last message incrementally
-      setMessages((prev) => {
-        const updated = [...prev];
-        updated[assistantIndex] = {
-          role: "assistant",
-          content: partial,
-        };
-        return updated;
-      });
+      // Check if this chunk contains an event
+      if (chunk.startsWith("event:")) {
+        const lines = chunk.split("\n");
+
+        for (const line of lines) {
+          if (line.startsWith("event:")) {
+            const eventContent = line.substring(6);
+
+            if (eventContent === "done") {
+              // Clear progress status when answer starts
+              answerStarted = true;
+              setProgressStatus("");
+            } else if (eventContent === "error") {
+              setProgressStatus("Error occurred");
+              answerStarted = true;
+            } else if (!answerStarted) {
+              // Update progress status
+              setProgressStatus(eventContent);
+            }
+          } else if (answerStarted && line) {
+            // This is part of the final answer after events
+            setMessages((prev) => {
+              const updated = [...prev];
+              updated[assistantIndex] = {
+                role: "assistant",
+                content: (updated[assistantIndex]?.content || "") + line,
+              };
+              return updated;
+            });
+          }
+        }
+      } else if (answerStarted) {
+        // This is part of the final answer
+        setMessages((prev) => {
+          const updated = [...prev];
+          updated[assistantIndex] = {
+            role: "assistant",
+            content: (updated[assistantIndex]?.content || "") + chunk,
+          };
+          return updated;
+        });
+      }
     }
+
+    setProgressStatus("");
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -100,6 +137,18 @@ export default function ChatbotInterface() {
             </div>
           ))
         )}
+
+        {/* Progress Status */}
+        {progressStatus && (
+          <div className="flex justify-start">
+            <div className="max-w-[70%] sm:max-w-[60%] rounded-lg px-4 py-2 bg-light-background/50">
+              <p className="text-xs text-gray-500 animate-pulse">
+                {progressStatus}
+              </p>
+            </div>
+          </div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 
