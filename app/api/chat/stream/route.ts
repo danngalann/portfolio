@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import weaviate from "weaviate-client";
-import { WeaviateStore } from "@langchain/weaviate";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
+import type { Document } from "@langchain/core/documents";
 
 export async function POST(req: Request) {
   if (process.env.NEXT_PUBLIC_ENABLE_RAG_CHAT !== "true") {
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const { messages, nResults = 3, lang = "en" } = await req.json();
+  const { messages, nResults = 5, lang = "en" } = await req.json();
 
   // Extract latest user message
   const userQuery = messages[messages.length - 1]?.content ?? "";
@@ -29,13 +29,37 @@ export async function POST(req: Request) {
     },
   });
 
-  const vectorStore = new WeaviateStore(embeddings, {
-    client,
-    indexName: `corpus_${lang}`,
+  const collectionName = `Corpus_${lang}`;
+
+  // Get the collection
+  const collection = client.collections.get(collectionName);
+
+  // Embed the query for vector search
+  const queryVector = await embeddings.embedQuery(userQuery);
+
+  // Perform hybrid search (BM25 + vector search)
+  // alpha: 0 = pure BM25, 1 = pure vector, 0.5 = balanced, 0.75 = favor vector
+  const response = await collection.query.hybrid(userQuery, {
+    limit: nResults,
+    returnMetadata: ["score"],
+    vector: queryVector,
+    alpha: 0.75, // Favors semantic search while still considering keyword matching
   });
 
-  // Run similarity search
-  const ragResults = await vectorStore.similaritySearch(userQuery, nResults);
+  // Convert Weaviate results to LangChain Document format
+  const ragResults: Document[] = response.objects.map((obj: any) => ({
+    pageContent: obj.properties.text || "",
+    metadata: {
+      type: obj.properties.type,
+      key: obj.properties.key,
+      company: obj.properties.company,
+      section: obj.properties.section,
+      lang: obj.properties.lang,
+      score: obj.metadata?.score,
+    },
+  }));
+
+  console.log(ragResults);
 
   // Build RAG context
   const contextText = ragResults

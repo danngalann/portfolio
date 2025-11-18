@@ -1,4 +1,4 @@
-import weaviate, { WeaviateClient } from "weaviate-client";
+import weaviate, { vectors, dataType } from "weaviate-client";
 import { WeaviateStore } from "@langchain/weaviate";
 import { v4 as uuidv4 } from "uuid";
 import type { Document } from "@langchain/core/documents";
@@ -65,12 +65,72 @@ function extractDocuments(dict: Dictionary, lang: string): Document[] {
   return documents;
 }
 
+async function createCollectionWithBM25(client: any, collectionName: string) {
+  try {
+    // Delete collection if it exists
+    try {
+      await client.collections.delete(collectionName);
+      console.log(`Deleted existing collection: ${collectionName}`);
+    } catch (e) {
+      // Collection doesn't exist, which is fine
+    }
+
+    // Create collection with BM25 configuration
+    await client.collections.create({
+      name: collectionName,
+      vectorizers: vectors.selfProvided(),
+      properties: [
+        {
+          name: "text",
+          dataType: dataType.TEXT,
+          indexSearchable: true,
+          indexFilterable: true,
+        },
+        {
+          name: "type",
+          dataType: dataType.TEXT,
+          indexFilterable: true,
+        },
+        {
+          name: "key",
+          dataType: dataType.TEXT,
+          indexFilterable: true,
+        },
+        {
+          name: "company",
+          dataType: dataType.TEXT,
+          indexFilterable: true,
+        },
+        {
+          name: "section",
+          dataType: dataType.TEXT,
+          indexFilterable: true,
+        },
+        {
+          name: "lang",
+          dataType: dataType.TEXT,
+          indexFilterable: true,
+        },
+      ],
+    });
+    console.log(`✓ Created collection: ${collectionName} with BM25 enabled`);
+  } catch (error) {
+    console.error(`Error creating collection ${collectionName}:`, error);
+    throw error;
+  }
+}
+
 async function loadCorpusForLanguage(
-  client: WeaviateClient,
+  client: any,
   embeddings: OpenAIEmbeddings,
   lang: string,
 ) {
   console.log(`\n--- Processing language: ${lang.toUpperCase()} ---`);
+
+  const collectionName = `Corpus_${lang}`;
+
+  // Create collection with BM25 support
+  await createCollectionWithBM25(client, collectionName);
 
   // Load dictionary for this language
   const dict = loadDictionary(lang);
@@ -83,12 +143,12 @@ async function loadCorpusForLanguage(
   // Create vector store for this language
   const vectorStore = new WeaviateStore(embeddings, {
     client,
-    indexName: `corpus_${lang}`,
+    indexName: collectionName,
   });
 
   // Text splitter
   const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 500,
+    chunkSize: 300,
     chunkOverlap: 100,
   });
 
