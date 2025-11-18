@@ -10,9 +10,24 @@ export default function ChatbotInterface() {
     { role: "user" | "assistant"; content: string }[]
   >([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
+
+  const suggestedMessages =
+    locale === "en"
+      ? [
+          "What is Daniel's experience with Elasticsearch?",
+          "What professional challenges has Daniel faced?",
+        ]
+      : [
+          "¿Cuál es la experiencia de Daniel con Elasticsearch?",
+          "¿Qué desafíos profesionales ha enfrentado Daniel?",
+        ];
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -70,12 +85,19 @@ export default function ChatbotInterface() {
     }
   };
 
+  const handleSuggestedClick = (message: string) => {
+    setInput(message);
+  };
+
   return (
-    <div className="flex flex-col h-[600px] max-w-4xl mx-auto border border-gray-600 rounded-lg shadow-lg bg-background">
+    <div className="flex flex-col h-[90vh] sm:h-[90vh] w-full max-w-3xl mx-auto bg-background">
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background">
+      <div
+        ref={messagesContainerRef}
+        className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 sm:py-8 space-y-6 scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+      >
         {messages.length === 0 ? (
-          <div className="flex items-center justify-center h-full text-gray-500">
+          <div className="flex items-center justify-center h-full text-gray-500 text-sm sm:text-base">
             Start a conversation...
           </div>
         ) : (
@@ -87,13 +109,13 @@ export default function ChatbotInterface() {
               }`}
             >
               <div
-                className={`max-w-[70%] sm:max-w-[60%] rounded-lg px-4 py-2 ${
+                className={`max-w-[90%] sm:max-w-[85%] rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 ${
                   message.role === "user"
                     ? "bg-light-background text-foreground"
-                    : "bg-light-background text-foreground"
+                    : "bg-transparent text-foreground"
                 }`}
               >
-                <p className="text-sm sm:text-base break-words">
+                <p className="text-sm sm:text-base leading-relaxed break-words whitespace-pre-wrap">
                   {message.content}
                 </p>
               </div>
@@ -104,20 +126,37 @@ export default function ChatbotInterface() {
       </div>
 
       {/* Input Area */}
-      <div className="border-t border-gray-600 p-4 bg-background">
-        <div className="flex gap-2">
+      <div className="border-t border-gray-700/50 px-4 py-4 sm:px-6 sm:py-5 bg-background">
+        {/* Suggested Messages */}
+        {messages.length === 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {suggestedMessages.map((message, index) => (
+              <button
+                key={index}
+                onClick={() => handleSuggestedClick(message)}
+                className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm text-gray-400 bg-transparent border border-gray-700/50 rounded-full hover:bg-light-background hover:text-foreground hover:border-gray-600 transition-all duration-200"
+              >
+                {message}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="flex gap-2 sm:gap-3 max-w-full">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyUp={handleKeyPress}
-            placeholder="Type your message..."
-            className="flex-1 px-4 py-2 bg-light-background border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 text-foreground placeholder-gray-500"
+            placeholder={
+              locale === "en" ? "Type your message..." : "Escribe tu mensaje..."
+            }
+            className="flex-1 px-4 py-3 sm:px-5 sm:py-3.5 bg-light-background border border-gray-700/50 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500 text-foreground placeholder-gray-500 text-sm sm:text-base transition-all"
           />
           <button
             onClick={handleSend}
             disabled={!input.trim()}
-            className="px-6 py-2 bg-light-background text-foreground rounded-lg hover:bg-[#54545e] disabled:bg-[#3a3a44] disabled:text-gray-600 disabled:cursor-not-allowed transition-colors duration-200"
+            className="px-5 py-3 sm:px-6 sm:py-3.5 bg-light-background text-foreground rounded-xl hover:bg-[#54545e] disabled:bg-[#3a3a44] disabled:text-gray-600 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 text-sm sm:text-base font-medium"
           >
             Send
           </button>
