@@ -59,8 +59,6 @@ export async function POST(req: Request) {
     },
   }));
 
-  console.log(ragResults);
-
   // Build RAG context
   const contextText = ragResults
     .map((doc, i) => `(${i + 1}) ${doc.pageContent}`)
