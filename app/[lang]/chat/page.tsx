@@ -5,5 +5,6 @@ export default function ChatPage() {
   if (process.env.NEXT_PUBLIC_ENABLE_RAG_CHAT !== "true") {
     return redirect("/");
   }
+
   return <ChatbotInterface />;
 }

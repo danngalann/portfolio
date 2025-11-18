@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const { messages, nResults = 3 } = await req.json();
+  const { messages, nResults = 3, lang = "en" } = await req.json();
 
   // Extract latest user message
   const userQuery = messages[messages.length - 1]?.content ?? "";
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
 
   const vectorStore = new WeaviateStore(embeddings, {
     client,
-    indexName: "Docs",
+    indexName: `corpus_${lang}`,
   });
 
   // Run similarity search

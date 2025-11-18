@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useLocale } from "@/app/contexts/dictionary-context";
 
 export default function ChatbotInterface() {
+  const locale = useLocale();
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<
     { role: "user" | "assistant"; content: string }[]
@@ -33,7 +35,7 @@ export default function ChatbotInterface() {
 
     const res = await fetch("/api/chat/stream", {
       method: "POST",
-      body: JSON.stringify({ messages: updatedMessages }),
+      body: JSON.stringify({ messages: updatedMessages, lang: locale }),
     });
 
     setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
