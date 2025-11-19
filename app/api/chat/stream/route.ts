@@ -14,7 +14,20 @@ export async function POST(req: Request) {
   const { messages, nResults = 5, lang = "en" } = await req.json();
 
   // Extract latest user message
-  const userQuery = messages[messages.length - 1]?.content ?? "";
+  let userQuery = messages[messages.length - 1]?.content ?? "";
+
+  // In a multi-message conversation, extract the first query as well for better context
+  if (messages.length > 2) {
+    const firstUserMessage = messages.find(
+      (msg: any) => msg.role === "user",
+    )?.content;
+    if (firstUserMessage) {
+      // Prepend first user message to current query for context
+      // This helps in cases where the conversation builds on the initial question
+      // without needing to re-ask it each time.
+      userQuery = `${firstUserMessage}\n\nFollow-up: ${userQuery}`;
+    }
+  }
 
   // Setup vector store and embeddings
   const client = await weaviate.connectToLocal({
