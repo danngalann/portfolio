@@ -15,6 +15,23 @@ services:
     networks:
       - portfolio-network
 
+  weaviate-init:
+    build:
+      context: .
+      dockerfile: Dockerfile.init
+    container_name: weaviate-init
+    environment:
+      - NODE_ENV=production
+      - WEAVIATE_PORT=8080
+      - WEAVIATE_HOST=weaviate
+    env_file:
+      - .env
+    depends_on:
+      - weaviate
+    networks:
+      - portfolio-network
+    restart: "no"
+
   portfolio:
     build:
       context: .
@@ -30,6 +47,7 @@ services:
       - .env
     depends_on:
       - weaviate
+      - weaviate-init
     restart: always
     networks:
       - portfolio-network

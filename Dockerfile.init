@@ -1,0 +1,32 @@
+# Dockerfile for Weaviate initialization service
+FROM node:20-alpine
+
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# Install wget for health checks
+RUN apk add --no-cache wget
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies (ignore scripts to skip husky prepare)
+RUN pnpm install --frozen-lockfile --prod --ignore-scripts
+
+# Install TypeScript for compilation
+RUN pnpm add -D typescript
+
+# Copy necessary files
+COPY load_embeddings.ts ./
+COPY dictionaries ./dictionaries
+COPY scripts/init-weaviate.sh ./scripts/init-weaviate.sh
+
+# Make script executable
+RUN chmod +x /app/scripts/init-weaviate.sh
+
+# Compile the TypeScript file
+RUN pnpm exec tsc load_embeddings.ts --outDir . --module es2022 --target es2022 --moduleResolution bundler --esModuleInterop --skipLibCheck
+
+CMD ["/app/scripts/init-weaviate.sh"]
