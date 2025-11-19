@@ -18,7 +18,10 @@ export async function POST(req: Request) {
 
   // Setup vector store and embeddings
   const client = await weaviate.connectToLocal({
-    port: 1564,
+    host: process.env.WEAVIATE_HOST,
+    port: process.env.WEAVIATE_PORT
+      ? parseInt(process.env.WEAVIATE_PORT)
+      : 1564,
   });
 
   const embeddings = new OpenAIEmbeddings({
