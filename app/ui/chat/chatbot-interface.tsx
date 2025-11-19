@@ -17,12 +17,12 @@ export default function ChatbotInterface() {
   const suggestedMessages =
     locale === "en"
       ? [
-          "What is Daniel's experience with Elasticsearch?",
+          "How did Daniel get into AI?",
           "What professional challenges has Daniel faced?",
           "How has Daniel applied his technical skills in his astrophotography projects?",
         ]
       : [
-          "¿Cuál es la experiencia de Daniel con Elasticsearch?",
+          "¿Cómo se interesó Daniel en la IA?",
           "¿Qué desafíos profesionales ha enfrentado Daniel?",
           "¿Cómo ha aplicado Daniel sus habilidades técnicas en sus proyectos de astrofotografía?",
         ];
