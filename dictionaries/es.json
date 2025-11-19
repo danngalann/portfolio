@@ -6,6 +6,9 @@
     "present": "Presente",
     "viewProject": "Ver proyecto"
   },
+  "chat": {
+    "start": "Pregunta lo que quieras sobre mi experiencia"
+  },
   "navbar": {
     "experience": "Experiencia",
     "projects": "Proyectos",

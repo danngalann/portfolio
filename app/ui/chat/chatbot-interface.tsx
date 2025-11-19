@@ -1,14 +1,16 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "@/app/contexts/dictionary-context";
+import { useDictionary, useLocale } from "@/app/contexts/dictionary-context";
 
 export default function ChatbotInterface() {
   const locale = useLocale();
+  const dict = useDictionary();
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<
     { role: "user" | "assistant"; content: string }[]
   >([]);
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
@@ -17,10 +19,12 @@ export default function ChatbotInterface() {
       ? [
           "What is Daniel's experience with Elasticsearch?",
           "What professional challenges has Daniel faced?",
+          "How has Daniel applied his technical skills in his astrophotography projects?",
         ]
       : [
           "¿Cuál es la experiencia de Daniel con Elasticsearch?",
           "¿Qué desafíos profesionales ha enfrentado Daniel?",
+          "¿Cómo ha aplicado Daniel sus habilidades técnicas en sus proyectos de astrofotografía?",
         ];
 
   const scrollToBottom = () => {
@@ -48,11 +52,16 @@ export default function ChatbotInterface() {
 
     const assistantIndex = updatedMessages.length;
 
+    // Show loading indicator
+    setIsLoading(true);
+
     const res = await fetch("/api/chat/stream", {
       method: "POST",
       body: JSON.stringify({ messages: updatedMessages, lang: locale }),
     });
 
+    // Hide loading and add empty assistant message
+    setIsLoading(false);
     setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
     const reader = res.body!.getReader();
@@ -98,29 +107,62 @@ export default function ChatbotInterface() {
       >
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full text-gray-500 text-sm sm:text-base">
-            Start a conversation...
+            {dict.chat.start}
           </div>
         ) : (
-          messages.map((message, index) => (
-            <div
-              key={index}
-              className={`flex ${
-                message.role === "user" ? "justify-end" : "justify-start"
-              }`}
-            >
+          <>
+            {messages.map((message, index) => (
               <div
-                className={`max-w-[90%] sm:max-w-[85%] rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 ${
-                  message.role === "user"
-                    ? "bg-light-background text-foreground"
-                    : "bg-transparent text-foreground"
+                key={index}
+                className={`flex ${
+                  message.role === "user" ? "justify-end" : "justify-start"
                 }`}
               >
-                <p className="text-sm sm:text-base leading-relaxed break-words whitespace-pre-wrap">
-                  {message.content}
-                </p>
+                <div
+                  className={`max-w-[90%] sm:max-w-[85%] rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 ${
+                    message.role === "user"
+                      ? "bg-light-background text-foreground"
+                      : "bg-transparent text-foreground"
+                  }`}
+                >
+                  <p className="text-sm sm:text-base leading-relaxed break-words whitespace-pre-wrap">
+                    {message.content}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))
+            ))}
+
+            {/* Loading indicator */}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="max-w-[90%] sm:max-w-[85%] rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 bg-transparent">
+                  <div className="flex space-x-2">
+                    <div
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
+                      style={{
+                        animationDelay: "0ms",
+                        animationDuration: "1.4s",
+                      }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
+                      style={{
+                        animationDelay: "200ms",
+                        animationDuration: "1.4s",
+                      }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
+                      style={{
+                        animationDelay: "400ms",
+                        animationDuration: "1.4s",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
         )}
         <div ref={messagesEndRef} />
       </div>
