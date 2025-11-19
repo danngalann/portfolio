@@ -205,7 +205,7 @@ export default function Hero() {
   const dict = useDictionary();
 
   return (
-    <section className="relative h-screen flex items-center justify-center -mt-[72px] pt-[72px] overflow-hidden">
+    <section className="relative h-dvh flex items-center justify-center -mt-[72px] pt-[72px] overflow-hidden">
       <FloatingTechWords />
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-bold mb-6 md:mb-8">
