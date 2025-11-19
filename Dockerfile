@@ -32,6 +32,9 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # Build the application
 RUN pnpm build
 
+# Ensure public directory exists (create if not present)
+RUN mkdir -p /app/public
+
 # Stage 3: Runner
 FROM node:20-alpine AS runner
 RUN apk add --no-cache libc6-compat
