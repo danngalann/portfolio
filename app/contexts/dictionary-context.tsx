@@ -11,6 +11,9 @@ type Dictionary = {
     present: string;
     viewProject: string;
   };
+  chat: {
+    start: string;
+  };
   navbar: {
     experience: string;
     projects: string;
