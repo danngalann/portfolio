@@ -12,7 +12,7 @@ export default function Experience() {
       title: dict.experience.jobs.delectatech.title,
       company: dict.experience.jobs.delectatech.company,
       startDate: new Date(2023, 1, 1),
-      endDate: null,
+      endDate: new Date(2026, 1, 9),
       description: dict.experience.jobs.delectatech.description,
       tags: [
         "TypeScript",

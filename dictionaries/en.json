@@ -138,9 +138,10 @@
         "Implemented AI-powered and agentic solutions using PyTorch, PydanticAI, and LangChain, including generative AI integrations.",
         "Adapted to the fast-paced startup environment, balancing shifting priorities and incomplete projects with high learning velocity.",
         "Took on DevOps and project management duties, leading a small cross-functional team through rapid development cycles.",
-        "Currently focusing on cloud scalability and international expansion initiatives."
+        "Supported international expansion efforts, while preparing for cloud-scale architectures.",
+        "After three years, chose to transition to a larger organization to deepen hands-on experience with mature cloud infrastructures, broader systems, and higher-scale challenges."
       ],
-      "summaryText": "At Delectatech, I expanded from backend to full-stack and AI development within a fast-moving startup. I built distributed systems, automated pipelines, and led cross-functional teams while refining my technical focus and leadership skills.",
+      "summaryText": "At Delectatech, I expanded from backend to full-stack and AI development within a fast-moving startup. I built distributed systems, automated pipelines, and led cross-functional teams while refining my technical focus and leadership skills. After three years of broad technical and leadership growth, I moved on to deepen my cloud expertise in a larger-scale environment.",
       "keyTakeawaysItems": [
         "Gained hands-on experience in AI implementation, microservices, and distributed processing.",
         "Strengthened expertise in backend and DevOps automation through CI/CD and containerization.",
@@ -156,7 +157,8 @@
         "Work in a startup is highly dynamic. Priorities change constantly, and you need to manage frustration over unfinished projects while finding satisfaction in the tasks you complete and the lessons you learn. Learning opportunities are plentiful. At Delectatech, I've faced challenges ranging from pesky, hard-to-debug issues to distributed AI-powered processing of large data volumes.",
         "It's also common in startups to take on multiple roles. What began as a backend-focused position has evolved into a full-stack role with AI-related tasks. I've moved from Symfony and PHP to FastAPI with Python and NestJS with Node. Building on the server knowledge I gained during my studies and at Perception, I've built CI/CD pipelines with Jenkins and GitHub Actions to improve iteration speed, execute automated tests, and build Docker images for deployment on VPS instances.",
         "The wide range of roles and challenges has helped me build a diverse technology stack. I've worked on projects in React and Angular on the frontend and with three different backend frameworks. I've used both relational and non-relational databases, such as PostgreSQL and MongoDB, along with specialized data-storage systems like Redis for caching and Elasticsearch for fast retrieval of data. I've also implemented distributed task handling with RabbitMQ and developed agentic AI solutions using PyTorch, PydanticAI, and LangChain.",
-        "The company is now expanding internationally, which brings a new set of challenges we're actively tackling. I'm currently learning cloud technologies to help us scale efficiently and adding some more DevOps responsibilities to my skill set. I've also taken on more responsibility as a project manager for fast-paced project iterations, leading a small cross-functional team of developers, data specialists, and product professionals."
+        "The company is now expanding internationally, which brings a new set of challenges. The goal was for me to learn more about cloud technologies to help us scale efficiently and adding some more DevOps responsibilities to my skill set. I've also taken on more responsibility as a project manager for fast-paced project iterations, leading a small cross-functional team of developers, data specialists, and product professionals.",
+        "After three years at the company, however, an opportunity came for me to learn about said cloud technologies at a larger company that had these systems already in place, which also offered a more broad technology stack and challenges, so I decided to make the move."
       ]
     },
     "perception": {

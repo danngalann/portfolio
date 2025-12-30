@@ -129,34 +129,36 @@
         "human": "Esta sección fue escrita por un humano (yo)"
       },
       "overviewItems": [
-        "Me uní a Delectatech, una startup impulsada por IA en el sector de la restauración, como desarrollador backend con la oportunidad de expandirme hacia IA y ciencia de datos.",
-        "Inicialmente incorporado en ingeniería de datos, luego pasé a desarrollo full stack mientras apoyaba iniciativas relacionadas con IA.",
-        "Descubrí preferencia personal por la ingeniería de software frente a la ciencia de datos, centrándome en backend e implementación de IA en lugar de pipelines de datos.",
-        "Trabajé con múltiples frameworks—Symfony, FastAPI y NestJS—y contribuí a frontends en React y Angular.",
-        "Construí y mantuve pipelines CI/CD con Jenkins y GitHub Actions, automatizando testing, construcción de imágenes y despliegues.",
-        "Gestioné sistemas distribuidos con RabbitMQ, Redis, Elasticsearch y entornos contenerizados.",
-        "Implementé soluciones impulsadas por IA y agentes usando PyTorch, PydanticAI y LangChain, incluyendo integraciones de IA generativa.",
-        "Me adapté al entorno de startup, equilibrando prioridades cambiantes y proyectos incompletos con una alta velocidad de aprendizaje.",
-        "Asumí tareas de DevOps y gestión de proyectos, liderando un pequeño equipo multidisciplinar.",
-        "Actualmente centrado en escalabilidad en la nube e iniciativas de expansión internacional."
+        "Me incorporé a Delectatech, una startup impulsada por IA en el sector de la restauración, como desarrollador backend, con la oportunidad de expandirme hacia la inteligencia artificial y la ciencia de datos.",
+        "Inicialmente me incorporé al área de ingeniería de datos, y posteriormente transicioné hacia el desarrollo full-stack mientras apoyaba iniciativas relacionadas con IA.",
+        "Descubrí una preferencia personal por la ingeniería de software frente a la ciencia de datos, centrándome en backend e implementación de IA más que en pipelines de datos.",
+        "Trabajé con múltiples frameworks —Symfony, FastAPI y NestJS— y contribuí a frontends en React y Angular.",
+        "Construí y mantuve pipelines de CI/CD con Jenkins y GitHub Actions, automatizando pruebas, creación de imágenes y flujos de despliegue.",
+        "Gestioné sistemas distribuidos que incluían RabbitMQ, Redis, Elasticsearch y entornos contenerizados con Docker.",
+        "Implementé soluciones basadas en IA y agentes utilizando PyTorch, PydanticAI y LangChain, incluyendo integraciones de IA generativa.",
+        "Me adapté a un entorno startup de ritmo acelerado, equilibrando prioridades cambiantes y proyectos incompletos con una alta curva de aprendizaje.",
+        "Asumí tareas de DevOps y gestión de proyectos, liderando un pequeño equipo multifuncional en ciclos de desarrollo rápidos.",
+        "Apoyé los esfuerzos de expansión internacional mientras me preparaba para arquitecturas a escala cloud.",
+        "Tras tres años, decidí dar el salto a una organización más grande para profundizar en infraestructuras cloud maduras, sistemas más amplios y desafíos de mayor escala."
       ],
-      "summaryText": "En Delectatech pasé de backend a full stack e IA en una startup de ritmo rápido. Construí sistemas distribuidos, pipelines automatizados y lideré equipos, mientras refinaba mi enfoque técnico y habilidades de liderazgo.",
+      "summaryText": "En Delectatech amplié mi perfil de backend a full-stack y desarrollo de IA dentro de una startup de rápido crecimiento. Construí sistemas distribuidos, automatizé pipelines y lideré equipos multifuncionales, al tiempo que afinaba mis habilidades técnicas y de liderazgo. Tras tres años de crecimiento técnico y profesional, decidí avanzar hacia un entorno de mayor escala para profundizar en tecnologías cloud.",
       "keyTakeawaysItems": [
-        "Experiencia práctica en implementación de IA, microservicios y procesamiento distribuido.",
-        "Fortalecimiento de experiencia en backend y automatización DevOps mediante CI/CD y contenerización.",
-        "Desarrollo de habilidades de liderazgo gestionando pequeños equipos ágiles.",
-        "Aprendizaje de adaptabilidad y priorización en un contexto de startup.",
-        "Transición de aspirante a científico de datos a ingeniero de software e implementador de IA."
+        "Adquirí experiencia práctica en implementación de IA, microservicios y procesamiento distribuido.",
+        "Fortalecí mis conocimientos en backend y automatización DevOps mediante CI/CD y contenerización.",
+        "Desarrollé habilidades de liderazgo y coordinación gestionando pequeños equipos ágiles.",
+        "Aprendí a adaptarme y priorizar en un entorno startup volátil.",
+        "Evolucioné de aspirar a científico de datos a consolidarme como ingeniero de software e implementador de soluciones de IA."
       ],
       "experienceParagraphs": [
-        "A finales de 2022 fui contactado por una consultora de selección que trabajaba para Delectatech, una startup de IA en el sector de la restauración. El rol era similar al que ya desempeñaba (backend con Symfony), pero ofrecía la oportunidad de trabajar en IA y ciencia de datos, algo que llevaba tiempo buscando. Vi una oportunidad para reorientar mi especialización, así que dejé Perception y en 2023 comencé una nueva etapa.",
-        "Durante las primeras semanas, un ingeniero de datos sénior me introdujo en las operaciones de datos y IA de la empresa. También recibí formación en el backend y frontend de la plataforma SaaS. Mi rol abarcaría ambas áreas: la aplicación full stack como responsabilidad formal y los procesos de datos como parte del camino profesional que buscaba.",
-        "En la práctica terminé inclinándome más hacia el desarrollo full stack. El ingeniero de datos sénior dejó la empresa poco después de que yo entrase y fue reemplazado por dos junior incorporados al mismo tiempo que yo. Han crecido en sus roles y ahora gestionan todas las tareas relacionadas con datos.",
-        "Fue revelador darme cuenta de que, tras perseguir activamente un rol en IA y ciencia de datos, en realidad prefería el desarrollo de software. Ahora el equipo de Datos gestiona la mayor parte del trabajo, y solo intervengo cuando hace falta más personal o me centro en tareas estrictamente relacionadas con IA, como implementación de IA generativa y entrenamiento de modelos.",
-        "El trabajo en una startup es muy dinámico. Las prioridades cambian constantemente, y hay que gestionar la frustración de los proyectos inacabados mientras se encuentra satisfacción en las tareas completadas y las lecciones aprendidas. Las oportunidades de aprendizaje son abundantes. En Delectatech he afrontado desafíos que van desde problemas complicados de depurar hasta procesamiento distribuido con IA de grandes volúmenes de datos.",
-        "También es común asumir múltiples roles. Lo que empezó como un puesto centrado en backend se convirtió en un rol full stack con tareas de IA. He pasado de Symfony y PHP a FastAPI con Python y NestJS con Node. Aprovechando el conocimiento de servidores obtenido en mis estudios y en Perception, construí pipelines CI/CD con Jenkins y GitHub Actions para mejorar la velocidad de iteración, ejecutar tests automáticos y construir imágenes Docker para desplegarlas en instancias VPS.",
-        "La variedad de tareas y retos me ha permitido construir un stack tecnológico diverso. He trabajado en proyectos en React y Angular en frontend y en tres frameworks distintos en backend. He usado bases de datos relacionales y no relacionales como PostgreSQL y MongoDB, además de sistemas especializados como Redis para caché y Elasticsearch para búsqueda rápida. También he implementado tareas distribuidas con RabbitMQ y soluciones de IA con PyTorch, PydanticAI y LangChain.",
-        "La empresa está expandiéndose internacionalmente, lo que trae nuevos retos que estamos abordando. Actualmente estoy aprendiendo tecnologías cloud para escalar de forma eficiente y asumiendo más responsabilidades de DevOps. También he tomado un rol más activo como project manager en iteraciones rápidas, liderando un pequeño equipo de desarrolladores, especialistas en datos y producto."
+        "A finales de 2022 fui contactado por un reclutador que trabajaba para Delectatech, una startup de IA en el sector de la restauración. El puesto era similar a lo que ya hacía (backend con Symfony), pero ofrecía la oportunidad de trabajar con inteligencia artificial y ciencia de datos, algo que llevaba tiempo buscando. Vi la oportunidad de redirigir mi especialización y en 2023 comencé una nueva etapa.",
+        "Durante las primeras semanas, un ingeniero senior de datos me introdujo en las operaciones de datos e IA de la empresa. También recibí formación sobre el backend y el frontend de nuestra plataforma SaaS. Mi rol abarcaba ambas áreas: el desarrollo full-stack como responsabilidad principal y los procesos de datos como parte de mi proyección profesional.",
+        "En la práctica, terminé orientándome más hacia el desarrollo full-stack. El ingeniero senior de datos dejó la empresa poco después de mi incorporación y fue reemplazado por dos perfiles junior que se incorporaron al mismo tiempo que yo. Con el tiempo, crecieron en sus roles y ahora gestionan todas las tareas relacionadas con datos.",
+        "Fue revelador darme cuenta de que, tras perseguir activamente un rol en IA y ciencia de datos, en realidad prefería el desarrollo de software. Actualmente, el equipo de datos se encarga de la mayor parte del trabajo relacionado, y yo intervengo solo cuando se necesitan más manos o en tareas específicas de IA, como la implementación de modelos generativos.",
+        "Trabajar en una startup es altamente dinámico. Las prioridades cambian constantemente y es necesario gestionar la frustración de proyectos inacabados mientras se encuentra satisfacción en las tareas completadas y en lo aprendido. En Delectatech afronté retos que iban desde errores difíciles de depurar hasta procesamiento distribuido de grandes volúmenes de datos mediante sistemas de IA.",
+        "También es habitual en una startup asumir múltiples roles. Lo que comenzó como un puesto centrado en backend evolucionó hacia un rol full-stack con tareas relacionadas con IA. Pasé de Symfony y PHP a FastAPI con Python y NestJS con Node. Aprovechando la experiencia previa en servidores adquirida durante mis estudios y en Perception, construí pipelines de CI/CD con Jenkins y GitHub Actions para acelerar iteraciones, ejecutar pruebas automáticas y generar imágenes Docker para despliegues en VPS.",
+        "La variedad de roles y desafíos me permitió construir un stack tecnológico diverso. Trabajé en proyectos con React y Angular en el frontend y con tres frameworks distintos en el backend. Utilicé bases de datos relacionales y no relacionales como PostgreSQL y MongoDB, así como sistemas especializados como Redis para caché y Elasticsearch para recuperación rápida de información. También implementé procesamiento distribuido con RabbitMQ y desarrollé soluciones de IA agéntica utilizando PyTorch, PydanticAI y LangChain.",
+        "La empresa se encuentra actualmente en proceso de expansión internacional, lo que ha traído nuevos retos. El objetivo era que aprendiera más sobre tecnologías cloud para ayudar a escalar de forma eficiente, además de asumir mayores responsabilidades de DevOps. También he asumido un rol más activo en la gestión de proyectos, liderando pequeños equipos multidisciplinares de desarrolladores, especialistas en datos y perfiles de producto.",
+        "Tras tres años en la empresa, surgió la oportunidad de aprender sobre estas tecnologías cloud en una organización más grande que ya contaba con dichas infraestructuras, además de ofrecer un entorno con mayor amplitud tecnológica y desafíos más complejos, por lo que decidí dar el paso."
       ]
     },
     "perception": {
