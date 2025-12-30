@@ -249,7 +249,74 @@
     "scrollDown": "Scroll down"
   },
   "metadata": {
-    "title": "Daniel's Portfolio",
-    "description": "Welcome to Daniel's personal portfolio website."
+    "title": "Daniel Galán",
+    "description": "dangalann's personal portfolio showcasing experience, projects, and career journey as a full-stack developer and AI enthusiast."
+  },
+  "astro": {
+    "title": "Astrophotography",
+    "content": [
+      "Although I'm not a fan of talking about hobbies in a CV or a professional portfolio, I did want to showcase this one. Taking pictures of the stars has been one of my long-running hobbies, since it combines my love for technology, photography, and astronomy. Astrophotography requires a willingness to go deep into technical details on optics, cameras, electronics, and more. It also requires pacience and planning, since certain astronomical objects are only visible at certain times of the year, and weather conditions need to be just right. I believe demonstrating these qualities in this hobby serves as a reflection of my personality and approach to work.",
+      "Following is a small gallery of some of my astrophotography work. As a side note, I also maintain a separate Instagram account where I post my astrophotography pictures: "
+    ],
+    "instagram": {
+      "url": "https://www.instagram.com/astro__dann",
+      "text": "@astro__dann."
+    },
+    "media": {
+      "andromeda.jpg": {
+        "title": "Andromeda Galaxy",
+        "description": "I took this picture of our closest galactic neighbor, the Andromeda Galaxy (M31), near Olivella's observatory over two nights. This was actually not my main target those nights; that was actually the horsehead nebula. However, because of horsehead's position in the sky when I arrived at location, I couldn't point my telescope to it without risking a collision with my tripod. I could, however, point to Andromeda while I waited for horsehead to get in to position, and this is the resulting picture.",
+        "height": 4028,
+        "width": 6179
+      },
+      "horsehead.jpg": {
+        "title": "Horsehead Nebula",
+        "description": "The Horsehead Nebula (Barnard 33) is a dark nebula in the constellation of Orion. It's a small, dark cloud of dust and gas that appears as a silhouette against the bright emission nebula IC 434. I captured this image from Olivella's observatory over two nights.",
+        "height": 3996,
+        "width": 6088
+      },
+      "heart_nebula.jpg": {
+        "title": "Heart Nebula",
+        "description": "The Heart Nebula (IC 1805) is an emission nebula located in the constellation Cassiopeia. It gets its name from its distinctive heart-like shape. The nebula is a region of active star formation, with young, hot stars illuminating the surrounding gas and dust. I captured this image at my home over several nights, trying for the first time a dual narrowband filter to combat light pollution.",
+        "height": 4115,
+        "width": 6137
+      },
+      "bode.jpg": {
+        "title": "Bode's Galaxy",
+        "description": "This picture shows M81 (Bode's Galaxy) and M82 (Cigar Galaxy), two interacting galaxies in the constellation Ursa Major. I took this picture near Olivella's observatory.",
+        "height": 2091,
+        "width": 3806
+      },
+      "dumbbell.jpg": {
+        "title": "Dumbbell Nebula",
+        "description": "The Dumbbell Nebula (Messier 27) is a planetary nebula in the constellation Vulpecula. It is one of the brightest and most well-known planetary nebulae in the night sky. I captured this image from my home with the Seestar S50 smart telescope.",
+        "height": 3838,
+        "width": 2158
+      },
+      "milky_way.jpg": {
+        "title": "Milky Way",
+        "description": "This picture shows the core of our galaxy, the Milky Way, taken from a dark-sky location in the Montseny mountains.",
+        "height": 6240,
+        "width": 3904
+      },
+      "ngc6914.jpg": {
+        "title": "NGC 6914",
+        "description": "NGC 6914 is a star-forming region located in the constellation Cygnus. It is a complex of emission and reflection nebulae, as well as dark nebulae, that is illuminated by the young, hot stars that have recently formed within it. I captured this image in a field in Lleida.",
+        "height": 3838,
+        "width": 2158
+      },
+      "pleiades.jpg": {
+        "title": "Pleiades",
+        "description": "The Pleiades (Messier 45) is an open star cluster located in the constellation Taurus. It is one of the nearest star clusters to Earth and is easily visible to the naked eye. I took this picture from near Olivella's observatory.",
+        "height": 4136,
+        "width": 6063
+      },
+      "silhouette.jpg": {
+        "title": "Silhouette",
+        "description": "A picture of me and some friends posing in front of the stars, in Turó de l'Home. I was trying to experiment with compositing a foreground subject with a long-exposure astrophotography background. Little did I know that this day a rare event was going on: a red 'cloud' filled the sky and I thought it was light pollution of some sort. Turns out a large geomagnetic storm was happening, and the red glow was actually auroras. This glow can be seen at the lower right part of the image.",
+        "height": 6240,
+        "width": 4160
+      }
+    }
   }
 }

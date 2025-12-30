@@ -72,6 +72,23 @@ type Dictionary = {
     keyTakeawaysItems: string[];
     aboutMeParagraphs: string[];
   };
+  astro: {
+    title: string;
+    content: string[];
+    instagram: {
+      url: string;
+      text: string;
+    };
+    media: Record<
+      string,
+      {
+        title: string;
+        description: string;
+        width?: number;
+        height?: number;
+      }
+    >;
+  };
   experienceDetails: Record<
     string,
     {

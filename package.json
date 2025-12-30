@@ -26,10 +26,12 @@
     "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^10.0.0",
+    "react-photo-album": "^3.4.0",
     "react-tooltip": "^5.30.0",
     "server-only": "^0.0.1",
     "uuid": "^13.0.0",
-    "weaviate-client": "^3.10.0"
+    "weaviate-client": "^3.10.0",
+    "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",

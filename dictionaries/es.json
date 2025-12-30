@@ -249,7 +249,74 @@
     "scrollDown": "Desplazar hacia abajo"
   },
   "metadata": {
-    "title": "Portfolio de Daniel",
-    "description": "Bienvenido al portfolio personal de Daniel."
+    "title": "Daniel Galán",
+    "description": "Portfolio personal de dangalann mostrando experiencia, proyectos y trayectoria profesional como desarrollador full-stack y entusiasta de la IA."
+  },
+  "astro": {
+    "title": "Astrofotografía",
+    "content": [
+      "Aunque no suelo hablar de aficiones en un CV o portfolio profesional, sí quería mostrar esta. Fotografiar las estrellas es una de mis aficiones más duraderas, ya que combina mi pasión por la tecnología, la fotografía y la astronomía. La astrofotografía requiere estar dispuesto a profundizar en detalles técnicos sobre óptica, cámaras, electrónica y más. También exige paciencia y planificación, ya que ciertos objetos astronómicos solo son visibles en determinadas épocas del año y las condiciones meteorológicas deben ser las adecuadas. Creo que demostrar estas cualidades en este hobby refleja mi personalidad y mi enfoque hacia el trabajo.",
+      "A continuación hay una pequeña galería con algunas de mis fotos de astrofotografía. Como nota, también mantengo una cuenta de Instagram donde publico mis fotos de astrofotografía: "
+    ],
+    "instagram": {
+      "url": "https://www.instagram.com/astro__dann",
+      "text": "@astro__dann."
+    },
+    "media": {
+      "andromeda.jpg": {
+        "title": "Galaxia de Andrómeda",
+        "description": "Tomé esta foto de nuestra galaxia vecina más cercana, la Galaxia de Andrómeda (M31), cerca del observatorio de Olivella durante dos noches. En realidad, este no era mi objetivo principal esas noches; era la nebulosa Cabeza de Caballo. Sin embargo, por la posición de la Cabeza de Caballo en el cielo cuando llegué, no podía apuntar el telescopio sin arriesgarme a golpear el trípode. Sí podía, en cambio, apuntar a Andrómeda mientras esperaba, y este es el resultado.",
+        "height": 4028,
+        "width": 6179
+      },
+      "horsehead.jpg": {
+        "title": "Nebulosa Cabeza de Caballo",
+        "description": "La Nebulosa Cabeza de Caballo (Barnard 33) es una nebulosa oscura en la constelación de Orión. Es una pequeña nube de polvo y gas que aparece como una silueta frente a la brillante nebulosa de emisión IC 434. Capturé esta imagen desde el observatorio de Olivella durante dos noches.",
+        "height": 3996,
+        "width": 6088
+      },
+      "heart_nebula.jpg": {
+        "title": "Nebulosa del Corazón",
+        "description": "La Nebulosa del Corazón (IC 1805) es una nebulosa de emisión situada en la constelación de Casiopea. Recibe su nombre por su característica forma de corazón. Es una región de formación estelar activa, con estrellas jóvenes y calientes que iluminan el gas y polvo circundante. Capturé esta imagen en casa durante varias noches, probando por primera vez un filtro de doble banda para combatir la contaminación lumínica.",
+        "height": 4115,
+        "width": 6137
+      },
+      "bode.jpg": {
+        "title": "Galaxia de Bode",
+        "description": "Esta imagen muestra M81 (Galaxia de Bode) y M82 (Galaxia del Cigarro), dos galaxias en interacción en la constelación de la Osa Mayor. Tomé esta foto cerca del observatorio de Olivella.",
+        "height": 2091,
+        "width": 3806
+      },
+      "dumbbell.jpg": {
+        "title": "Nebulosa Dumbbell",
+        "description": "La Nebulosa Dumbbell (Messier 27) es una nebulosa planetaria en la constelación de Vulpecula. Es una de las nebulosas planetarias más brillantes y conocidas del cielo nocturno. Capturé esta imagen desde casa con el telescopio inteligente Seestar S50.",
+        "height": 3838,
+        "width": 2158
+      },
+      "milky_way.jpg": {
+        "title": "Vía Láctea",
+        "description": "Esta imagen muestra el núcleo de nuestra galaxia, la Vía Láctea, tomada desde un lugar oscuro en el Montseny.",
+        "height": 6240,
+        "width": 3904
+      },
+      "ngc6914.jpg": {
+        "title": "NGC 6914",
+        "description": "NGC 6914 es una región de formación estelar situada en la constelación de Cygnus. Es un complejo de nebulosas de emisión, reflexión y oscuras, iluminadas por estrellas jóvenes y calientes que se han formado recientemente en su interior. Capturé esta imagen en un campo en Lleida.",
+        "height": 3838,
+        "width": 2158
+      },
+      "pleiades.jpg": {
+        "title": "Pléyades",
+        "description": "Las Pléyades (Messier 45) son un cúmulo abierto de estrellas situado en la constelación de Tauro. Es uno de los cúmulos estelares más cercanos a la Tierra y es fácilmente visible a simple vista. Tomé esta foto cerca del observatorio de Olivella.",
+        "height": 4136,
+        "width": 6063
+      },
+      "silhouette.jpg": {
+        "title": "Silueta",
+        "description": "Una foto mía y de unas amigas posando frente a las estrellas, en el Turó de l'Home. Estaba experimentando con componer un sujeto en primer plano con un fondo de astrofotografía de larga exposición. No sabía que ese día ocurría un evento raro: una 'nube' roja llenó el cielo y pensé que era contaminación lumínica. Resultó ser una gran tormenta geomagnética, y el resplandor rojo eran auroras. Este resplandor puede verse en la parte inferior derecha de la imagen.",
+        "height": 6240,
+        "width": 4160
+      }
+    }
   }
 }

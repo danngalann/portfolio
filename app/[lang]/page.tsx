@@ -1,3 +1,4 @@
+import Astrophotography from "../ui/astrophotography/astrophotography";
 import Experience from "../ui/experience/experience";
 import Hero from "../ui/hero";
 import Projects from "../ui/projects/projects";
@@ -8,6 +9,7 @@ export default async function Home() {
       <Hero />
       <Experience />
       <Projects />
+      <Astrophotography />
     </main>
   );
 }
