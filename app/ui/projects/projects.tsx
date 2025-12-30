@@ -9,10 +9,10 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      title: dict.projects.items.sesametime.title,
-      description: dict.projects.items.sesametime.description,
-      link: "https://github.com/danngalann/sesametime",
-      tags: ["JavaScript", "Chrome Extension", "Productivity"],
+      title: dict.projects.items.homecaption.title,
+      description: dict.projects.items.homecaption.description,
+      link: "https://github.com/danngalann/homecaption",
+      tags: ["Python", "NextJS", "Accessibility"],
     },
     {
       title: dict.projects.items.astroweather.title,
@@ -21,10 +21,10 @@ export default function Projects() {
       tags: ["React", "TypeScript", "Astrophotography"],
     },
     {
-      title: dict.projects.items.cluedogpt.title,
-      description: dict.projects.items.cluedogpt.description,
-      link: "https://github.com/danngalann/cluedo-gpt",
-      tags: ["Python", "PydanticAI", "LLMs", "AI"],
+      title: dict.projects.items.bluetoothtimer.title,
+      description: dict.projects.items.bluetoothtimer.description,
+      link: "https://github.com/danngalann/bluetooth-timer",
+      tags: ["Android", "Kotlin"],
     },
     {
       title: dict.projects.items.booksummarizer.title,
@@ -33,16 +33,22 @@ export default function Projects() {
       tags: ["Python", "PydanticAI", "LLMs", "AI"],
     },
     {
+      title: dict.projects.items.sesametime.title,
+      description: dict.projects.items.sesametime.description,
+      link: "https://github.com/danngalann/sesametime",
+      tags: ["JavaScript", "Chrome Extension", "Productivity"],
+    },
+    {
+      title: dict.projects.items.cluedogpt.title,
+      description: dict.projects.items.cluedogpt.description,
+      link: "https://github.com/danngalann/cluedo-gpt",
+      tags: ["Python", "PydanticAI", "LLMs", "AI"],
+    },
+    {
       title: dict.projects.items.panoramahorizon.title,
       description: dict.projects.items.panoramahorizon.description,
       link: "https://github.com/danngalann/panorama-horizon-maker",
       tags: ["Python", "Image Processing", "Astrophotography"],
-    },
-    {
-      title: dict.projects.items.arpdos.title,
-      description: dict.projects.items.arpdos.description,
-      link: "https://github.com/danngalann/arpdos",
-      tags: ["Python", "Networking", "Cybersecurity"],
     },
   ];
 

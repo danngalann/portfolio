@@ -62,9 +62,13 @@
         "title": "Panorama Horizon Maker",
         "description": "Another small utility that can take a 360 image and help you generate an horizon file from it. This horizon file can then be used in astrophotography software to automate astronomy sessions."
       },
-      "arpdos": {
-        "title": "ArpDos",
-        "description": "A nasty little thing I wrote back when I was studing to prank my classmates. It will cut internet access to every computer on a network (or at least it did in 2019). I'm showcasing it here as evidence to my interest an knowledge in cybersecurity and network protocols."
+      "homecaption": {
+        "title": "HomeCaption",
+        "description": "A web application that generates captions on a laptop configured as a kiosk. Created as hearing assistance for a family member. It uses a local VAD model to detect speech, and sends the audio to Elevenlabs to extract captions and send them to a frontend via a websocket."
+      },
+      "bluetoothtimer": {
+        "title": "Bluetooth Timer",
+        "description": "Native Android application written in Kotlin. An extremely minimalist timer that solves a personal use case: listening to a timer alarm via Bluetooth, without it sounding on the phone."
       }
     }
   },
