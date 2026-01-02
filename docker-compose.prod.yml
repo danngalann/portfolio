@@ -9,7 +9,8 @@ services:
       ENABLE_MODULES: "text2vec-openai"
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
       CLUSTER_HOSTNAME: "node1"
-    # No persistent volume - fresh database on each deployment
+    volumes:
+      - weaviate_data_prod:/var/lib/weaviate
     restart: always
     networks:
       - portfolio-network
@@ -57,3 +58,6 @@ networks:
   proxy:
     external: false
     name: proxy
+
+volumes:
+  weaviate_data_prod:
