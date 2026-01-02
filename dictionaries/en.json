@@ -66,9 +66,17 @@
         "title": "HomeCaption",
         "description": "A web application that generates captions on a laptop configured as a kiosk. Created as hearing assistance for a family member. It uses a local VAD model to detect speech, and sends the audio to Elevenlabs to extract captions and send them to a frontend via a websocket."
       },
+      "livecaption": {
+        "title": "LiveCaption",
+        "description": "Following the idea of HomeCaption, this native Android application listens to the device's microphone and displays real-time captions on screen. It's designed for more manual and portable use than HomeCaption, such as for conversations outside the home."
+      },
       "bluetoothtimer": {
         "title": "Bluetooth Timer",
         "description": "Native Android application written in Kotlin. An extremely minimalist timer that solves a personal use case: listening to a timer alarm via Bluetooth, without it sounding on the phone."
+      },
+      "zohosprintsmcp": {
+        "title": "Zoho Sprints MCP",
+        "description": "An attempt at creating an MCP server for Zoho Sprints, to automate the creation and management of tasks and sprints from an AI agent."
       }
     }
   },

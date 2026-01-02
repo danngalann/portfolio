@@ -15,6 +15,12 @@ export default function Projects() {
       tags: ["Python", "NextJS", "Accessibility"],
     },
     {
+      title: dict.projects.items.livecaption.title,
+      description: dict.projects.items.livecaption.description,
+      link: "https://github.com/danngalann/livecaption",
+      tags: ["Kotlin", "Android", "Accessibility"],
+    },
+    {
       title: dict.projects.items.astroweather.title,
       description: dict.projects.items.astroweather.description,
       link: "https://github.com/danngalann/astroweather_next",
@@ -49,6 +55,12 @@ export default function Projects() {
       description: dict.projects.items.panoramahorizon.description,
       link: "https://github.com/danngalann/panorama-horizon-maker",
       tags: ["Python", "Image Processing", "Astrophotography"],
+    },
+    {
+      title: dict.projects.items.zohosprintsmcp.title,
+      description: dict.projects.items.zohosprintsmcp.description,
+      link: "https://github.com/danngalann/zoho-sprints-mcp",
+      tags: ["Python", "MCP", "Automation", "AI"],
     },
   ];
 
