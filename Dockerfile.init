@@ -10,7 +10,7 @@ RUN apk add --no-cache wget
 WORKDIR /app
 
 # Copy package files
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies (ignore scripts to skip husky prepare)
 RUN pnpm install --frozen-lockfile --prod --ignore-scripts
