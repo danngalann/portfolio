@@ -2,7 +2,7 @@
 FROM node:24-alpine
 
 # Install pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10.26.2 --activate
 
 # Install wget for health checks
 RUN apk add --no-cache wget
@@ -13,10 +13,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies (ignore scripts to skip husky prepare)
-RUN pnpm install --frozen-lockfile --prod --ignore-scripts
-
-# Install TypeScript for compilation
-RUN pnpm add -D typescript
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 # Copy necessary files
 COPY load_embeddings.ts ./
