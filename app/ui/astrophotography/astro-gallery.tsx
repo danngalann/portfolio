@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { MasonryPhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
@@ -83,6 +83,29 @@ function renderNextImage(
 
 export default function AstroGallery({ media }: AstroGalleryProps) {
   const [index, setIndex] = useState(-1);
+
+  useEffect(() => {
+    const requestedPicture = new URLSearchParams(window.location.search).get(
+      "ap",
+    );
+    if (!requestedPicture) return;
+
+    const requestedIndex = Object.keys(media)
+      .filter((filename) => filename in imageMap)
+      .findIndex(
+        (filename) => filename.replace(/\.[^.]+$/, "") === requestedPicture,
+      );
+    if (requestedIndex < 0) return;
+
+    const frame = requestAnimationFrame(() => {
+      document
+        .getElementById("astrophotography-section")
+        ?.scrollIntoView({ block: "start" });
+      setIndex(requestedIndex);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [media]);
 
   // Transform media object into photos array, using static imports
   const photos: AstroPhoto[] = Object.entries(media)

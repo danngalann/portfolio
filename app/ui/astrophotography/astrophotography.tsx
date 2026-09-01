@@ -9,7 +9,7 @@ export default function Astrophotography() {
 
   return (
     <section
-      id="projects-section"
+      id="astrophotography-section"
       className="flex flex-col items-center justify-center"
     >
       <h1 className="text-4xl uppercase my-16">{dict.astro.title}</h1>
