@@ -9,6 +9,27 @@ export default function Experience() {
 
   const jobs: Job[] = [
     {
+      title: dict.experience.jobs.viaplay.title,
+      company: dict.experience.jobs.viaplay.company,
+      startDate: new Date(2026, 0, 1),
+      endDate: null,
+      description: dict.experience.jobs.viaplay.description,
+      tags: [
+        "TypeScript",
+        "AWS",
+        "CloudFormation",
+        "Python",
+        "Vite",
+        "Next.js",
+        "DynamoDB",
+        "Kinesis",
+        "GitHub Actions",
+        "Jira",
+        "Confluence",
+      ],
+      slug: "viaplay",
+    },
+    {
       title: dict.experience.jobs.delectatech.title,
       company: dict.experience.jobs.delectatech.company,
       startDate: new Date(2023, 1, 1),

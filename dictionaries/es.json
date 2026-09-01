@@ -22,6 +22,11 @@
   "experience": {
     "title": "Experiencia",
     "jobs": {
+      "viaplay": {
+        "title": "Software Engineer",
+        "company": "Viaplay Group",
+        "description": "Desarrollo y mantenimiento de servicios fiables para una plataforma de streaming en monorepos TypeScript, con infraestructura AWS, flujos de entrega automatizados y foco en la calidad a gran escala."
+      },
       "delectatech": {
         "title": "Full Stack & AI Developer",
         "company": "Delectatech",
@@ -123,6 +128,44 @@
     ]
   },
   "experienceDetails": {
+    "viaplay": {
+      "title": "Viaplay Group",
+      "contents": "Contenidos",
+      "sections": {
+        "overview": "Resumen general",
+        "summary": "Resumen corto",
+        "keyTakeaways": "Puntos clave",
+        "experience": "Experiencia"
+      },
+      "tooltips": {
+        "ai": "Esta sección fue creada con ayuda de IA, a partir de la sección 'Experiencia'",
+        "human": "Esta sección fue escrita por un humano (yo)"
+      },
+      "overviewItems": [
+        "Me incorporé a Viaplay Group como software engineer, pasando de una startup con recursos limitados a una organización internacional de streaming de gran tamaño.",
+        "Trabajo principalmente con monorepos TypeScript, contribuyendo a servicios y sistemas preparados para millones de usuarios.",
+        "Gestiono infraestructura AWS mediante CloudFormation y trabajo con servicios como DynamoDB y Kinesis.",
+        "Utilizo GitHub Actions para automatizar flujos de pruebas unitarias, de integración y end-to-end, así como despliegues.",
+        "Colaboro en un entorno híbrido con equipos distribuidos entre países, culturas y disciplinas.",
+        "Exploro aplicaciones responsables de la IA en el desarrollo y la revisión automatizada de código.",
+        "Amplío conocimientos de bajo nivel mediante el interés por Rust y la ingeniería orientada al rendimiento."
+      ],
+      "summaryText": "En Viaplay Group estoy adquiriendo experiencia en sistemas de streaming a gran escala, infraestructura cloud madura y prácticas de entrega centradas en la calidad. El rol ha reforzado mi comprensión de cómo una ingeniería cuidadosa, la automatización y la colaboración transversal sustentan productos fiables para millones de usuarios.",
+      "keyTakeawaysItems": [
+        "Experiencia con sistemas de cara al usuario a gran escala y prácticas de ingeniería centradas en la fiabilidad.",
+        "Gestión práctica de infraestructura AWS con CloudFormation, DynamoDB y Kinesis.",
+        "Automatización CI/CD de pruebas unitarias, de integración y end-to-end con GitHub Actions.",
+        "Colaboración dentro de una organización de ingeniería internacional y multicultural.",
+        "Crecimiento continuo en desarrollo asistido por IA, Rust e ingeniería de sistemas orientada al rendimiento."
+      ],
+      "experienceParagraphs": [
+        "En enero de 2026 me incorporé a Viaplay Group como Software Engineer, tras tres años en Delectatech. El salto de una startup a una compañía internacional de streaming consolidada me ha dado una nueva perspectiva sobre la ingeniería a gran escala: los sistemas deben diseñarse con cuidado, probarse bien y ser resilientes porque dan servicio a millones de usuarios.",
+        "Mi trabajo se basa principalmente en monorepos TypeScript. También gestiono infraestructura AWS con CloudFormation y trabajo con servicios como DynamoDB y Kinesis. Este entorno me ha permitido profundizar en cloud mientras contribuyo a un ecosistema técnico más amplio y maduro.",
+        "Un área importante de crecimiento ha sido la entrega automatizada. Utilizo GitHub Actions para apoyar flujos de pruebas y despliegue en los niveles unitario, de integración y end-to-end. El énfasis en la fiabilidad y la repetibilidad ha reforzado el valor de equilibrar velocidad de entrega y validación rigurosa.",
+        "Trabajo en un entorno híbrido e internacional junto a compañeros con distintos orígenes, experiencias y perspectivas. Esta colaboración ha ampliado mi manera de abordar la comunicación y la toma de decisiones técnicas en equipos grandes.",
+        "Viaplay también me permite explorar prácticas de ingeniería emergentes, como el desarrollo asistido por IA y la revisión automatizada de código, manteniendo el juicio humano como parte central de la calidad. Además, estoy avanzando hacia trabajo más cercano a sistemas mediante el estudio de Rust y programación orientada al rendimiento."
+      ]
+    },
     "delectatech": {
       "title": "Delectatech",
       "contents": "Contenidos",

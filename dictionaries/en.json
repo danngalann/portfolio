@@ -22,6 +22,11 @@
   "experience": {
     "title": "Experience",
     "jobs": {
+      "viaplay": {
+        "title": "Software Engineer",
+        "company": "Viaplay Group",
+        "description": "Builds and maintains reliable streaming-platform services in TypeScript monorepos, with AWS infrastructure, automated delivery workflows, and a focus on quality at scale."
+      },
       "delectatech": {
         "title": "Full Stack & AI Developer",
         "company": "Delectatech",
@@ -123,6 +128,44 @@
     ]
   },
   "experienceDetails": {
+    "viaplay": {
+      "title": "Viaplay Group",
+      "contents": "Contents",
+      "sections": {
+        "overview": "Overview",
+        "summary": "Short Summary",
+        "keyTakeaways": "Key Takeaways",
+        "experience": "Experience"
+      },
+      "tooltips": {
+        "ai": "This section was created with the aid of AI, from the 'Experience' section",
+        "human": "This section was written by a human (me!)"
+      },
+      "overviewItems": [
+        "Joined Viaplay Group as a software engineer, moving from a resource-constrained startup to a large, multinational streaming organization.",
+        "Works primarily in TypeScript monorepos, contributing to services and systems designed to support millions of users.",
+        "Manages AWS infrastructure through CloudFormation and works with services including DynamoDB and Kinesis.",
+        "Uses GitHub Actions to automate unit, integration, and end-to-end testing and deployment workflows.",
+        "Collaborates across countries, cultures, and disciplines in a hybrid working environment.",
+        "Explores responsible engineering applications of AI-assisted development and automated code review.",
+        "Expanding systems-level knowledge through an interest in Rust and performance-oriented engineering."
+      ],
+      "summaryText": "At Viaplay Group, I am developing experience in large-scale streaming systems, mature cloud infrastructure, and quality-focused delivery practices. The role has strengthened my understanding of how thoughtful engineering, automation, and cross-functional collaboration support reliable products for millions of users.",
+      "keyTakeawaysItems": [
+        "Experience working with large-scale, user-facing systems and reliability-focused engineering practices.",
+        "Hands-on AWS infrastructure management with CloudFormation, DynamoDB, and Kinesis.",
+        "Practical CI/CD automation across unit, integration, and end-to-end testing with GitHub Actions.",
+        "Collaboration within an international, multicultural engineering organization.",
+        "Continued growth in AI-assisted development, Rust, and performance-oriented systems engineering."
+      ],
+      "experienceParagraphs": [
+        "In January 2026, I joined Viaplay Group as a Software Engineer after three years at Delectatech. Moving from a startup to an established international streaming company has given me a new perspective on engineering at scale: systems must be thoughtfully designed, well tested, and resilient because they serve millions of users.",
+        "My work is primarily based in TypeScript monorepos. I also manage AWS infrastructure with CloudFormation and work with services such as DynamoDB and Kinesis. This environment has let me deepen my cloud knowledge while contributing to a broader and more mature technical ecosystem.",
+        "A major area of growth has been automated delivery. I use GitHub Actions to support testing and deployment workflows across unit, integration, and end-to-end levels. The emphasis on reliability and repeatability has reinforced the value of balancing delivery speed with careful validation.",
+        "I work in a hybrid, multinational environment alongside colleagues with different backgrounds, experiences, and perspectives. That collaboration has broadened how I approach communication and technical decision-making within larger teams.",
+        "Viaplay also gives me room to explore emerging engineering practices, including AI-assisted development and automated code review, while keeping human judgment central to quality. I am also building toward more systems-level work by studying Rust and performance-oriented programming."
+      ]
+    },
     "delectatech": {
       "title": "Delectatech",
       "contents": "Contents",

@@ -7,7 +7,7 @@ import { FaHandPaper } from "react-icons/fa";
 import { useDictionary } from "@/app/contexts/dictionary-context";
 
 type ExperienceDetailProps = {
-  company: "delectatech" | "perception" | "necsia";
+  company: "viaplay" | "delectatech" | "perception" | "necsia";
 };
 
 export default function ExperienceDetailClient({

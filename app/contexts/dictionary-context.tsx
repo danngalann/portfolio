@@ -27,6 +27,11 @@ type Dictionary = {
   experience: {
     title: string;
     jobs: {
+      viaplay: {
+        title: string;
+        company: string;
+        description: string;
+      };
       delectatech: {
         title: string;
         company: string;
