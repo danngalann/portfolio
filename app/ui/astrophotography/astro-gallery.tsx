@@ -56,8 +56,11 @@ interface AstroGalleryProps {
   >;
 }
 
+const galleryImageSizes =
+  "(max-width: 599px) calc(100vw - 32px), (max-width: 799px) calc((100vw - 47px) / 2), calc((100vw - 62px) / 3)";
+
 function renderNextImage(
-  { alt = "", title, sizes }: RenderImageProps,
+  { alt = "", title }: RenderImageProps,
   { photo, width, height }: RenderImageContext,
 ) {
   return (
@@ -73,7 +76,7 @@ function renderNextImage(
         src={photo}
         alt={alt}
         title={title}
-        sizes={sizes}
+        sizes={galleryImageSizes}
         placeholder="blur"
         className="object-cover"
       />
@@ -173,7 +176,7 @@ export default function AstroGallery({ media }: AstroGalleryProps) {
                     placeholder="blur"
                     blurDataURL={slides[index]?.blurDataURL}
                     className="object-contain"
-                    sizes="100vw"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
                     priority
                   />
                 </div>
