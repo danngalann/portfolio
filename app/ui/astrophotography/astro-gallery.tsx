@@ -18,9 +18,11 @@ import milkyWayImg from "@/public/astro/milky_way.jpg";
 import ngc6914Img from "@/public/astro/ngc6914.jpg";
 import pleiadesImg from "@/public/astro/pleiades.jpg";
 import silhouetteImg from "@/public/astro/silhouette.jpg";
+import veilNebulaImg from "@/public/astro/veil_nebula.jpg";
 
 // Mapping from filename to imported image
 const imageMap: Record<string, StaticImageData> = {
+  "veil_nebula.jpg": veilNebulaImg,
   "andromeda.jpg": andromedaImg,
   "bode.jpg": bodeImg,
   "dumbbell.jpg": dumbbellImg,
