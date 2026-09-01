@@ -87,6 +87,13 @@ function renderNextImage(
 export default function AstroGallery({ media }: AstroGalleryProps) {
   const [index, setIndex] = useState(-1);
 
+  const closeGallery = () => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("ap");
+    window.history.replaceState(window.history.state, "", url);
+    setIndex(-1);
+  };
+
   useEffect(() => {
     const requestedPicture = new URLSearchParams(window.location.search).get(
       "ap",
@@ -155,7 +162,7 @@ export default function AstroGallery({ media }: AstroGalleryProps) {
         slides={slides}
         open={index >= 0}
         index={index}
-        close={() => setIndex(-1)}
+        close={closeGallery}
         on={{
           view: ({ index: currentIndex }) => {
             if (currentIndex !== index) {
