@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="container mx-auto p-6">
         <div className="flex justify-center items-center gap-8">
           <Link
-            href="https://github.com/danngalann"
+            href="https://github.com/danngalann/portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group hover:text-foreground/80 transition-colors duration-300"
           >
             <span className="relative">
-              GitHub
+              Source code
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
             </span>
           </Link>

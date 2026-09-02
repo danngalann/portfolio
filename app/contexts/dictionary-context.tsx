@@ -80,7 +80,13 @@ type Dictionary = {
   astro: {
     title: string;
     content: string[];
+    portfolio: {
+      lead: string;
+      url: string;
+      text: string;
+    };
     instagram: {
+      lead: string;
       url: string;
       text: string;
     };

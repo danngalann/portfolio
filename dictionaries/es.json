@@ -308,10 +308,15 @@
   "astro": {
     "title": "Astrofotografía",
     "content": [
-      "Aunque no suelo hablar de aficiones en un CV o portfolio profesional, sí quería mostrar esta. Fotografiar las estrellas es una de mis aficiones más duraderas, ya que combina mi pasión por la tecnología, la fotografía y la astronomía. La astrofotografía requiere estar dispuesto a profundizar en detalles técnicos sobre óptica, cámaras, electrónica y más. También exige paciencia y planificación, ya que ciertos objetos astronómicos solo son visibles en determinadas épocas del año y las condiciones meteorológicas deben ser las adecuadas. Creo que demostrar estas cualidades en este hobby refleja mi personalidad y mi enfoque hacia el trabajo.",
-      "A continuación hay una pequeña galería con algunas de mis fotos de astrofotografía. Como nota, también mantengo una cuenta de Instagram donde publico mis fotos de astrofotografía: "
+      "La astrofotografía es una práctica a largo plazo que combina astronomía, fotografía y resolución de problemas técnicos en óptica, captura de imagen, seguimiento y procesado. Publico el trabajo completo—incluyendo imágenes de cielo profundo, paisajes nocturnos, vídeos y detalles de adquisición—en un portfolio dedicado a la astrofotografía."
     ],
+    "portfolio": {
+      "lead": "El archivo completo está disponible en ",
+      "url": "https://astro.danngalann.com",
+      "text": "astro.danngalann.com."
+    },
     "instagram": {
+      "lead": "También publico nuevos trabajos en ",
       "url": "https://www.instagram.com/astro__dann",
       "text": "@astro__dann."
     },

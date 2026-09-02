@@ -308,10 +308,15 @@
   "astro": {
     "title": "Astrophotography",
     "content": [
-      "Although I'm not a fan of talking about hobbies in a CV or a professional portfolio, I did want to showcase this one. Taking pictures of the stars has been one of my long-running hobbies, since it combines my love for technology, photography, and astronomy. Astrophotography requires a willingness to go deep into technical details on optics, cameras, electronics, and more. It also requires pacience and planning, since certain astronomical objects are only visible at certain times of the year, and weather conditions need to be just right. I believe demonstrating these qualities in this hobby serves as a reflection of my personality and approach to work.",
-      "Following is a small gallery of some of my astrophotography work. As a side note, I also maintain a separate Instagram account where I post my astrophotography pictures: "
+      "Astrophotography is a long-term practice that combines astronomy, photography, and technical problem-solving across optics, imaging, tracking, and post-processing. I publish the complete body of work—including deep-sky images, nightscapes, videos, and acquisition notes—in a dedicated astrophotography portfolio."
     ],
+    "portfolio": {
+      "lead": "Explore the complete archive at ",
+      "url": "https://astro.danngalann.com",
+      "text": "astro.danngalann.com."
+    },
     "instagram": {
+      "lead": "New work is also shared on ",
       "url": "https://www.instagram.com/astro__dann",
       "text": "@astro__dann."
     },
