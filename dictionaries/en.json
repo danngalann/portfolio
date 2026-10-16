@@ -73,7 +73,7 @@
       },
       "livecaption": {
         "title": "LiveCaption",
-        "description": "Following the idea of HomeCaption, this native Android application listens to the device's microphone and displays real-time captions on screen. It's designed for more manual and portable use than HomeCaption, such as for conversations outside the home."
+        "description": "A native Kotlin app that uses tiered AI models to transcribe speech in real time. Inspired by Google's Transcribe app, it offers a clearer interface for non-technical users and offline transcription fallback for remote areas. Built as an assistance tool for a deaf family member."
       },
       "bluetoothtimer": {
         "title": "Bluetooth Timer",
@@ -82,6 +82,14 @@
       "zohosprintsmcp": {
         "title": "Zoho Sprints MCP",
         "description": "An attempt at creating an MCP server for Zoho Sprints, to automate the creation and management of tasks and sprints from an AI agent."
+      },
+      "easymacros": {
+        "title": "EasyMacros",
+        "description": "A self-hostable nutrient tracker with a native Android app, a TypeScript API, and PostgreSQL. AI can analyze ingredient photos, including nutrition labels, to suggest ingredient details and nutrient values, and estimate a meal's portion weight and nutrients from photos and a description. Estimates are editable and reviewed before saving."
+      },
+      "ksprustscripts": {
+        "title": "KSP Rust kRPC Scripts",
+        "description": "A learning project with Rust programs for controlling Kerbal Space Program through the kRPC mod, exploring flight control, orbital maneuvers, and mission automation."
       }
     }
   },
@@ -105,14 +113,14 @@
       "Pursued comprehensive technical education through mid- and advanced-level vocational programs in computer science, mastering both hardware and software fundamentals.",
       "Gained practical experience via internships at Necsia IT Consulting and Perception Technologies, leading to full-time roles in professional software development.",
       "Transitioned to Delectatech, an AI-focused startup, to bridge software engineering with artificial intelligence and expand into hybrid, multidisciplinary work.",
-      "Continues to invest in lifelong learning, skill refinement, and personal growth—balancing technical specialization with broader intellectual interests such as language learning and astronomy."
+      "Continues to invest in lifelong learning, skill refinement, and personal growth, balancing technical specialization with broader intellectual interests such as language learning and astronomy."
     ],
     "summaryText": "A self-taught technologist turned professional developer, I built my career from early curiosity and persistence. From dismantling toys to developing software and exploring AI, my journey reflects a constant drive to learn, adapt, and evolve.",
     "keyTakeawaysItems": [
       "Early self-directed learning built a strong foundation in problem-solving and technical curiosity.",
       "Language fluency and self-education enabled continuous professional advancement.",
       "Vocational training provided both theoretical grounding and practical exposure to computing.",
-      "Career progression reflects intentional growth—from intern to full-stack developer to AI-focused engineer.",
+      "Career progression reflects intentional growth, from intern through full-stack developer to AI-focused engineer.",
       "Maintains a lifelong learning mindset, blending professional development with personal curiosity and discipline."
     ],
     "aboutMeParagraphs": [
@@ -183,7 +191,7 @@
         "Joined Delectatech, an AI-driven startup in the food service industry, as a backend developer with the opportunity to expand into AI and data science.",
         "Initially onboarded in data engineering, later transitioned toward full-stack development while supporting AI-related initiatives.",
         "Realized a personal preference for software engineering over data science, focusing on backend and AI implementation rather than data pipelines.",
-        "Worked across multiple frameworks—Symfony, FastAPI, and NestJS—and contributed to React and Angular frontends.",
+        "Worked across multiple frameworks, including Symfony, FastAPI, and NestJS, and contributed to React and Angular frontends.",
         "Built and maintained CI/CD pipelines with Jenkins and GitHub Actions, automating testing, image building, and deployment workflows.",
         "Managed distributed systems involving RabbitMQ, Redis, Elasticsearch, and Dockerized environments.",
         "Implemented AI-powered and agentic solutions using PyTorch, PydanticAI, and LangChain, including generative AI integrations.",
@@ -272,7 +280,7 @@
         "Worked in a highly regulated, documentation-driven environment, emphasizing precision and traceability over speed.",
         "Collaborated closely with senior and mid-level developers, gaining exposure to real-world software engineering standards and enterprise workflows.",
         "Acquired hands-on experience with legacy codebases, manual deployment, and database integrity validation.",
-        "Developed professional habits in technical documentation, structured debugging, and change tracking—at a time before version control systems were standard.",
+        "Developed professional habits in technical documentation, structured debugging, and change tracking at a time before version control systems were standard.",
         "Experienced the transition to remote work during the onset of the COVID-19 pandemic, adapting to asynchronous communication and VPN-based workflows.",
         "Learned valuable lessons about team communication, expectation management, and the unpredictable nature of early career opportunities."
       ],
@@ -286,7 +294,7 @@
       ],
       "experienceParagraphs": [
         "Necsia was my first serious job as a developer. At the time I was looking for internships as part of my curriculum for my studies at Vallbona. I consciously picked an internship modality available at my school where you were required to work more hours, receiving pay in exchange. To be more specific, these were year-long internships instead of the regular three-month internship usually offered in most Spanish degree programs. The longer duration meant more experience and the possibility of getting hired afterwards (COVID had other ideas, but more on that later). The pay meant I was expected to perform at a higher level of responsibility than a regular intern.",
-        "It was their recruitment team that found me and contacted me via LinkedIn. Back then, on-site interviews were still in fashion, and I went through a single interview before being hired. The position was fully on-site, in the offices of the World Trade Center in Barcelona. Getting my first serious job in a glass maze with views of the sea was quite an experience—especially when the police started raiding the place for suspected drug trafficking (the offices are next to the port). But that's a story for another day over coffee.",
+        "It was their recruitment team that found me and contacted me via LinkedIn. Back then, on-site interviews were still in fashion, and I went through a single interview before being hired. The position was fully on-site, in the offices of the World Trade Center in Barcelona. Getting my first serious job in a glass maze with views of the sea was quite an experience, especially when the police started raiding the place for suspected drug trafficking (the offices are next to the port). But that's a story for another day over coffee.",
         "When I started, a mountain of onboarding documents landed on my desk. After reading them all (and even understanding some parts) I was given database access and began working. My task was to develop and maintain a Java application with a small UI utility that managed data migrations between several database engines for Aigües de Barcelona (now Agbar Group).",
         "The application was massive, full of legacy code and extensive documentation, and overseen by a senior developer who knew the entire system by heart. Our small team implemented new features and fixed bugs while documenting nearly every change. I don't recall any version control system being in place, so documentation was crucial for tracking progress.",
         "As my internship was nearing its end, COVID hit hardest. Remote work became a necessity, so we were allowed to take our laptops home and were given VPN access to work remotely. This was my first experience with remote work. The tasks remained mostly the same, but communication suffered; our team wasn't used to asynchronous coordination and relied solely on basic messaging software.",
@@ -308,7 +316,7 @@
   "astro": {
     "title": "Astrophotography",
     "content": [
-      "Astrophotography is a long-term practice that combines astronomy, photography, and technical problem-solving across optics, imaging, tracking, and post-processing. I publish the complete body of work—including deep-sky images, nightscapes, videos, and acquisition notes—in a dedicated astrophotography portfolio."
+      "Astrophotography is a long-term practice that combines astronomy, photography, and technical problem-solving across optics, imaging, tracking, and post-processing. I publish the complete body of work, including deep-sky images, nightscapes, videos, and acquisition notes, in a dedicated astrophotography portfolio."
     ],
     "portfolio": {
       "lead": "Explore the complete archive at ",

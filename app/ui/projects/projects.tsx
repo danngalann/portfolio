@@ -9,28 +9,28 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      title: dict.projects.items.homecaption.title,
-      description: dict.projects.items.homecaption.description,
-      link: "https://github.com/danngalann/homecaption",
-      tags: ["Python", "NextJS", "Accessibility"],
-    },
-    {
       title: dict.projects.items.livecaption.title,
       description: dict.projects.items.livecaption.description,
       link: "https://github.com/danngalann/livecaption",
       tags: ["Kotlin", "Android", "Accessibility"],
     },
     {
+      title: dict.projects.items.easymacros.title,
+      description: dict.projects.items.easymacros.description,
+      link: "https://github.com/danngalann/EasyMacros",
+      tags: ["Android", "Kotlin", "TypeScript", "PostgreSQL"],
+    },
+    {
+      title: dict.projects.items.ksprustscripts.title,
+      description: dict.projects.items.ksprustscripts.description,
+      link: "https://github.com/danngalann/ksp_rust_scripts",
+      tags: ["Rust", "Kerbal Space Program", "Automation"],
+    },
+    {
       title: dict.projects.items.astroweather.title,
       description: dict.projects.items.astroweather.description,
       link: "https://github.com/danngalann/astroweather_next",
       tags: ["React", "TypeScript", "Astrophotography"],
-    },
-    {
-      title: dict.projects.items.bluetoothtimer.title,
-      description: dict.projects.items.bluetoothtimer.description,
-      link: "https://github.com/danngalann/bluetooth-timer",
-      tags: ["Android", "Kotlin"],
     },
     {
       title: dict.projects.items.booksummarizer.title,
