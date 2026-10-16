@@ -73,7 +73,7 @@
       },
       "livecaption": {
         "title": "LiveCaption",
-        "description": "Siguendo la idea de HomeCaption, ésta aplicación nativa para Android escucha el micrófono del dispositivo y muestra subtítulos en pantalla en tiempo real. Está pensada para un uso más manual y portátil que HomeCaption, como para conversaciones fuera de casa."
+        "description": "Una aplicación nativa para Kotlin que utiliza varios modelos de IA escalonados para transcribir voz en tiempo real. Inspirada en la aplicación Transcribe de Google, ofrece una interfaz más clara para usuarios sin conocimientos técnicos y una alternativa de transcripción sin conexión para zonas remotas. Se creó como herramienta de apoyo para un familiar sordo."
       },
       "bluetoothtimer": {
         "title": "Bluetooth Timer",
@@ -82,6 +82,14 @@
       "zohosprintsmcp": {
         "title": "Zoho Sprints MCP",
         "description": "Un intento de crear un servidor MCP para Zoho Sprints, para automatizar la creación y gestión de tareas y sprints desde un agente de IA."
+      },
+      "easymacros": {
+        "title": "EasyMacros",
+        "description": "Un gestor de nutrientes autoalojable con una aplicación nativa para Android, una API en TypeScript y PostgreSQL. La IA puede analizar fotos de ingredientes, incluidas las etiquetas nutricionales, para sugerir sus datos y valores nutricionales, y estimar el peso de una ración y sus nutrientes a partir de fotos y una descripción. Las estimaciones se pueden editar y revisar antes de guardarlas."
+      },
+      "ksprustscripts": {
+        "title": "KSP Rust kRPC Scripts",
+        "description": "Un proyecto de aprendizaje con programas en Rust para controlar Kerbal Space Program mediante el mod kRPC y explorar el control de vuelo, las maniobras orbitales y la automatización de misiones."
       }
     }
   },
@@ -183,7 +191,7 @@
         "Me incorporé a Delectatech, una startup impulsada por IA en el sector de la restauración, como desarrollador backend, con la oportunidad de expandirme hacia la inteligencia artificial y la ciencia de datos.",
         "Inicialmente me incorporé al área de ingeniería de datos, y posteriormente transicioné hacia el desarrollo full-stack mientras apoyaba iniciativas relacionadas con IA.",
         "Descubrí una preferencia personal por la ingeniería de software frente a la ciencia de datos, centrándome en backend e implementación de IA más que en pipelines de datos.",
-        "Trabajé con múltiples frameworks —Symfony, FastAPI y NestJS— y contribuí a frontends en React y Angular.",
+        "Trabajé con múltiples frameworks, como Symfony, FastAPI y NestJS, y contribuí a frontends en React y Angular.",
         "Construí y mantuve pipelines de CI/CD con Jenkins y GitHub Actions, automatizando pruebas, creación de imágenes y flujos de despliegue.",
         "Gestioné sistemas distribuidos que incluían RabbitMQ, Redis, Elasticsearch y entornos contenerizados con Docker.",
         "Implementé soluciones basadas en IA y agentes utilizando PyTorch, PydanticAI y LangChain, incluyendo integraciones de IA generativa.",
@@ -272,7 +280,7 @@
         "Trabajé en un entorno altamente regulado y centrado en documentación, priorizando la precisión y trazabilidad sobre la velocidad.",
         "Colaboré estrechamente con desarrolladores sénior y de nivel medio, obteniendo exposición a estándares reales de ingeniería software y flujos de trabajo empresariales.",
         "Obtuve experiencia práctica con bases de código legacy, despliegues manuales y validación de integridad de datos.",
-        "Desarrollé hábitos profesionales en documentación técnica, depuración estructurada y seguimiento de cambios—en una época previa al uso extendido de sistemas de control de versiones.",
+        "Desarrollé hábitos profesionales en documentación técnica, depuración estructurada y seguimiento de cambios, en una época previa al uso extendido de sistemas de control de versiones.",
         "Viví la transición al trabajo remoto durante el inicio de la pandemia de COVID-19, adaptándome a comunicación asincrónica y flujos por VPN.",
         "Aprendí lecciones valiosas sobre comunicación, gestión de expectativas y la naturaleza impredecible de los inicios de una carrera profesional."
       ],
@@ -286,7 +294,7 @@
       ],
       "experienceParagraphs": [
         "Necsia fue mi primer trabajo serio como desarrollador. Por entonces buscaba prácticas del ciclo de Vallbona. Elegí una modalidad con más horas a cambio de remuneración. Eran prácticas de un año, en lugar de los tres meses habituales, lo que implicaba más experiencia y posibilidad de contratación (la COVID tuvo otros planes). El sueldo implicaba más responsabilidad que la de un becario típico.",
-        "Su equipo de selección me encontró por LinkedIn. En aquella época las entrevistas presenciales seguían siendo comunes, y pasé una única entrevista antes de ser contratado. El puesto era completamente presencial, en el World Trade Center de Barcelona. Conseguir mi primer trabajo serio en un edificio acristalado con vistas al mar fue toda una experiencia—especialmente cuando la policía comenzó a registrar el lugar buscando tráfico de drogas (las oficinas están junto al puerto). Pero esa historia queda para un café.",
+        "Su equipo de selección me encontró por LinkedIn. En aquella época las entrevistas presenciales seguían siendo comunes, y pasé una única entrevista antes de ser contratado. El puesto era completamente presencial, en el World Trade Center de Barcelona. Conseguir mi primer trabajo serio en un edificio acristalado con vistas al mar fue toda una experiencia, especialmente cuando la policía comenzó a registrar el lugar buscando tráfico de drogas (las oficinas están junto al puerto). Pero esa historia queda para un café.",
         "Al empezar, recibí una montaña de documentos de onboarding. Tras leerlos (y entender parte), me dieron acceso a bases de datos y comencé a trabajar. Mi tarea era mantener y desarrollar una aplicación Java con una pequeña interfaz que gestionaba migraciones de datos entre varios motores para Aigües de Barcelona (Agbar).",
         "La aplicación era enorme, llena de código legacy y abundante documentación, supervisada por un desarrollador sénior que conocía todo el sistema. Nuestro pequeño equipo implementaba nuevas funciones y corregía errores mientras documentábamos casi cada cambio. No recuerdo ningún sistema de control de versiones, así que la documentación era esencial para seguir el progreso.",
         "Al acercarse el final de mis prácticas, la COVID golpeó fuerte. El teletrabajo se volvió necesario, así que pudimos llevarnos los portátiles a casa y acceder por VPN. Fue mi primera experiencia de trabajo remoto. Las tareas eran prácticamente las mismas, pero la comunicación se resintió; el equipo no estaba habituado a coordinarse de forma asincrónica y dependía de mensajería básica.",
@@ -308,7 +316,7 @@
   "astro": {
     "title": "Astrofotografía",
     "content": [
-      "La astrofotografía es una práctica a largo plazo que combina astronomía, fotografía y resolución de problemas técnicos en óptica, captura de imagen, seguimiento y procesado. Publico el trabajo completo—incluyendo imágenes de cielo profundo, paisajes nocturnos, vídeos y detalles de adquisición—en un portfolio dedicado a la astrofotografía."
+      "La astrofotografía es una práctica a largo plazo que combina astronomía, fotografía y resolución de problemas técnicos en óptica, captura de imagen, seguimiento y procesado. Publico el trabajo completo, incluyendo imágenes de cielo profundo, paisajes nocturnos, vídeos y detalles de adquisición, en un portfolio dedicado a la astrofotografía."
     ],
     "portfolio": {
       "lead": "El archivo completo está disponible en ",
