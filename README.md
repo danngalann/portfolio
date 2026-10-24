@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Production images
+
+Default-branch CI publishes the production image to GHCR. The public,
+build-time `NEXT_PUBLIC_ENABLE_RAG_CHAT` flag comes from the GitHub Actions
+repository variable of the same name; it is also passed as a Docker build
+argument. For manual builds, pass `--build-arg NEXT_PUBLIC_ENABLE_RAG_CHAT=true`
+when chat should be enabled. API keys and other runtime settings stay in the
+server-only `.env` file and must never be passed as build arguments.
+
 ## Getting Started
 
 First, run the development server:

@@ -30,6 +30,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Build the application
+ARG NEXT_PUBLIC_ENABLE_RAG_CHAT=false
 RUN pnpm build
 
 # Ensure public directory exists (create if not present)

@@ -22,6 +22,7 @@ jobs:
     env:
       HUSKY: "0"
       NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_ENABLE_RAG_CHAT: ${{ vars.NEXT_PUBLIC_ENABLE_RAG_CHAT || 'false' }}
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -71,6 +72,8 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64
+          build-args: |
+            NEXT_PUBLIC_ENABLE_RAG_CHAT=${{ vars.NEXT_PUBLIC_ENABLE_RAG_CHAT || 'false' }}
           tags: |
             ghcr.io/danngalann/portfolio:production
             ghcr.io/danngalann/portfolio:sha-${{ github.sha }}
