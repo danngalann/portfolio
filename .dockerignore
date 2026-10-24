@@ -10,7 +10,7 @@ out
 build
 
 # Environment files
-.env*.local
+.env*
 
 # Testing
 coverage
