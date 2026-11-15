@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "react-tooltip/dist/react-tooltip.css";
 import "./globals.css";
 import { roboto, montserrat } from "./ui/fonts";
+import Analytics from "./ui/analytics";
 
 export const metadata: Metadata = {
   title: "Daniel's Portfolio",
@@ -18,7 +19,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${roboto.variable} ${montserrat.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -2,16 +2,58 @@ import { NextResponse } from "next/server";
 import weaviate from "weaviate-client";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import type { Document } from "@langchain/core/documents";
+import { emitTelemetry, requestContext } from "@/app/lib/telemetry";
+
+const MAX_LOGGED_QUERY_LENGTH = 1000;
+
+function logChatQuery(
+  req: Request,
+  body: unknown,
+  status: "accepted" | "disabled",
+) {
+  try {
+    const { messages, lang } = (body ?? {}) as {
+      messages?: { role?: string; content?: unknown }[];
+      lang?: unknown;
+    };
+    const last = Array.isArray(messages) ? messages[messages.length - 1] : null;
+    emitTelemetry({
+      event: "chat_query",
+      status,
+      ...requestContext(req.headers),
+      lang: typeof lang === "string" ? lang.slice(0, 16) : undefined,
+      turns: Array.isArray(messages)
+        ? messages.filter((message) => message?.role === "user").length
+        : undefined,
+      query:
+        typeof last?.content === "string"
+          ? last.content.slice(0, MAX_LOGGED_QUERY_LENGTH)
+          : undefined,
+    });
+  } catch {
+    // Logging must never break the chat.
+  }
+}
 
 export async function POST(req: Request) {
   if (process.env.NEXT_PUBLIC_ENABLE_RAG_CHAT !== "true") {
+    logChatQuery(
+      req,
+      await req
+        .clone()
+        .json()
+        .catch(() => null),
+      "disabled",
+    );
     return NextResponse.json(
       { error: "RAG chat is disabled." },
       { status: 403 },
     );
   }
 
-  const { messages, nResults = 5, lang = "en" } = await req.json();
+  const body = await req.json();
+  const { messages, nResults = 5, lang = "en" } = body;
+  logChatQuery(req, body, "accepted");
 
   // Extract latest user message
   let userQuery = messages[messages.length - 1]?.content ?? "";
